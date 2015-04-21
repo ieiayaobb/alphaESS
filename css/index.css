@@ -1,0 +1,23 @@
+.head{
+  background:url(../img/head1px.png);
+  background-repeat:repeat-x;
+  background-size：100%;
+  height:91px;
+}
+.head-menu{
+  font-size:24px;
+  font-weight:lighter;
+  text-align:center;
+  line-height:80px;
+}
+.head-menu>ul{
+  display:inline-block;
+  margin:auto;
+}
+.head-menu li{
+  display:inline-block;
+  margin-left:50px;
+}
+.head-menu a{
+  color:#FFF;
+}
