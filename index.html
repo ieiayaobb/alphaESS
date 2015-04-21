@@ -26,9 +26,6 @@
 	</head>
 
 	<body>
-		<div id="info">
-		</div>
-
 		<script src="js/three.min.js"></script>
 		<script src="js/OBJLoader.js"></script>
 
@@ -60,7 +57,7 @@
 
 				scene = new THREE.Scene();
 
-				var ambient = new THREE.AmbientLight( 0x101030 );
+				var ambient = new THREE.AmbientLight( 0xfffff );
 				scene.add( ambient );
 
 				var directionalLight = new THREE.DirectionalLight( 0xffeedd );
