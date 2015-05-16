@@ -1,8 +1,8 @@
 .head{
-  background:url(../img/head1px.png);
   background-repeat:repeat-x;
   background-size：100%;
-  height:91px;
+  height:80px;
+  background-color: #525252;
 }
 .head-menu{
   font-size:24px;
@@ -16,10 +16,11 @@
 }
 .head-menu li{
   display:inline-block;
-  margin-left:50px;
+  padding:0 20px 0 20px;
 }
 .head-menu a{
   color:#FFF;
+  text-decoration:none;
 }
 
 .content{
@@ -28,16 +29,17 @@
   background-position: left;
   /*background-size:100;*/
   height:1000px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   /*width:1200px;*/
 }
 
 .slogan{
   color:#FFF;
-  font-size:66px;
+  font-size:72px;
   position:relative;
-  left:550px;
+  left:580px;
   top: 280px;
+  font-weight: bold;
 }
 
 .photo-up{
@@ -54,7 +56,7 @@
 .photo-list{
   position:relative;
   left:1107px;
-  top: 333px;
+  top: 315px;
   float:left;
 }
 .photo1{
@@ -80,4 +82,11 @@
   position:relative;
   top:234px;
   left:-646px;
+}
+
+.menu-button{
+  cursor:pointer;
+}
+.menu-button:hover{
+  background-color:#F7B128;
 }
