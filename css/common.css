@@ -1,0 +1,36 @@
+.head{
+    background-repeat:repeat-x;
+    background-size£º100%;
+    height:80px;
+    background-color: #525252;
+}
+.head-menu{
+    font-size:24px;
+    font-weight:lighter;
+    text-align:center;
+    line-height:80px;
+}
+.head-menu>ul{
+    display:inline-block;
+    margin:auto;
+}
+.head-menu li{
+    display:inline-block;
+    padding:0 20px 0 20px;
+}
+.head-menu a{
+    color:#FFF;
+    text-decoration:none;
+}
+
+.logo{
+    width:240px;
+    height: 249px;
+    background-image: url(../img/logo.png);
+    display:none;
+}
+
+.content{
+    width:100%;
+    height:1000px;
+}

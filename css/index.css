@@ -1,36 +1,14 @@
-.head{
-  background-repeat:repeat-x;
-  background-size：100%;
-  height:80px;
-  background-color: #525252;
-}
-.head-menu{
-  font-size:24px;
-  font-weight:lighter;
-  text-align:center;
-  line-height:80px;
-}
-.head-menu>ul{
-  display:inline-block;
-  margin:auto;
-}
-.head-menu li{
-  display:inline-block;
-  padding:0 20px 0 20px;
-}
-.head-menu a{
-  color:#FFF;
-  text-decoration:none;
-}
-
 .content{
   width:100%;
-  background-image: url(../img/index/first/first.png);
   background-position: left;
   /*background-size:100;*/
   height:1000px;
   /*overflow: hidden;*/
   /*width:1200px;*/
+}
+
+.content-1{
+  background-image: url(../img/index/first/first.png);
 }
 
 .slogan{
@@ -40,6 +18,7 @@
   left:580px;
   top: 280px;
   font-weight: bold;
+  float:left;
 }
 
 .photo-up{
@@ -55,10 +34,12 @@
 
 .photo-list{
   position:relative;
-  left:1107px;
-  top: 315px;
+  left:752px;
+  top: 531px;
   float:left;
+  width:700px;
 }
+
 .photo1{
   background-image: url(../img/index/first/lefttop1.png);
   position:relative;
@@ -73,15 +54,15 @@
 .photo3{
   background-image: url(../img/index/first/leftbottom1.png);
   position:relative;
-  top:234px;
-  left:-655px;
+  top:-66px;
+  left:-135px;
 }
 
 .photo4{
   background-image: url(../img/index/first/rightbottom1.png);
   position:relative;
-  top:234px;
-  left:-646px;
+  top:-66px;
+  left:-126px;
 }
 
 .menu-button{
