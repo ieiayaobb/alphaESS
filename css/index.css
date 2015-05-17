@@ -65,3 +65,77 @@
   left:-126px;
 }
 
+.contact{
+  width:1920px;
+  height:1000px;
+  float:left;
+  background-image: url(../img/index/contact/background.png);
+}
+
+.country{
+  float:left;
+  position:relative;
+  top:400px;
+  left:200px;
+  width:300px;
+}
+
+.country-icon{
+  width:52px;
+  height:51px;
+  float:left;
+}
+
+.country-china{
+  background-image: url(../img/index/contact/china.png);
+}
+
+.country-germany{
+  background-image: url(../img/index/contact/german.png);
+}
+
+.country-australia{
+  background-image: url(../img/index/contact/australia.png);
+}
+
+.info-country{
+  float:left;
+  width:300px;
+}
+
+.country-info{
+  width: 300px;
+}
+
+.news{
+  float:left;
+}
+
+.new{
+  float:left;
+
+}
+
+.new-pic-1{
+  background-image: url(../img/index/news/news1.png);
+}
+
+.new-pic-2{
+  background-image: url(../img/index/news/news2.png);
+}
+
+.new-pic-3{
+  background-image: url(../img/index/news/news3.png);
+}
+
+.new-pic{
+  width:330px;
+  height:250px;
+  float:left;
+}
+
+.country-name{
+  font-size:18px;
+  color:#FFF;
+  margin-left:20px;
+}
