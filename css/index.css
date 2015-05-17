@@ -65,6 +65,32 @@
   left:-126px;
 }
 
+.hill{
+  float:left;
+  background-image: url(../img/index/hill.png);
+  width:500px;
+  height:230px;
+  margin-top:500px;
+}
+
+.house{
+  float:left;
+  background-image: url(../img/index/house.png);
+  width:455px;
+  height:365px;
+  position:relative;
+  left:200px;
+  top:180px;
+}
+
+.clock{
+  float:left;
+  background-image: url(../img/index/clock.png);
+  width:783px;
+  height:783px;
+  margin-left:250px;
+}
+
 .contact{
   width:1920px;
   height:1000px;
@@ -75,8 +101,8 @@
 .country{
   float:left;
   position:relative;
-  top:400px;
-  left:200px;
+  top:300px;
+  left:400px;
   width:300px;
 }
 
@@ -100,20 +126,42 @@
 
 .info-country{
   float:left;
-  width:300px;
+  width:400px;
+  margin-top:50px;
 }
 
 .country-info{
   width: 300px;
+  margin-left:20px;
+  margin-top:10px;
+  color:#FFF;
+  float:left;
 }
 
 .news{
-  float:left;
+  width:800px;
+  margin:0 auto;
 }
 
 .new{
   float:left;
+  width:1020px;
+  margin-top:20px;
+}
 
+.new-title{
+  float:left;
+  font-size:32px;
+  margin-left:50px;
+}
+
+.new-content{
+  float:left;
+  width:600px;
+  font-size:18px;
+  margin-left:50px;
+  margin-top:30px;
+  line-height:30px;
 }
 
 .new-pic-1{
