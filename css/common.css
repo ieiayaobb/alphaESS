@@ -1,6 +1,5 @@
 .head{
     background-repeat:repeat-x;
-    background-size£º100%;
     height:80px;
     background-color: #525252;
 }
@@ -41,4 +40,42 @@
 }
 .menu-button:hover{
     background-color:#F7B128;
+}
+
+.navi>ul{
+    margin:0 auto;
+    width:1000px;
+}
+
+.icon-menu{
+    float:left;
+    margin-left:150px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.storion-menu{
+    width: 64px;
+    height:157px;
+    background-image: url(../img/product/storion-menu.png);
+}
+
+.crystal-menu{
+    width:69px;
+    height:162px;
+    background-image: url(../img/product/crystal-menu.png);
+}
+
+.invertor-menu{
+    width:85px;
+    height:111px;
+    background-image: url(../img/product/invertor-menu.png);
+    margin-top:50px;
+}
+
+.cloud-menu{
+    width:80px;
+    height:90px;
+    background-image: url(../img/product/cloud-menu.png);
+    margin-top:50px;
 }
