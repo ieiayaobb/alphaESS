@@ -15,6 +15,7 @@
     margin:auto;
 }
 .head-menu li{
+    float:left;
     display:inline-block;
     padding:0 20px 0 20px;
 }
@@ -24,13 +25,20 @@
 }
 
 .logo{
-    width:240px;
-    height: 249px;
+    width:78px;
+    height: 80px;
     background-image: url(../img/logo.png);
-    display:none;
+    float:left;
 }
 
 .content{
     width:100%;
     height:1000px;
+}
+
+.menu-button{
+    cursor:pointer;
+}
+.menu-button:hover{
+    background-color:#F7B128;
 }
