@@ -129,7 +129,8 @@
   width:455px;
   height:365px;
   position:relative;
-  left:35%;
+  left:50%;
+  margin-left:-227px;
 }
 
 .clock{
@@ -137,8 +138,9 @@
   background-image: url(../img/index/clock.png);
   width:783px;
   height:783px;
-  margin-left:250px;
+  margin-left:-391px;
   position:relative;
+  left:50%;
   top:-200px;
 
   -webkit-animation: clockrotate 10s ease infinite ;
@@ -154,7 +156,7 @@
 .country{
   float:left;
   position:relative;
-  top:300px;
+  top:100px;
   left:15%;
   width:300px;
 }
@@ -282,4 +284,66 @@
 
 .new-active{
   background-color: #D7D7D7;
+}
+
+.timeline{
+  width:100%;
+  height:270px;
+  background-image: url(../img/index/timeline.png);
+  background-position: right;
+}
+
+.product-icon{
+  width:95px;
+  height:109px;
+  float:left;
+}
+
+.storion-icon{
+  background-image: url(../img/index/storion-icon.png);
+}
+
+.battery-icon{
+  background-image: url(../img/index/battery-icon.png);
+}
+
+.battery-box-icon{
+  background-image: url(../img/index/batterybox-icon.png);
+}
+
+.invertor-icon{
+  background-image: url(../img/index/invetor-icon.png);
+}
+
+.time{
+  float:right;
+  margin-top:100px;
+}
+
+.time1{
+  margin-right:200px;
+}
+
+.time2{
+  margin-right:150px;
+}
+
+.time3{
+  margin-right:30px;
+}
+
+.time4{
+  margin-right:40px;
+}
+
+.time-introduction{
+  width:100%;
+  height:18px;
+}
+
+.time-introduction span{
+  color:#F7B128;
+  font-size:18px;
+  float:right;
+  width:50px;
 }

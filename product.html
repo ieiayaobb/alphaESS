@@ -16,38 +16,41 @@
 					})
 				},1000);
 
-				$(".left-feature .image-feature").css("opacity" , 0);
-				$(".right-feature .image-feature").css("opacity" , 0);
-				var i = 0;
-				setInterval(function(){
-					$(".left-feature .image-feature").eq(i).animate({
-						left:'30px',
-						opacity:1
-					})
-				},200);
-				setInterval(function(){
-					$(".right-feature .image-feature").eq(i++).animate({
-						left:'-30px',
-						opacity:1
-					})
-				},200);
+				$(".left-feature .image-feature").css("opacity", 0);
+				$(".right-feature .image-feature").css("opacity", 0);
+				setTimeout(function() {
+
+					var i = 0;
+					setInterval(function () {
+						$(".left-feature .image-feature").eq(i).animate({
+							left: '30px',
+							opacity: 1
+						})
+					}, 200);
+					setInterval(function () {
+						$(".right-feature .image-feature").eq(i++).animate({
+							left: '-30px',
+							opacity: 1
+						})
+					}, 200);
+				},3000);
 			});
 		</script>
 	</head>
 	<body>
-		<div class="head">
-			<div class="head-menu">
-				<ul>
-					<li><span class="logo"></span></li>
-					<li class="menu-button"><a href="index.html">Home</a></li>
-					<li class="menu-button"><a href="#">About Us</a></li>
-					<li class="menu-button"><a href="#">Products</a></li>
-					<li class="menu-button"><a href="#">News</a></li>
-					<li class="menu-button"><a href="#">Contact</a></li>
-					<li class="menu-button"><a href="#">Login</a></li>
-				</ul>
-			</div>
+	<div class="head">
+		<div class="head-menu">
+			<ul>
+				<li><span class="logo"></span></li>
+				<li class="menu-button"><a href="index.html">Home</a></li>
+				<li class="menu-button"><a href="#">About Us</a></li>
+				<li class="menu-button"><a href="product.html">Products</a></li>
+				<li class="menu-button"><a href="#">News</a></li>
+				<li class="menu-button"><a href="#">Contact</a></li>
+				<li class="menu-button"><a href="#">Login</a></li>
+			</ul>
 		</div>
+	</div>
 		<div class="navi">
 			<ul>
 				<li><span class="icon-menu storion-menu"></span></li>
@@ -85,7 +88,7 @@
 					</p>
 				</div>
 			</div>
-			<a href="#">Learn More</a>
+			<a class="learn-more" href="#">Learn More</a>
 		</div>
 		<div class="content content-2">
 			<div class="crystal"></div>
@@ -150,7 +153,7 @@
 					</div>
 				</li>
 			</ul>
-			<a href="#">Learn More</a>
+			<a class="learn-more" href="#">Learn More</a>
 		</div>
 		<div class="content content-3">
 			<div class="mixed">
@@ -180,9 +183,9 @@
 							Not only does this act as a backup during a grid outage but it also optimizes the self-consumption rate.
 						</p>
 					</div>
-					<a href="#">Learn More</a>
 				</div>
 			</div>
+			<a class="learn-more" href="#">Learn More</a>
 		</div>
 		<div class="content content-4">
 			<div class="cloud"></div>
