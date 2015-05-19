@@ -12,6 +12,7 @@
   background-image: url(../img/index/first/first.png);
   z-index:10;
   position:relative;
+  padding-top:80px;
 }
 
 .content-2{
@@ -24,10 +25,21 @@
   color:#FFF;
   font-size:72px;
   position:relative;
-  left:580px;
-  top: 280px;
+  left:10%;
+  top: 80px;
   font-weight: bold;
   float:left;
+  background-image: url(../img/index/mask.png);
+  width:455px;
+  height:525px;
+}
+
+.slogan>div:first-child{
+  margin-top:150px;
+}
+
+.slogan>div{
+  margin-left:20px;
 }
 
 .photo-up{

@@ -2,6 +2,9 @@
     background-repeat:repeat-x;
     height:80px;
     background-color: #525252;
+    position:fixed;
+    width:100%;
+    z-index:9999;
 }
 .head-menu{
     font-size:24px;
@@ -42,9 +45,16 @@
     background-color:#F7B128;
 }
 
+.navi{
+    padding-top:80px;
+}
+
 .navi>ul{
     margin:0 auto;
     width:1000px;
+}
+.navi li{
+    cursor:pointer;
 }
 
 .icon-menu{
