@@ -4,11 +4,23 @@
 		<title>index</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
+
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script>
 			$(document).ready(function(){
+
+				$(window).scroll(function(e){
+//					console.log(e)
+				});
+
+
+				setInterval(function(){
+					$(".photo1").animate({
+						opacity:0
+					},1000)
+				}, 1000);
 
 			});
 		</script>
@@ -34,16 +46,15 @@
 				<div>ENERGY</div>
 			</div>
 			<div class="photo-list">
-				<span class="photo-up photo1"></span>
-				<span class="photo-up photo2"></span>
-				<span class="photo-down photo3"></span>
-				<span class="photo-down photo4"></span>
+				<span class="photo-up photo1 photo1_1"></span>
+				<span class="photo-up photo2 photo1_2"></span>
+				<span class="photo-down photo3 photo1_3"></span>
+				<span class="photo-down photo4 photo1_4"></span>
 			</div>
 		</div>
 		<div class="content content-2">
-			<div class="clock">
-				<div class="house"></div>
-			</div>
+			<div class="clock"></div>
+			<div class="house"></div>
 			<div class="hill"></div>
 		</div>
 

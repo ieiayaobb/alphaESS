@@ -35,6 +35,8 @@
     font-size: 36px;
     width: inherit;
     text-align:center;
+    position:relative;
+    opacity:0;
 }
 
 .feature{
@@ -45,7 +47,6 @@
 
 .feature-detail{
     float:left;
-    margin-top: 20px;
 }
 
 .feature-detail-content{
@@ -201,6 +202,8 @@
 .content-4{
     background-image: url(../img/product/cloud-background.png);
     background-position:center;
+    position:relative;
+    z-index:10;
 }
 
 .cloud{
@@ -215,6 +218,9 @@
     width:181px;
     height:129px;
     position:absolute;
+    left : 12%;
+    top: 50px;
+    z-index:10;
 }
 
 .laptop{
@@ -222,6 +228,8 @@
     width:310px;
     height:178px;
     position:absolute;
+    left : 10%;
+    top:400px;
 }
 
 .phone{
@@ -229,6 +237,9 @@
     width:80px;
     height:136px;
     position:absolute;
+    left : 60%;
+    top : 500px
+
 }
 
 .imac{
@@ -236,6 +247,8 @@
     width:288px;
     height:277px;
     position:absolute;
+    left : 75%;
+    top:400px;
 }
 
 .storion-flat{
@@ -243,4 +256,26 @@
     width:164px;
     height:396px;
     position:absolute;
+    left : 40%;
+    top:550px;
+}
+
+.introduction{
+    width:300px;
+    height:200px;
+    position:absolute;
+    left:70%;
+    top :100px;
+}
+
+.introduction-name{
+    font-size: 48px;
+}
+
+.introduction-detail{
+    font-size:24px;
+}
+
+.introduction-detail li{
+    margin:10px 0 0 20px;
 }
