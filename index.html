@@ -10,6 +10,10 @@
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script>
 			$(document).ready(function(){
+				$(".photo2_1").css("opacity", 0);
+				$(".photo2_2").css("opacity", 0);
+				$(".photo2_3").css("opacity", 0);
+				$(".photo2_4").css("opacity", 0);
 
 				$(window).scroll(function(e){
 //					console.log(e)
@@ -17,10 +21,17 @@
 
 
 				setInterval(function(){
-					$(".photo1").animate({
-						opacity:0
-					},1000)
-				}, 1000);
+					for(var i = 1;i <= 4;i++) {
+						if (Math.random() > 0.5) {
+							$(".photo1_" + i).animate({
+								opacity: 1 - $(".photo1_" + i).css("opacity")
+							},1000);
+							$(".photo2_" + i).animate({
+								opacity: 1 - $(".photo2_" + i).css("opacity")
+							},1000);
+						}
+					}
+				}, 3000);
 
 			});
 		</script>
@@ -45,11 +56,17 @@
 				<div>YOUR</div>
 				<div>ENERGY</div>
 			</div>
-			<div class="photo-list">
+			<div class="photo-list photo-list-1">
 				<span class="photo-up photo1 photo1_1"></span>
 				<span class="photo-up photo2 photo1_2"></span>
 				<span class="photo-down photo3 photo1_3"></span>
 				<span class="photo-down photo4 photo1_4"></span>
+			</div>
+			<div class="photo-list photo-list-2">
+				<span class="photo-up photo1 photo2_1"></span>
+				<span class="photo-up photo2 photo2_2"></span>
+				<span class="photo-down photo3 photo2_3"></span>
+				<span class="photo-down photo4 photo2_4"></span>
 			</div>
 		</div>
 		<div class="content content-2">

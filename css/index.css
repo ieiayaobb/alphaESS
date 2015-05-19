@@ -13,6 +13,7 @@
   z-index:10;
   position:relative;
   padding-top:80px;
+  height:920px;
 }
 
 .content-2{
@@ -54,10 +55,11 @@
 }
 
 .photo-list{
-  position:relative;
+  position:absolute;
   top: 531px;
   float:right;
   width:520px;
+  left:60%;
 }
 
 .photo1{
@@ -90,11 +92,11 @@
 }
 
 .photo1_3{
-  background-image: url(../img/index/first/leftbottom1.png);
+  background-image: url(../img/index/first/rightbottom1.png);
 }
 
 .photo1_4{
-  background-image: url(../img/index/first/rightbottom1.png);
+  background-image: url(../img/index/first/leftbottom1.png);
 }
 
 .photo2_1{
@@ -106,11 +108,11 @@
 }
 
 .photo2_3{
-  background-image: url(../img/index/first/leftbottom2.png);
+  background-image: url(../img/index/first/rightbottom2.png);
 }
 
 .photo2_4{
-  background-image: url(../img/index/first/rightbottom2.png);
+  background-image: url(../img/index/first/leftbottom2.png);
 }
 
 
