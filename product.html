@@ -9,12 +9,28 @@
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script>
 			$(document).ready(function(){
-				setInterval(function(){
+				setTimeout(function(){
 					$(".feature-title").animate({
 						top:'-30px',
 						opacity:1
 					})
 				},1000);
+
+				$(".left-feature .image-feature").css("opacity" , 0);
+				$(".right-feature .image-feature").css("opacity" , 0);
+				var i = 0;
+				setInterval(function(){
+					$(".left-feature .image-feature").eq(i).animate({
+						left:'30px',
+						opacity:1
+					})
+				},200);
+				setInterval(function(){
+					$(".right-feature .image-feature").eq(i++).animate({
+						left:'-30px',
+						opacity:1
+					})
+				},200);
 			});
 		</script>
 	</head>
@@ -23,7 +39,7 @@
 			<div class="head-menu">
 				<ul>
 					<li><span class="logo"></span></li>
-					<li class="menu-button"><a href="#">Home</a></li>
+					<li class="menu-button"><a href="index.html">Home</a></li>
 					<li class="menu-button"><a href="#">About Us</a></li>
 					<li class="menu-button"><a href="#">Products</a></li>
 					<li class="menu-button"><a href="#">News</a></li>
@@ -51,7 +67,6 @@
 						The electricity provided by the PV system can power loads directly, while charging
 						the battery. The surplus solar energy can be fed into the grid.
 					</p>
-					<a href="#">Learn More</a>
 				</div>
 			</div>
 			<div class="feature feature-2">
@@ -62,16 +77,15 @@
 					<p class="feature-detail-content">
 						Via an integrated control system and adaptive logic, the EMS controls and optimizes
 					</p>
-					<a href="#">Learn More</a>
 				</div>
 				<div class="feature-detail">
 					<span class="point"></span>
 					<p class="feature-detail-content">
 						the flow of energy to realize the maximum PV self-consumption rate.
 					</p>
-					<a href="#">Learn More</a>
 				</div>
 			</div>
+			<a href="#">Learn More</a>
 		</div>
 		<div class="content content-2">
 			<div class="crystal"></div>

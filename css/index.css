@@ -279,3 +279,7 @@
     -webkit-transform:rotate(360deg);
   }
 }
+
+.new-active{
+  background-color: #D7D7D7;
+}

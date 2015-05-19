@@ -10,16 +10,13 @@
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script>
 			$(document).ready(function(){
+				$(window).scroll(function(e){
+				});
+
 				$(".photo2_1").css("opacity", 0);
 				$(".photo2_2").css("opacity", 0);
 				$(".photo2_3").css("opacity", 0);
 				$(".photo2_4").css("opacity", 0);
-
-				$(window).scroll(function(e){
-//					console.log(e)
-				});
-
-
 				setInterval(function(){
 					for(var i = 1;i <= 4;i++) {
 						if (Math.random() > 0.5) {
@@ -77,7 +74,7 @@
 
 		<div class="content content-3">
 			<div class="news">
-				<div class="new">
+				<div class="new new-active">
 					<span class="new-pic new-pic-1"></span>
 					<span class="new-title">Introducing the All-Wheel Drive Model S 70D</span>
 					<p class="new-content">Most cars don't improve over time. By contrast, Model S gets
