@@ -4,22 +4,43 @@
 		<title>index</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
+
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script>
 			$(document).ready(function(){
+				$(window).scroll(function(e){
+				});
+
+				$(".photo2_1").css("opacity", 0);
+				$(".photo2_2").css("opacity", 0);
+				$(".photo2_3").css("opacity", 0);
+				$(".photo2_4").css("opacity", 0);
+				setInterval(function(){
+					for(var i = 1;i <= 4;i++) {
+						if (Math.random() > 0.5) {
+							$(".photo1_" + i).animate({
+								opacity: 1 - $(".photo1_" + i).css("opacity")
+							},1000);
+							$(".photo2_" + i).animate({
+								opacity: 1 - $(".photo2_" + i).css("opacity")
+							},1000);
+						}
+					}
+				}, 3000);
 
 			});
 		</script>
 	</head>
 	<body>
-		 <div class="head">
+		<div class="head">
 			<div class="head-menu">
 				<ul>
-					<li class="menu-button"><a href="#">Home</a></li>
+					<li><span class="logo"></span></li>
+					<li class="menu-button"><a href="index.html">Home</a></li>
 					<li class="menu-button"><a href="#">About Us</a></li>
-					<li class="menu-button"><a href="#">Products</a></li>
+					<li class="menu-button"><a href="product.html">Products</a></li>
 					<li class="menu-button"><a href="#">News</a></li>
 					<li class="menu-button"><a href="#">Contact</a></li>
 					<li class="menu-button"><a href="#">Login</a></li>
@@ -32,18 +53,120 @@
 				<div>YOUR</div>
 				<div>ENERGY</div>
 			</div>
-			<div class="photo-list">
-				<span class="photo-up photo1"></span>
-				<span class="photo-up photo2"></span>
-				<span class="photo-down photo3"></span>
-				<span class="photo-down photo4"></span>
+			<div class="photo-list photo-list-1">
+				<span class="photo-up photo1 photo1_1"></span>
+				<span class="photo-up photo2 photo1_2"></span>
+				<span class="photo-down photo3 photo1_3"></span>
+				<span class="photo-down photo4 photo1_4"></span>
+			</div>
+			<div class="photo-list photo-list-2">
+				<span class="photo-up photo1 photo2_1"></span>
+				<span class="photo-up photo2 photo2_2"></span>
+				<span class="photo-down photo3 photo2_3"></span>
+				<span class="photo-down photo4 photo2_4"></span>
 			</div>
 		</div>
 		<div class="content content-2">
-
+			<div class="clock"></div>
+			<div class="house"></div>
+			<div class="hill"></div>
 		</div>
-<!--		<img src="img/2.png" class="content"></img>
-		<img src="img/3.png" class="content"></img>
-		<img src="img/4.png" class="content"></img>-->
+
+		<div class="content content-3">
+			<div class="news">
+				<div class="new new-active">
+					<span class="new-pic new-pic-1"></span>
+					<span class="new-title">Introducing the All-Wheel Drive Model S 70D</span>
+					<p class="new-content">Most cars don't improve over time. By contrast, Model S gets
+						faster, smarter, and better as time passes. With Tesla's regular over-the-air
+						software updates, Model S actually improves while you sleep.   When  you
+						wake up, added functionality</p>
+				</div>
+				<div class="new">
+					<span class="new-pic new-pic-2"></span>
+					<span class="new-title">Introducing the All-Wheel Drive Model S 70D</span>
+					<p class="new-content">Most cars don't improve over time. By contrast, Model S gets
+						faster, smarter, and better as time passes. With Tesla's regular over-the-air
+						software updates, Model S actually improves while you sleep.   When  you
+						wake up, added functionality</p>
+				</div>
+				<div class="new">
+					<span class="new-pic new-pic-3"></span>
+					<span class="new-title">Introducing the All-Wheel Drive Model S 70D</span>
+					<p class="new-content">Most cars don't improve over time. By contrast, Model S gets
+						faster, smarter, and better as time passes. With Tesla's regular over-the-air
+						software updates, Model S actually improves while you sleep.   When  you
+						wake up, added functionality</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content contact">
+			<div class="timeline">
+				<div class="time time4">
+
+					<div class="product-list">
+						<div class="product-icon storion-icon"></div>
+						<div class="product-icon battery-icon"></div>
+						<div class="product-icon battery-box-icon"></div>
+						<div class="product-icon invertor-icon"></div>
+					</div>
+					<div class="time-introduction"><span>Product Family</span></div>
+				</div>
+				<div class="time time3">
+
+					<div class="product-list">
+					<div class="product-icon storion-icon"></div>
+					<div class="product-icon battery-icon"></div>
+						</div>
+					<div class="time-introduction"><span>Integrated Solution</span></div>
+				</div>
+				<div class="time time2">
+
+					<div class="product-list">
+					<div class="product-icon battery-box-icon"></div>
+						</div>
+					<div class="time-introduction"><span>Single Product</span></div>
+				</div>
+				<div class="time time1">
+
+					<div class="product-list">
+					<div class="product-icon invertor-icon"></div>
+						</div>
+					<div class="time-introduction"><span>Experimental Product</span></div>
+				</div>
+			</div>
+			<div class="country">
+				<div class="info-country info-german">
+					<span class="country-icon country-germany"></span>
+					<span class="country-name">Germany</span>
+					<p class="country-info">Alpha ESS Europe GmbH
+						Tel. +49 176 -999 2 88 66
+						E-mail.europe@alpha-ess.com
+						www.alpha-ess.de
+						Add. Paul-Ehrlich-Straße 1 bis 1c, 63225 Langen</p>
+				</div>
+				<div class="info-country info-australia">
+					<span class="country-icon country-australia"></span>
+					<span class="country-name">Australia</span>
+					<p class="country-info">ALPHA ESS AUSTRALIA PTY. LTD.
+						Tel. +61-(0)412 953 647
+						www.alpha-ess.com.au
+						Add.UNIT 601 68 MCEVOY ST, ALEXANDRIA NSW 2015,
+						Contact information</p>
+				</div>
+				<div class="info-country info-china">
+					<span class="country-icon country-china"></span>
+					<span class="country-name">China</span>
+					<p class="country-info">
+						Tel. 0086-(0)512-68287609
+						Fax. 0086-(0)512-68280679
+						E-mail. info@alpha-ess.com
+						www.alpha-ess.com
+						Add.1-B302,CreativeIndustrialPark,No.328,
+						XinghuStreet,SIPSuzhou.</p>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
