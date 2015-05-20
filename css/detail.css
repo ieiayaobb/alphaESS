@@ -54,6 +54,7 @@
     float: left;
     width: 335px;
     height: 120px;
+    cursor: pointer;
 
 /*    background-color: #f7b128;*/
 }
@@ -67,6 +68,7 @@
     background-color: #b78626;
     color: #fff;
 }
+
 .content .left .menu-item .menu-name{
     float: left;
     width: 335px;
@@ -77,6 +79,11 @@
     line-height: 120px;
     font-weight: bolder;
 }
+.content .left .menu-item .onlymenu-name{
+    color:#FFFFFF;
+    background-color:#f7b128;
+}
+
 
 .content .left .menu-item .arrow{
     float: left;
@@ -89,6 +96,9 @@
     text-align: center;
     line-height: 120px;
 
+}
+.onlymenu-arrow{
+    background-color:  #b78626;
 }
 .content .left .line{
     float: left;
@@ -155,4 +165,8 @@
     line-height: 40px;
     font-size: 18px;
     text-align: center;
+}
+.content .right .main .downloadlist-background .downloadlist .download-link:hover{
+    background-color: #f7b128;
+    cursor: pointer;
 }
