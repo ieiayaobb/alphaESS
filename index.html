@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>index</title>
+		<title>AlphaESS</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 
@@ -10,8 +10,35 @@
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script>
 			$(document).ready(function(){
+				var current = judge(0);
+//				console.log(current)
 				$(window).scroll(function(e){
+					if(judge(current) != undefined) {
+						current = judge(current);
+//						console.log(current)
+					}
 				});
+
+				function judge(current){
+//					console.log(current)
+					if($(window).scrollTop() >= 0 && $(window).scrollTop() <= 920){
+						if(current != 1) {
+							return 1;
+						}
+					}else if($(window).scrollTop() > 920 && $(window).scrollTop() <= 920 * 2){
+						if(current != 2) {
+							return 2;
+						}
+					}else if($(window).scrollTop() > 920 * 2 && $(window).scrollTop() <= 920 * 3){
+						if(current != 3) {
+							return 3;
+						}
+					}else if($(window).scrollTop() > 920 * 3){
+						if(current != 4) {
+							return 4;
+						}
+					}
+				}
 
 				$(".photo2_1").css("opacity", 0);
 				$(".photo2_2").css("opacity", 0);
@@ -30,6 +57,22 @@
 					}
 				}, 3000);
 
+				setInterval(function(){
+					var $next = $(".new-active").removeClass("new-active").next(".new");
+					if($next.length == 0){
+						$next = $(".new").eq(0);
+					}
+					$next.addClass("new-active");
+				},3000);
+
+
+				setInterval(function(){
+					var $next = $(".current-period").removeClass("current-period").next(".period-introduction")
+					if($next.length == 0){
+						$next = $(".period-introduction").eq(0);
+					}
+					$next.addClass("current-period")
+				},2500);
 			});
 		</script>
 	</head>
@@ -42,8 +85,8 @@
 					<li class="menu-button"><a href="#">About Us</a></li>
 					<li class="menu-button"><a href="product.html">Products</a></li>
 					<li class="menu-button"><a href="#">News</a></li>
-					<li class="menu-button"><a href="#">Contact</a></li>
-					<li class="menu-button"><a href="#">Login</a></li>
+					<li class="menu-button"><a href="#">Contact Us</a></li>
+					<li class="menu-button"><a href="#">Log-in</a></li>
 				</ul>
 			</div>
 		</div>
@@ -69,34 +112,34 @@
 		<div class="content content-2">
 			<div class="clock"></div>
 			<div class="house"></div>
+			<div class="period-introduction-wrapper">
+				<div class="period-introduction morning-introduction current-period">
+					<span>The energy produced by the PV module is used to optimize self-consuption;the excess energy is used to recharge the batteries.</span>
+				</div>
+				<div class="period-introduction noon-introduction">
+					<span>When the batteries are fully charged and Alpha system already meets your self-consumption requirements, the redundant energy is fed into the pubulic grid.</span>
+				</div>
+				<div class="period-introduction evening-introduction">
+					<span>Once the sun has set, Alpha system automatically switches to energy from batteries. If the battery capacity or power is insuffcient to meet your consumption requirements, electricity is then obtained from the public grid.</span>
+				</div>
+				<div class="period-introduction midnight-introduction">
+					<span>When the grid fails, Alpha system can switch to the off-grid mode automatically and supply the loads.</span>
+				</div>
+			</div>
 			<div class="hill"></div>
 		</div>
 
 		<div class="content content-3">
 			<div class="news">
 				<div class="new new-active">
-					<span class="new-pic new-pic-1"></span>
-					<span class="new-title">Introducing the All-Wheel Drive Model S 70D</span>
-					<p class="new-content">Most cars don't improve over time. By contrast, Model S gets
-						faster, smarter, and better as time passes. With Tesla's regular over-the-air
-						software updates, Model S actually improves while you sleep.   When  you
-						wake up, added functionality</p>
+					<img class="new-pic" src="img/index/news/news1.png" width="330" height="250" />
+					<span class="new-title">The Intersolar Europe takes place annually at Munich in Germany and is the world’s leading exhibition for the solar industry and its partners.</span>
+					<p class="new-content">In 2014, 1,082 international exhibitors and 42,380 trade visitors attended the Intersolar Europe. The exhibition focuses on the areas of photovoltaics, PV production technologies, energy storage systems and renewable heating. Since its founding, it has become the most important industry platform for the solar industry. In 2014, more than 1,100 attendees and around 200 speakers discussed current industry topics and shed light on the background of technological, market and political developments.</p>
 				</div>
 				<div class="new">
-					<span class="new-pic new-pic-2"></span>
-					<span class="new-title">Introducing the All-Wheel Drive Model S 70D</span>
-					<p class="new-content">Most cars don't improve over time. By contrast, Model S gets
-						faster, smarter, and better as time passes. With Tesla's regular over-the-air
-						software updates, Model S actually improves while you sleep.   When  you
-						wake up, added functionality</p>
-				</div>
-				<div class="new">
-					<span class="new-pic new-pic-3"></span>
-					<span class="new-title">Introducing the All-Wheel Drive Model S 70D</span>
-					<p class="new-content">Most cars don't improve over time. By contrast, Model S gets
-						faster, smarter, and better as time passes. With Tesla's regular over-the-air
-						software updates, Model S actually improves while you sleep.   When  you
-						wake up, added functionality</p>
+					<img class="new-pic" src="img/index/news/news2.png" width="330" height="250" />
+					<span class="new-title">Alpha ESS Welcomes TESLA to the industry</span>
+					<p class="new-content">Thanks to Tesla’s unveiling of the Tesla PowerWall this week the spotlight has been firmly place onto the domestic energy storage industry. Back from exhibiting our own Energy Storage Systems at [insert exhibition name] it is refreshing to see that AlphaESS’s vision for the future of domestic power is mimicked in a wider audience.</p>
 				</div>
 			</div>
 		</div>
