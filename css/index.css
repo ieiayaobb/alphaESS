@@ -347,3 +347,17 @@
   float:right;
   width:50px;
 }
+
+.period-introduction-wrapper{
+  float:left;
+}
+
+.period-introduction{
+  float:left;
+  display:none;
+  width:300px;
+  font-size:18px;
+}
+.current-period{
+  display:block;
+}

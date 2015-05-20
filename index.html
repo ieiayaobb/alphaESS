@@ -11,6 +11,7 @@
 		<script>
 			$(document).ready(function(){
 				$(window).scroll(function(e){
+//					console.log(e)
 				});
 
 				$(".photo2_1").css("opacity", 0);
@@ -29,6 +30,16 @@
 						}
 					}
 				}, 3000);
+
+				setInterval(function(){
+					var $next = $(".new-active").removeClass("new-active").next(".new");
+					if($next.length == 0){
+						$next = $(".new").eq(0);
+					}
+					$next.addClass("new-active");
+				},3000);
+
+
 
 			});
 		</script>
@@ -69,6 +80,20 @@
 		<div class="content content-2">
 			<div class="clock"></div>
 			<div class="house"></div>
+			<div class="period-introduction-wrapper">
+				<div class="period-introduction morning-introduction current-period">
+					<span>The energy produced by the PV module is used to optimize self-consuption;the excess energy is used to recharge the batteries.</span>
+				</div>
+				<div class="period-introduction noon-introduction">
+					<span>When the batteries are fully charged and Alpha system already meets your self-consumption requirements, the redundant energy is fed into the pubulic grid.</span>
+				</div>
+				<div class="period-introduction evening-introduction">
+					<span>Once the sun has set, Alpha system automatically switches to energy from batteries. If the battery capacity or power is insuffcient to meet your consumption requirements, electricity is then obtained from the public grid.</span>
+				</div>
+				<div class="period-introduction midnight-introduction">
+					<span>When the grid fails, Alpha system can switch to the off-grid mode automatically and supply the loads.</span>
+				</div>
+			</div>
 			<div class="hill"></div>
 		</div>
 
