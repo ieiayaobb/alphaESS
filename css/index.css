@@ -151,14 +151,15 @@
   height:1000px;
   float:left;
   background-image: url(../img/index/contact/background.png);
+  background-position: right;
 }
 
 .country{
   float:left;
   position:relative;
   top:100px;
-  left:15%;
-  width:300px;
+  left:12%;
+  width:280px;
 }
 
 .country-icon{
@@ -181,12 +182,12 @@
 
 .info-country{
   float:left;
-  width:400px;
+  width:352px;
   margin-top:50px;
 }
 
 .country-info{
-  width: 300px;
+  width: 250px;
   margin-left:20px;
   margin-top:10px;
   color:#FFF;
@@ -350,13 +351,20 @@
 
 .period-introduction-wrapper{
   float:left;
+  position:relative;
+  left:35%;
+  top:-200px;
+  width:350px;
+  background-image: url(../img/index/hill1pxback.png);
+  background-repeat: repeat-y;
 }
 
 .period-introduction{
   float:left;
   display:none;
-  width:300px;
+  width:250px;
   font-size:18px;
+  margin:10px 0 10px 20px;
 }
 .current-period{
   display:block;

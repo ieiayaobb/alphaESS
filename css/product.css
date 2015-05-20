@@ -75,14 +75,14 @@
 }
 
 .crystal{
-    width:360px;
-    height:771px;
+    width:374px;
+    height:640px;
     background-image: url(../img/product/crystal.png);
     float:left;
     margin: auto;
     position:absolute;
     left:50%;
-    margin-left:-180px;
+    margin-left:-187px;
     margin-top:50px;
 }
 
