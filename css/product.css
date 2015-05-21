@@ -194,14 +194,37 @@
 }
 
 .content-3{
-    background-image: url(../img/product/mixed.png);
-    background-position:center;
+    /*background-image: url(../img/product/mixed.png);*/
+    /*background-position:center;*/
+}
+
+.left-mixed{
+    background-image: url(../img/product/left-mixed.png);
+    background-position: right;
+    width:1200px;
+    height:1000px;
+    background-repeat: no-repeat;
+    position:relative;
+    z-index: 10;
+    margin-left:-20%;
+}
+
+.right-mixed{
+    background-image: url(../img/product/right-mixed.png);
+    background-position: right;
+    width:1320px;
+    height: 1000px;
+    background-repeat: no-repeat;
+    position:absolute;
+    z-index: 9;
+    top:-50px;
+    opacity:0;
 }
 
 .mixed-feature{
     position:relative;
     top:300px;
-    left:200px;
+    left:30%;
 }
 
 .content-4{
@@ -216,6 +239,17 @@
     width:378px;
     height:266px;
     margin:100px auto;
+    z-index:10;
+}
+
+.link{
+    background-image: url(../img/product/link.png);
+    position:absolute;
+    width:803px;
+    height:432px;
+    left:50%;
+    top:140px;
+    margin-left:-401px;
 }
 
 .pad{
@@ -260,9 +294,11 @@
     background-image: url(../img/product/storion-flat.png);
     width:164px;
     height:396px;
-    position:absolute;
-    left : 40%;
-    top:550px;
+    margin:100px auto;
+}
+
+.device{
+    opacity : 0;
 }
 
 .introduction{
