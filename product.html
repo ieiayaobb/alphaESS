@@ -9,34 +9,29 @@
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script>
 			$(document).ready(function(){
-				setTimeout(function(){
-
-				},1000);
-
-
-			});
-		</script>
-		<script>
-			$(document).ready(function(){
 				var current = judge(0);
-				handleAnimation(current)
+				handleAnimation(current);
+				setSideMenu(current);
 				$(window).scroll(function(e){
 					if(judge(current) != undefined) {
 						current = judge(current);
 						handleAnimation(current)
-
+						setSideMenu(current);
 					}
 				});
 
 				function handleAnimation(current){
+					clearOtherInterval(current);
 					switch(current){
 						case 1 :
+							console.log("call 1")
 							$(".feature-title").animate({
 								top:'-30px',
 								opacity:1
 							});
 							break;
 						case 2:
+							console.log("call 2")
 							var i = 0;
 							setInterval(function () {
 								$(".left-feature .image-feature").eq(i).animate({
@@ -52,8 +47,10 @@
 							}, 200);
 							break;
 						case 3:
+							console.log("call 3")
 							break;
 						case 4:
+							console.log("call 4")
 							break;
 						default :
 
@@ -61,40 +58,52 @@
 				}
 
 				function judge(current){
-					if($(window).scrollTop() >= 80 + 197 && $(window).scrollTop() <= 920){
+					if($(window).scrollTop() >= 197 && $(window).scrollTop() <= 1000 + 197){
 						if(current != 1) {
 							return 1;
 						}
-					}else if($(window).scrollTop() > 920 && $(window).scrollTop() <= 920 + 600){
+					}else if($(window).scrollTop() > 1000 + 197 && $(window).scrollTop() <= 1000 + 197 + 1000){
 						if(current != 2) {
 							return 2;
 						}
-					}else if($(window).scrollTop() > 920 + 600 && $(window).scrollTop() <= 920 + 600 + 1000){
+					}else if($(window).scrollTop() > 1000 + 197 + 1000 && $(window).scrollTop() <= 1000 + 197 + 1000 + 1000){
 						if(current != 3) {
 							return 3;
 						}
-					}else if($(window).scrollTop() > 920 + 600 + 1000){
+					}else if($(window).scrollTop() > 1000 + 197 + 1000 + 1000){
 						if(current != 4) {
 							return 4;
 						}
 					}
 				}
 
-
 				function clearOtherInterval(now){
 					if(now != 1){
-						clearInterval(photoSwitchInterval);
+//						clearInterval(photoSwitchInterval);
 					}
 					if(now != 2){
-						clearInterval(featureInterval);
+//						clearInterval(featureInterval);
+						$(".image-feature").css("left", 0).css("opacity", 0);
 					}
 					if(now != 3) {
-						clearInterval(newsInterval);
+//						clearInterval(newsInterval);
 					}
 					if(now != 4){
-						clearInterval(contactInterval);
+//						clearInterval(contactInterval);
 					}
 				}
+
+				function setSideMenu(current){
+					$(".menu-active").removeClass("menu-active");
+					$(".menu-normal").eq(current - 1).addClass("menu-active");
+				}
+
+				$(".left-menu li").click(function(){
+					$(".menu-active").removeClass("menu-active");
+					$(this).children(".menu-normal").addClass("menu-active");
+					window.scrollTo(0, 200 + 1000 * ($(this).index()));
+					console.log($(this).index())
+				});
 			});
 		</script>
 	</head>
@@ -123,7 +132,7 @@
 		<div class="left-menu">
 			<ul>
 				<li>
-					<span class="menu-normal menu-active"></span>
+					<span class="menu-normal"></span>
 					<span class="menu-text">Storion</span>
 				</li>
 				<li>

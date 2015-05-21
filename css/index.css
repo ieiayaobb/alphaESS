@@ -146,7 +146,10 @@
   position:relative;
   left:50%;
   top:-200px;
+}
 
+
+.running-clock{
   -webkit-animation: clockrotate 10s ease infinite ;
   animation: clockrotate 10s ease infinite ;
 }
@@ -374,4 +377,8 @@
 }
 .current-period{
   display:block;
+}
+
+.time{
+  opacity: 0;
 }
