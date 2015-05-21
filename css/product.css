@@ -89,6 +89,7 @@
 .image-feature{
     float:left;
     position:relative;
+    opacity:0;
 }
 
 .image-feature-icon{

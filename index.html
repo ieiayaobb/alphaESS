@@ -81,15 +81,15 @@
 						if(current != 1) {
 							return 1;
 						}
-					}else if($(window).scrollTop() > 920 && $(window).scrollTop() <= 920 * 2){
+					}else if($(window).scrollTop() > 920 && $(window).scrollTop() <= 920 + 600){
 						if(current != 2) {
 							return 2;
 						}
-					}else if($(window).scrollTop() > 920 * 2 && $(window).scrollTop() <= 920 * 3){
+					}else if($(window).scrollTop() > 920 + 600 && $(window).scrollTop() <= 920 + 600 + 1000){
 						if(current != 3) {
 							return 3;
 						}
-					}else if($(window).scrollTop() > 920 * 3){
+					}else if($(window).scrollTop() > 920 + 600 + 1000){
 						if(current != 4) {
 							return 4;
 						}
@@ -110,7 +110,6 @@
 					if(now != 4){
 						clearInterval(contactInterval);
 					}
-
 				}
 			});
 		</script>
