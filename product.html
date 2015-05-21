@@ -101,8 +101,9 @@
 				$(".left-menu li").click(function(){
 					$(".menu-active").removeClass("menu-active");
 					$(this).children(".menu-normal").addClass("menu-active");
-					window.scrollTo(0, 200 + 1000 * ($(this).index()));
-					console.log($(this).index())
+					$("body").animate({
+						scrollTop : 200 + 1000 * ($(this).index())
+					},500)
 				});
 			});
 		</script>
