@@ -101,18 +101,22 @@
 
 .photo2_1{
   background-image: url(../img/index/first/lefttop2.png);
+  opacity: 0;
 }
 
 .photo2_2{
   background-image: url(../img/index/first/righttop2.png);
+  opacity: 0;
 }
 
 .photo2_3{
   background-image: url(../img/index/first/rightbottom2.png);
+  opacity: 0;
 }
 
 .photo2_4{
   background-image: url(../img/index/first/leftbottom2.png);
+  opacity: 0;
 }
 
 

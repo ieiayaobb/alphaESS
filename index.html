@@ -11,16 +11,72 @@
 		<script>
 			$(document).ready(function(){
 				var current = judge(0);
-//				console.log(current)
+				var photoSwitchInterval;
+				var newsInterval;
+				var featureInterval;
+				var contactInterval;
+				handleAnimation(current)
 				$(window).scroll(function(e){
 					if(judge(current) != undefined) {
 						current = judge(current);
-//						console.log(current)
+						handleAnimation(current)
+
 					}
 				});
 
+				function handleAnimation(current){
+					clearOtherInterval(current);
+					switch(current){
+						case 1 :
+//							console.log("call 1")
+							photoSwitchInterval = setInterval(function (){
+//								console.log("running 1")
+								for(var i = 1;i <= 4;i++) {
+									if (Math.random() > 0.5) {
+										$(".photo1_" + i).animate({
+											opacity: 1 - $(".photo1_" + i).css("opacity")
+										},1000);
+										$(".photo2_" + i).animate({
+											opacity: 1 - $(".photo2_" + i).css("opacity")
+										},1000);
+									}
+								}
+							}, 3000);
+							break;
+						case 2:
+//							console.log("call 2")
+							featureInterval = setInterval(function(){
+//								console.log("running 2")
+								var $next = $(".current-period").removeClass("current-period").next(".period-introduction")
+								if($next.length == 0){
+									$next = $(".period-introduction").eq(0);
+								}
+								$next.addClass("current-period")
+							},2500);
+							break;
+						case 3:
+//							console.log("call 3")
+							newsInterval = setInterval(function(){
+//								console.log("running 3")
+								var $next = $(".new-active").removeClass("new-active").next(".new");
+								if($next.length == 0){
+									$next = $(".new").eq(0);
+								}
+								$next.addClass("new-active");
+							},3000);
+							break;
+						case 4:
+//							console.log("call 4")
+							contactInterval = setInterval(function(){
+//								console.log("running 4")
+							},10000);
+							break;
+						default :
+
+					}
+				}
+
 				function judge(current){
-//					console.log(current)
 					if($(window).scrollTop() >= 0 && $(window).scrollTop() <= 920){
 						if(current != 1) {
 							return 1;
@@ -40,39 +96,22 @@
 					}
 				}
 
-				$(".photo2_1").css("opacity", 0);
-				$(".photo2_2").css("opacity", 0);
-				$(".photo2_3").css("opacity", 0);
-				$(".photo2_4").css("opacity", 0);
-				setInterval(function(){
-					for(var i = 1;i <= 4;i++) {
-						if (Math.random() > 0.5) {
-							$(".photo1_" + i).animate({
-								opacity: 1 - $(".photo1_" + i).css("opacity")
-							},1000);
-							$(".photo2_" + i).animate({
-								opacity: 1 - $(".photo2_" + i).css("opacity")
-							},1000);
-						}
-					}
-				}, 3000);
 
-				setInterval(function(){
-					var $next = $(".new-active").removeClass("new-active").next(".new");
-					if($next.length == 0){
-						$next = $(".new").eq(0);
+				function clearOtherInterval(now){
+					if(now != 1){
+						clearInterval(photoSwitchInterval);
 					}
-					$next.addClass("new-active");
-				},3000);
-
-
-				setInterval(function(){
-					var $next = $(".current-period").removeClass("current-period").next(".period-introduction")
-					if($next.length == 0){
-						$next = $(".period-introduction").eq(0);
+					if(now != 2){
+						clearInterval(featureInterval);
 					}
-					$next.addClass("current-period")
-				},2500);
+					if(now != 3) {
+						clearInterval(newsInterval);
+					}
+					if(now != 4){
+						clearInterval(contactInterval);
+					}
+
+				}
 			});
 		</script>
 	</head>
