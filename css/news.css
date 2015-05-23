@@ -1,0 +1,141 @@
+.head{
+    background-repeat:repeat-x;
+    background-size: 100%;
+    height:80px;
+    background-color: #525252;
+}
+.head-menu{
+    font-size:24px;
+    font-weight:lighter;
+    text-align:center;
+    line-height:80px;
+}
+.head-menu>ul{
+    display:inline-block;
+    margin:auto;
+}
+.head-menu li{
+    display:inline-block;
+    padding:0 20px 0 20px;
+}
+.head-menu a{
+    color:#FFF;
+    text-decoration:none;
+}
+
+
+
+.content-wrap {
+    width:0;
+    height:0;
+    position:fixed;
+    left:50%;
+    right:50%;
+
+}
+.content{
+    width: 1280px;
+    height: 787px;
+    margin-left:-640px;
+    margin-top: 100px;
+}
+
+.content .left{
+    float: left;
+    width: 335px;
+    height: 787px;
+    background-color: #f1f1f1;
+}
+.content .left .menu-item{
+    float: left;
+    width: 335px;
+    height: 50px;
+    cursor: pointer;
+
+    /*    background-color: #f7b128;*/
+}
+.content .left #menu-l1{
+    background-color: #f7b128;
+}
+.content .left #menu-l1 .menu-name{
+    color: #fff;
+}
+.content .left #menu-l1 .arrow{
+    background-color: #b78626;
+    color: #fff;
+}
+
+.content .left .menu-item .menu-name{
+    float: left;
+    width: 335px;
+    height: 50px;
+    font-size: 14px;
+    color: #a9a9a9;
+    text-align: center;
+    font-weight: bolder;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.content .left .menu-item .onlymenu-name{
+    color:#FFFFFF;
+    background-color:#f7b128;
+}
+
+
+.content .left .menu-item .arrow{
+    float: left;
+    margin-left: -50px;
+    width: 50px;
+    height: 120px;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #f1f1f1;
+    text-align: center;
+    line-height: 120px;
+
+}
+.onlymenu-arrow{
+    background-color:  #b78626;
+}
+.content .left .line{
+    float: left;
+    width: 230px;
+    height: 2px;
+    border-bottom: 2px solid #a9a9a9;
+    margin: 1px 0 1px 54px;
+}
+.content .right{
+    float: left;
+    width: 943px;
+    height: 786px;
+}
+
+.content .right .main{
+    float: left;
+    width: 772px;
+    height: 516px;
+    margin-left: 171px;
+}
+
+.content .right .main .title{
+    float: left;
+    width: 772px;
+    height: 176px;
+    color: #a9a9a9;
+    font-size: 28px;
+}
+.content .right .main .detail{
+    float: left;
+    width: 772px;
+    height: 292px;
+    font-size: 20px;
+    color: #a9a9a9;
+    line-height: 120%;
+}
+.content .right .main .downloadlist-background{
+    float: left;
+    width: 772px;
+    height: 48px;
+    border-bottom:1px solid #979797;
+}
