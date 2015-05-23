@@ -159,6 +159,7 @@
   float:left;
   background-image: url(../img/index/contact/background.png);
   background-position: right;
+  min-width:1024px;
 }
 
 .country{
@@ -382,3 +383,4 @@
 .time{
   opacity: 0;
 }
+
