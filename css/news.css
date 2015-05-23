@@ -23,67 +23,61 @@
     text-decoration:none;
 }
 
-
-
 .content-wrap {
-    width:0;
-    height:0;
-    position:fixed;
-    left:50%;
-    right:50%;
-
-}
-.content{
-    width: 1280px;
-    height: 787px;
-    margin-left:-640px;
+    float:left;
     margin-top: 100px;
 }
 
-.content .left{
-    float: left;
-    width: 335px;
-    height: 787px;
+.content-wrap .left{
+    position:fixed;
+    width: 300px;
+    height: 400px;
     background-color: #f1f1f1;
+    margin-left:20px;
 }
-.content .left .menu-item{
+.content-wrap .left .menu-item{
     float: left;
-    width: 335px;
-    height: 50px;
+    width: 240px;
     cursor: pointer;
-
-    /*    background-color: #f7b128;*/
+    margin:30px 0 0 20px;
+    padding-bottom: 10px;
+    padding-top:10px;
+    border-bottom:1px solid #f7b128;
 }
-.content .left #menu-l1{
+
+.content-wrap .left .menu-item:hover{
+    color:#FFF;
     background-color: #f7b128;
 }
-.content .left #menu-l1 .menu-name{
-    color: #fff;
+.content-wrap .left #menu-l1{
+    background-color: #f7b128;
 }
-.content .left #menu-l1 .arrow{
+.content-wrap .left #menu-l1 .menu-name{
+    color: #fff;
+
+}
+.content-wrap .left #menu-l1 .arrow{
     background-color: #b78626;
     color: #fff;
 }
 
-.content .left .menu-item .menu-name{
+.content-wrap .left .menu-item .menu-name{
     float: left;
-    width: 335px;
-    height: 50px;
+    width: 240px;
     font-size: 14px;
-    color: #a9a9a9;
     text-align: center;
     font-weight: bolder;
     text-overflow:ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
-.content .left .menu-item .onlymenu-name{
+.content-wrap .left .menu-item .onlymenu-name{
     color:#FFFFFF;
     background-color:#f7b128;
 }
 
 
-.content .left .menu-item .arrow{
+.content-wrap .left .menu-item .arrow{
     float: left;
     margin-left: -50px;
     width: 50px;
@@ -98,44 +92,59 @@
 .onlymenu-arrow{
     background-color:  #b78626;
 }
-.content .left .line{
+.content-wrap .left .line{
     float: left;
     width: 230px;
     height: 2px;
     border-bottom: 2px solid #a9a9a9;
     margin: 1px 0 1px 54px;
 }
-.content .right{
+.content-wrap .right{
     float: left;
-    width: 943px;
-    height: 786px;
+    margin-left: 350px;
 }
 
-.content .right .main{
+.content-wrap .right .main{
     float: left;
-    width: 772px;
-    height: 516px;
-    margin-left: 171px;
 }
 
-.content .right .main .title{
+.content-wrap .right .main .title{
     float: left;
-    width: 772px;
-    height: 176px;
+    line-height: 150px;
     color: #a9a9a9;
     font-size: 28px;
 }
-.content .right .main .detail{
+.content-wrap .right .main .detail{
     float: left;
-    width: 772px;
-    height: 292px;
     font-size: 20px;
     color: #a9a9a9;
     line-height: 120%;
 }
-.content .right .main .downloadlist-background{
+.content-wrap .right .main .downloadlist-background{
     float: left;
     width: 772px;
     height: 48px;
     border-bottom:1px solid #979797;
+}
+
+.news-pic{
+    float:left;
+}
+
+.title{
+    margin-left: 20px;
+}
+
+.menu-name a{
+    color:#000;
+    text-decoration: none;
+}
+
+.menu-name>a:hover{
+    color:#FFF;
+    text-decoration: none;
+}
+
+.content-wrap .left .menu-item:hover{
+    background-color: #f7b128;
 }
