@@ -125,15 +125,16 @@
   width:500px;
   height:230px;
   position:relative;
-  left:50%;
+  left:10%;
+  top:100px;
 }
 
 .house{
   background-image: url(../img/index/house.png);
-  width:455px;
-  height:365px;
+  width:401px;
+  height:294px;
   position:relative;
-  left:50%;
+  left:40%;
   margin-left:-227px;
 }
 
@@ -144,7 +145,7 @@
   height:783px;
   margin-left:-391px;
   position:relative;
-  left:50%;
+  left:40%;
   top:-200px;
 }
 
