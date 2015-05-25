@@ -148,6 +148,22 @@
   top:-200px;
 }
 
+.clock .morning{
+  font-size : 24px;
+}
+
+.clock .afternoon{
+  font-size : 24px;
+}
+
+.clock .evening{
+  font-size : 24px;
+}
+
+.clock .ups{
+  font-size : 24px;
+}
+
 
 .running-clock{
   -webkit-animation: clockrotate 10s ease infinite ;
@@ -384,3 +400,6 @@
   opacity: 0;
 }
 
+.new{
+  cursor:pointer;
+}

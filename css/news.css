@@ -110,9 +110,10 @@
 
 .content-wrap .right .main .title{
     float: left;
-    line-height: 150px;
+    line-height: 100px;
     color: #a9a9a9;
     font-size: 28px;
+    width:70%;
 }
 .content-wrap .right .main .detail{
     float: left;
