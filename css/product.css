@@ -157,37 +157,41 @@
 .left-feature .image-feature{
     margin-top:50px;
     float:right;
-    width:300px;
+    width:280px;
 }
 
 .right-feature .image-feature{
     margin-top:50px;
     float:left;
-    width:300px;
+    width:310px;
 }
 
 .left-feature .image-feature-title{
     float:right;
     font-size:24px;
     margin-right:20px;
+    margin-top:20px;
 }
 
 .left-feature .image-feature-sub-title {
     float: right;
     font-size:14px;
     margin-right:20px;
+    margin-top:10px;
 }
 
 .right-feature .image-feature-title{
     float:left;
     font-size:24px;
     margin-left:20px;
+    margin-top:20px;
 }
 
 .right-feature .image-feature-sub-title {
     float: left;
     font-size:14px;
     margin-left:20px;
+    margin-top:10px;
 }
 
 .sub-title-wrapper{
