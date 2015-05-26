@@ -404,3 +404,18 @@
 .new{
   cursor:pointer;
 }
+
+.smile-content{
+  float:left;
+  height:350px;
+  width:100%;
+  background-color: #8aa05c;
+}
+
+.smile{
+  margin:0 auto;
+  margin-top:20px;
+  width:437px;
+  height:310px;
+  background-image: url(../img/index/smile.png);
+}
