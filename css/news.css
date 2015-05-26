@@ -1,3 +1,10 @@
+body{
+    background-color: #f3f3f3;
+    height:100%;
+    font-size:14px;
+    color:#333;
+    overflow:hidden;
+}
 .head{
     background-repeat:repeat-x;
     background-size: 100%;
@@ -24,71 +31,45 @@
 }
 
 .content-wrap {
-    float:left;
+    width:990px;
+    position:relative;
+    margin:0px auto;
     margin-top: 100px;
 }
 
 .content-wrap .left{
-    position:fixed;
-    width: 300px;
-    height: 400px;
-    background-color: #f1f1f1;
-    margin-left:20px;
+    width: 250px;
+    margin-right:10px;
+    float:left;
+    position:relative;
 }
-.content-wrap .left .menu-item{
+.content-wrap .left li{
     float: left;
-    width: 240px;
     cursor: pointer;
-    margin:30px 0 0 20px;
-    padding-bottom: 10px;
     padding-top:10px;
-    border-bottom:1px solid #f7b128;
-}
-
-.content-wrap .left .menu-item:hover{
-    color:#FFF;
-    background-color: #f7b128;
-}
-.content-wrap .left #menu-l1{
-    background-color: #f7b128;
-}
-.content-wrap .left #menu-l1 .menu-name{
-    color: #fff;
-
-}
-.content-wrap .left #menu-l1 .arrow{
-    background-color: #b78626;
-    color: #fff;
-}
-
-.content-wrap .left .menu-item .menu-name{
-    float: left;
-    width: 240px;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bolder;
-    text-overflow:ellipsis;
-    overflow: hidden;
+    width: 200px;
+    color: #333;
+    list-style: inside;
+    text-overflow: ellipsis;
     white-space: nowrap;
+    overflow: hidden;
+    _zoom: 1;
+    font-size: 12px;
+    line-height: 24px;
 }
-.content-wrap .left .menu-item .onlymenu-name{
-    color:#FFFFFF;
-    background-color:#f7b128;
+.content-wrap .left li a{
+    width: 180px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #333;
+    outline: 0;
+    text-decoration: none;
 }
 
-
-.content-wrap .left .menu-item .arrow{
-    float: left;
-    margin-left: -50px;
-    width: 50px;
-    height: 120px;
-    font-size: 32px;
-    font-weight: bolder;
-    color: #f1f1f1;
-    text-align: center;
-    line-height: 120px;
-
+.content-wrap .left li a:hover{
+    color:#f7b128;
 }
+
 .onlymenu-arrow{
     background-color:  #b78626;
 }
@@ -100,25 +81,45 @@
     margin: 1px 0 1px 54px;
 }
 .content-wrap .right{
-    float: left;
-    margin-left: 350px;
+    float: right;
+    position:relative;
+    width:728px;
+    background-color:#fff;
+    border: 1px solid #e6e6e6;
 }
 
 .content-wrap .right .main{
-    float: left;
+    width: 655px;
+    margin: 20px auto 0;
+    position: relative;
 }
 
 .content-wrap .right .main .title{
-    float: left;
-    line-height: 100px;
-    color: #a9a9a9;
-    font-size: 28px;
-    width:70%;
+    line-height: 29px;
+    overflow: hidden;
+    height: 63px;
+    padding-top: 23px;
+    width: 527px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #333;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: normal;
 }
+
+.post-info{
+    font-size: 12px;
+    color: #8c8c8c;
+    line-height: 14px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
 .content-wrap .right .main .detail{
     float: left;
-    font-size: 20px;
-    color: #a9a9a9;
+    font-size: 14px;
+    color: #333;
     line-height: 120%;
 }
 .content-wrap .right .main .downloadlist-background{
@@ -130,10 +131,6 @@
 
 .news-pic{
     float:left;
-}
-
-.title{
-    margin-left: 20px;
 }
 
 .menu-name a{
@@ -148,4 +145,29 @@
 
 .content-wrap .left .menu-item:hover{
     background-color: #f7b128;
+}
+
+.company-info{
+    width:250px;
+    border:1px solid #e6e6e6;
+    background-color:#fff;
+    height:200px;
+    margin-bottom: 15px;
+}
+
+.news-list{
+    width:200px;
+    border:1px solid #e6e6e6;
+    background-color:#fff;
+    height:200px;
+    padding: 0 19px 25px 29px
+}
+
+.news-list h3{
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 4px;
+    margin: 16px 0 0 0;
 }
