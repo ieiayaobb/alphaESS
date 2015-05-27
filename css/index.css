@@ -149,13 +149,29 @@
 }
 
 .house{
-  background-image: url(../img/index/house.png);
   width:401px;
   height:294px;
   position:relative;
   left:40%;
   margin-left:-227px;
 }
+
+.morning-house{
+  background-image: url(../img/index/morning-house.png);
+}
+
+.afternoon-house{
+  background-image: url(../img/index/afternoon-house.png);
+}
+
+.evening-house{
+  background-image: url(../img/index/evening-house.png);
+}
+
+.ups-house{
+  background-image: url(../img/index/ups-house.png);
+}
+
 
 .clock{
   float:left;
@@ -186,8 +202,8 @@
 
 
 .running-clock{
-  -webkit-animation: clockrotate 10s ease infinite ;
-  animation: clockrotate 10s ease infinite ;
+  -webkit-animation: clockrotate 20s ease infinite ;
+  animation: clockrotate 20s ease infinite ;
 }
 
 .contact{
@@ -396,8 +412,8 @@
 .period-introduction-wrapper{
   float:left;
   position:relative;
-  left:35%;
-  top:-200px;
+  left:25%;
+  top:-300px;
   width:350px;
 
 }
@@ -409,6 +425,7 @@
 }
 
 .period-title{
+  margin:50px 0 0 50px;
   font-size:18px;
 }
 
@@ -460,4 +477,34 @@
 
 .content-3{
   background-color: #f3f3f3;
+}
+
+.redsun{
+  background-image: url(../img/index/redsun.png);
+  width:74px;
+  height:74px;
+  float:left
+}
+
+.yellowsun{
+  background-image: url(../img/index/yellowsun.png);
+  width:74px;
+  height:74px;
+  float:left
+}
+
+.moon{
+  background-image: url(../img/index/moon.png);
+  width:74px;
+  height: 74px;
+  background-position: center;
+  background-repeat: no-repeat;
+  float:left;
+}
+
+.energy{
+  background-color:#F7B128;
+  width:100px;
+  height:100px;
+  z-index:-1
 }

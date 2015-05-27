@@ -23,6 +23,8 @@
                 }
             });
 
+            var houseArr = [""]
+
             function handleAnimation(current) {
                 clearOtherInterval(current);
                 switch (current) {
@@ -51,7 +53,7 @@
                                 $next = $(".period-introduction").eq(0);
                             }
                             $next.addClass("current-period");
-                        }, 2500);
+                        }, 5000);
                         $(".clock").addClass("running-clock");
                         break;
                     case 3:
@@ -154,21 +156,27 @@
 <div class="content content-2">
     <div class="clock">
     </div>
-    <div class="house"></div>
+    <div class="house">
+
+    </div>
     <div class="period-introduction-wrapper">
         <div class="period-introduction morning-introduction current-period">
+            <div class="yellowsun"></div>
             <div class="period-title morning">Morning</div>
             <div class="period-detail">The energy produced by the PV module is used to optimize self-consuption;the excess energy is used to recharge the batteries.</div>
         </div>
         <div class="period-introduction noon-introduction">
+            <div class="redsun"></div>
             <div class="period-title afternoon">Afternoon</div>
             <div class="period-detail">When the batteries are fully charged and Alpha system already meets your self-consumption requirements, the redundant energy is fed into the pubulic grid.</div>
         </div>
         <div class="period-introduction evening-introduction">
+            <div class="moon"></div>
             <div class="period-title evening">Evening</div>
             <div class="period-detail">Once the sun has set, Alpha system automatically switches to energy from batteries. If the battery capacity or power is insuffcient to meet your consumption requirements, electricity is then obtained from the public grid.</div>
         </div>
         <div class="period-introduction midnight-introduction">
+            <div class="moon"></div>
             <div class="period-title ups">UPS</div>
             <div class="period-detail">When the grid fails, Alpha system can switch to the off-grid mode automatically and supply the loads.</div>
         </div>
