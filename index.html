@@ -23,7 +23,8 @@
                 }
             });
 
-            var houseArr = [""]
+            var houseArr = ["morning-house","afternoon-house","evening-house","ups-house"];
+            var houseIndex = 1;
 
             function handleAnimation(current) {
                 clearOtherInterval(current);
@@ -53,6 +54,21 @@
                                 $next = $(".period-introduction").eq(0);
                             }
                             $next.addClass("current-period");
+
+                            var prevIndex;
+                            if(houseIndex == 0){
+                                prevIndex = 3;
+                            }else{
+                                prevIndex = houseIndex - 1;
+                            }
+
+                            var prev = houseArr[prevIndex];
+                            var now = houseArr[houseIndex];
+                            $(".house").removeClass(prev).addClass(now);
+                            if(houseIndex++ >=3){
+                                houseIndex = 0;
+                            }
+
                         }, 5000);
                         $(".clock").addClass("running-clock");
                         break;
@@ -156,7 +172,7 @@
 <div class="content content-2">
     <div class="clock">
     </div>
-    <div class="house">
+    <div class="house morning-house">
 
     </div>
     <div class="period-introduction-wrapper">

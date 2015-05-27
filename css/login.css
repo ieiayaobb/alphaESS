@@ -6,20 +6,21 @@
     overflow: hidden;
 }
 
-.logo{
-    height: 80px;
-    margin-bottom: 20px;
+.smallsmile{
+    width:198px;
+    height: 133px;
     float:none;
     display:inline-block;
+    background-image: url(../img/login/smallsmile.png);
 }
 
 .logo-wrapper{
-    height:80px;
+    height:133px;
 }
 
 .login-form{
     display: block !important;
-    width: 324px;
+    width: 400px;
     padding-top: 10px;
     position: relative;
     margin:0 auto;
@@ -29,52 +30,90 @@
     text-align: center;
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 0;
     margin-top: -360px;
 }
 
 .input{
-    background: #fff;
-    width: 298px;
-    display: block;
+    background-color:transparent;
+    width: 320px;
     height: 20px;
     line-height: 20px;
     padding: 12px 10px;
-    border: 1px solid #e6e6e6;
+    border: 2px solid rgba(200, 200, 200, 0.2);;
     border-radius: 6px;
-    color: #333;
+    color: #fff;
     font-size: 14px;
     font-weight: bold;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-}
-
-.username{
-    border-radius: 6px 6px 0 0;
+    border-radius: 6px;
+    float:left;
+    margin:0 0 10px 10px;
 }
 
 .password{
-    border-radius: 0 0 6px 6px;
     margin-top: -1px;
 }
 
 .login-btn{
-    margin: 16px 0 0 0;
+    float:left;
+    margin: 0 0 0 55px;
     border: 0 none;
-    background: #ff7a4d;
     color: #fff;
-    border: 1px solid #ff7549;
     cursor: pointer;
     border-radius: 6px;
     display: block;
-    font-size: 16px;
-    height: 44px;
+    font-size: 22px;
+    height: 49px;
     line-height: 44px;
     text-align: center;
-    width: 320px;
+    width: 342px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    background-image: url(../img/login/loginBtn.png);
+    opacity: 0.7;
+}
+
+body{
+    background-image: url(../img/login/background.png);
+    width:100%;
+    height:100%;
+    background-position: center;
+}
+
+.slogan{
+    font-size:48px;
+    color:#f7b128;
+    margin-bottom: 20px;
+}
+
+.username-ico{
+    width:45px;
+    height: 39px;
+    background-image: url(../img/login/username.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display:inline-block;
+    float:left;
+}
+
+.password-ico{
+    width:45px;
+    height: 39px;
+    background-image: url(../img/login/password.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display:inline-block;
+    float:left;
+}
+
+.forgot{
+    float:right;
+    margin-top:10px;
+    font-size: 18px;
+    color:#fff;
 }
