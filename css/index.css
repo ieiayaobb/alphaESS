@@ -240,28 +240,26 @@
   height:1000px;
 }
 
-.new{
-  float:left;
-  width:1020px;
-  margin-top:20px;
-}
-
 .new-title{
   float:left;
-  font-size:24px;
+  font-size:22px;
   margin-left:50px;
   text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;
   width:600px;
+  color:#333;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .new-content{
   float:left;
   width:600px;
-  font-size:18px;
+  font-size:14px;
   margin-left:50px;
   margin-top:30px;
   line-height:30px;
   text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;
+  color:#333;
 }
 
 .new-pic-1{
@@ -418,7 +416,13 @@
 }
 
 .new{
+  float:left;
+  width:1020px;
+  margin-top:20px;
+  padding:20px 20px 20px 20px;
   cursor:pointer;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
 }
 
 .smile-content{
@@ -434,4 +438,8 @@
   width:437px;
   height:310px;
   background-image: url(../img/index/smile.png);
+}
+
+.content-3{
+  background-color: #f3f3f3;
 }

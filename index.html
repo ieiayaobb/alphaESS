@@ -12,7 +12,6 @@
         $(document).ready(function () {
             var current = judge(0);
             var photoSwitchInterval;
-            var newsInterval;
             var featureInterval;
             var contactInterval;
             handleAnimation(current)
@@ -57,14 +56,6 @@
                         break;
                     case 3:
                         console.log("call 3")
-                        newsInterval = setInterval(function () {
-                            console.log("running 3")
-                            var $next = $(".new-active").removeClass("new-active").next(".new");
-                            if ($next.length == 0) {
-                                $next = $(".new").eq(0);
-                            }
-                            $next.addClass("new-active");
-                        }, 3000);
                         break;
                     case 4:
                         console.log("call 4");
@@ -111,7 +102,6 @@
                     $(".clock").removeClass("running-clock");
                 }
                 if (now != 3) {
-                    clearInterval(newsInterval);
                 }
                 if (now != 4) {
                     clearInterval(contactInterval);
@@ -198,7 +188,7 @@
 
 <div class="content content-3">
     <div class="news">
-        <div class="new new-active">
+        <div class="new">
             <img class="new-pic" src="img/index/news/news1.png" width="330" height="250"/>
             <span class="new-title">The Intersolar Europe takes place annually at Munich in Germany and is the world’s leading exhibition for the solar industry and its partners.</span>
 

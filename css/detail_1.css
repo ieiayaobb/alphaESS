@@ -166,9 +166,52 @@ body{
 
 .news-list h3{
     border-bottom: 1px solid #e6e6e6;
-    margin-bottom: 20px;
     font-size: 14px;
     line-height: 26px;
     padding-bottom: 4px;
-    margin: 16px 0 0 0;
+    margin: 16px 0 20px 0;
+}
+
+.detail{
+    width:527px;
+    padding-bottom:30px;
+
+
+
+}
+.detail li{
+    list-style: inside;
+    margin-top:20px;
+}
+
+.downloadlist{
+    height:200px;
+}
+
+.downloadlist .download-link{
+    width: 120px;
+    height: 20px;
+    float: right;
+    background-color: #d8d8d8;
+    color: #fff;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.downloadlist .download-link:hover{
+    background-color: #f7b128;
+    cursor: pointer;
+}
+
+.downloadlist li{
+    float:left;
+    border-bottom: 1px solid #e6e6e6;
+    width:100%;
+    padding-bottom: 10px;
+}
+
+.name{
+    float:left;
 }
