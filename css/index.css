@@ -428,6 +428,7 @@
 .period-title{
   margin:50px 0 0 50px;
   font-size:18px;
+  font-family: Calibri;
 }
 
 .period-detail{
@@ -439,6 +440,7 @@
   background-position: right;
   color:#333;
   padding:10px;
+  font-family: Calibri;
 }
 
 
