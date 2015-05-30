@@ -32,6 +32,29 @@
             var houseArr = ["morning-house","afternoon-house","evening-house","ups-house"];
             var houseIndex = 1;
 
+            function featureFunction(){
+                console.log("running 2")
+                var $next = $(".current-period").removeClass("current-period").next(".period-introduction")
+                if ($next.length == 0) {
+                    $next = $(".period-introduction").eq(0);
+                }
+                $next.addClass("current-period");
+
+                var prevIndex;
+                if(houseIndex == 0){
+                    prevIndex = 3;
+                }else{
+                    prevIndex = houseIndex - 1;
+                }
+
+                var prev = houseArr[prevIndex];
+                var now = houseArr[houseIndex];
+                $(".house").removeClass(prev).addClass(now);
+                if(houseIndex++ >=3){
+                    houseIndex = 0;
+                }
+            }
+
             function handleAnimation(current) {
                 clearOtherInterval(current);
                 switch (current) {
@@ -53,29 +76,7 @@
                         break;
                     case 2:
                         console.log("call 2")
-                        featureInterval = setInterval(function () {
-                            console.log("running 2")
-                            var $next = $(".current-period").removeClass("current-period").next(".period-introduction")
-                            if ($next.length == 0) {
-                                $next = $(".period-introduction").eq(0);
-                            }
-                            $next.addClass("current-period");
-
-                            var prevIndex;
-                            if(houseIndex == 0){
-                                prevIndex = 3;
-                            }else{
-                                prevIndex = houseIndex - 1;
-                            }
-
-                            var prev = houseArr[prevIndex];
-                            var now = houseArr[houseIndex];
-                            $(".house").removeClass(prev).addClass(now);
-                            if(houseIndex++ >=3){
-                                houseIndex = 0;
-                            }
-
-                        }, 5000);
+                        featureInterval = setInterval(featureFunction, 5000);
                         $(".clock").addClass("running-clock");
                         break;
                     case 3:
@@ -96,7 +97,7 @@
                 }
             }
 
-            var content_1 = 700;
+            var content_1 = 500;
             var content_2 = 600;
             var content_3 = 350;
             var content_4 = 700;
@@ -143,6 +144,15 @@
             });
             $(".new").eq(1).click(function () {
                 window.location.href = "news2.html";
+            });
+
+            $(".clock").mouseenter(function(){
+                $(this).removeClass("running-clock");
+                clearInterval(featureInterval);
+            })
+            $(".clock").mouseout(function(){
+                $(this).addClass("running-clock");
+                featureInterval = setInterval(featureFunction, 5000);
             })
         });
     </script>
@@ -289,32 +299,37 @@
             <span class="country-icon country-germany"></span>
             <span class="country-name">Germany</span>
 
-            <p class="country-info">Alpha ESS Europe GmbH
-                Tel. +49 176 -999 2 88 66
-                E-mail.europe@alpha-ess.com
-                www.alpha-ess.de
-                Add. Paul-Ehrlich-Straße 1 bis 1c, 63225 Langen</p>
+            <div class="country-info">
+                <div class="country-company-name">Alpha ESS Europe GmbH</div>
+                <div class="country-company-tel">Tel. +49 176 -999 2 88 66</div>
+                <div class="country-company-email">E-mail.europe@alpha-ess.com</div>
+                <div class="country-company-web">www.alpha-ess.de</div>
+                <div class="country-company-add">Add. Paul-Ehrlich-Straße 1 bis 1c, 63225 Langen</div>
+            </div>
         </div>
         <div class="info-country info-australia">
             <span class="country-icon country-australia"></span>
             <span class="country-name">Australia</span>
 
-            <p class="country-info">ALPHA ESS AUSTRALIA PTY. LTD.
-                Tel. +61-(0)412 953 647
-                www.alpha-ess.com.au
-                Add.UNIT M601 68 MCEVOY ST, ALEXANDRIA NSW 2015,
-                Contact information</p>
+            <div class="country-info">
+                <div class="country-company-name">ALPHA ESS AUSTRALIA PTY. LTD.</div>
+                <div class="country-company-tel">Tel. +61-(0)412 953 647</div>
+                <div class="country-company-web">www.alpha-ess.com.au</div>
+                <div class="country-company-add">Add.UNIT M601 68 MCEVOY ST, ALEXANDRIA NSW 2015</div>
+            </div>
+
         </div>
         <div class="info-country info-china">
             <span class="country-icon country-china"></span>
             <span class="country-name">China</span>
 
-            <p class="country-info">
-                Tel. 0086-(0)512-68287609
-                Fax. 0086-(0)512-68280679
-                E-mail. info@alpha-ess.com
-                www.alpha-ess.com
-                NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou, 215123</p>
+            <div class="country-info">
+                <div class="country-company-fax">Fax. 0086-(0)512-68280679</div>
+                <div class="country-company-tel">Tel. 0086-(0)512-68287609</div>
+                <div class="country-company-email">E-mail. info@alpha-ess.com</div>
+                <div class="country-company-web">www.alpha-ess.com</div>
+                <div class="country-company-add">NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou, 215123</div>
+            </div>
         </div>
     </div>
 </div>

@@ -117,6 +117,17 @@
 						scrollTop : 200 + 1000 * ($(this).index())
 					},500)
 				});
+
+				$(".storion").mouseenter(function(){
+					$(this).animate({
+						top : "-20px"
+					},300);
+				}).mouseout(function(){
+					$(this).animate({
+						top : "0px"
+					},300);
+				});
+
 			});
 		</script>
 	</head>
@@ -129,7 +140,7 @@
 				<li class="menu-button"><a href="company.html">About Us</a></li>
 				<li class="menu-button"><a href="product.html">Products</a></li>
 				<li class="menu-button"><a href="news1.html">News</a></li>
-				<li class="menu-button"><a href="career.html">Contact Us</a></li>
+				<li class="menu-button"><a href="career.html">Career</a></li>
 				<li class="menu-button"><a href="login.html">Log-in</a></li>
 			</ul>
 		</div>
@@ -146,11 +157,11 @@
 			<ul>
 				<li>
 					<span class="menu-normal"></span>
-					<span class="menu-text">Storion</span>
+					<span class="menu-text">Storion Series</span>
 				</li>
 				<li>
 					<span class="menu-normal"></span>
-					<span class="menu-text">Crystal</span>
+					<span class="menu-text">Alpha-Centauri</span>
 				</li>
 				<li>
 					<span class="menu-normal"></span>
@@ -163,7 +174,11 @@
 			</ul>
 		</div>
 		<div class="content content-1">
-			<div class="storion"></div>
+			<div class="title">Storion Series</div>
+			<div class="stuff clearfix">
+				<div class="powerpack"></div>
+				<div class="storion"></div>
+			</div>
 			<div class="feature feature-1">
 				<div class="feature-title"><span>Advanced</span></div>
 				<span class="divide"></span>
@@ -194,6 +209,7 @@
 			<a class="learn-more" href="detail.html">Learn More</a>
 		</div>
 		<div class="content content-2">
+			<div class="title">Alpha-Centauri</div>
 			<div class="crystal"></div>
 			<ul class="left-feature">
 				<li>
