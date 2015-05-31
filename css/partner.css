@@ -111,7 +111,9 @@ body{
     float: left;
     font-size: 14px;
     color: #333;
-    line-height: 120%;
+    margin-bottom: 30px;
+    line-height: 20px;
+    text-indent: 30px;
 }
 .content-wrap .right .main .downloadlist-background{
     float: left;
@@ -162,4 +164,38 @@ body{
     line-height: 26px;
     padding-bottom: 4px;
     margin: 16px 0 0 0;
+}
+
+.partner-logo{
+    float:left;
+}
+
+.logo-lishen{
+    width:186px;
+    height:64px;
+    background-image: url(../img/partners/lishen.png);
+}
+
+.logo-power{
+    width:254px;
+    height:100px;
+    background-image: url(../img/partners/power.png);
+}
+
+.logo-goodwe{
+    width:254px;
+    height:100px;
+    background-image: url(../img/partners/goodwe.png);
+}
+
+.logo-gmde{
+    width:254px;
+    height:100px;
+    background-image: url(../img/partners/gmde.png);
+}
+
+.logo-solr360{
+    width:254px;
+    height:100px;
+    background-image: url(../img/partners/solr360.png);
 }

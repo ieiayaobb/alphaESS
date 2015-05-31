@@ -26,7 +26,7 @@
                 switch (current) {
                     case 1 :
                         console.log("call 1")
-                        $(".feature-title").animate({
+                        $(".content-1 .feature-title").animate({
                             top: '-30px',
                             opacity: 1
                         });
@@ -49,9 +49,9 @@
                         break;
                     case 3:
                         console.log("call 3")
-                        $(".right-mixed").animate({
+                        $(".accessories").animate({
                             opacity: 1,
-                            top: '0px'
+                            top: '200px'
                         }, 500);
                         break;
                     case 4:
@@ -69,20 +69,25 @@
                 }
             }
 
+            var content_1 = 197;
+            var content_2 = 800;
+            var content_3 = 900;
+            var content_4 = 1000;
+
             function judge(current) {
-                if ($(window).scrollTop() >= 197 && $(window).scrollTop() <= 1000 + 197) {
+                if ($(window).scrollTop() >= content_1 && $(window).scrollTop() <= content_1 + content_2) {
                     if (current != 1) {
                         return 1;
                     }
-                } else if ($(window).scrollTop() > 1000 + 197 && $(window).scrollTop() <= 1000 + 197 + 1000) {
+                } else if ($(window).scrollTop() > content_1 + content_2 && $(window).scrollTop() <= content_1 + content_2 + content_3) {
                     if (current != 2) {
                         return 2;
                     }
-                } else if ($(window).scrollTop() > 1000 + 197 + 1000 && $(window).scrollTop() <= 1000 + 197 + 1000 + 1000) {
+                } else if ($(window).scrollTop() > content_1 + content_2 + content_3 && $(window).scrollTop() <= content_1 + content_2 + content_3 + content_4) {
                     if (current != 3) {
                         return 3;
                     }
-                } else if ($(window).scrollTop() > 1000 + 197 + 1000 + 1000) {
+                } else if ($(window).scrollTop() > content_1 + content_2 + content_3 + content_4) {
                     if (current != 4) {
                         return 4;
                     }
@@ -92,13 +97,14 @@
             function clearOtherInterval(now) {
                 if (now != 1) {
 //						clearInterval(photoSwitchInterval);
+                    $(".content-1 .feature-title").css("top", 40).css("opacity", 0);
                 }
                 if (now != 2) {
 //						clearInterval(featureInterval);
                     $(".image-feature").css("left", 0).css("opacity", 0);
                 }
                 if (now != 3) {
-                    $(".right-mixed").css("top", 50).css("opacity", 0);
+                    $(".accessories").css("top", 300).css("opacity", 0);
                 }
                 if (now != 4) {
                     clearInterval(cloudInterval);
@@ -120,11 +126,11 @@
 
             $(".storion").mouseenter(function () {
                 $(this).animate({
-                    top: "-20px"
+                    top: "20px"
                 }, 300);
             }).mouseout(function () {
                 $(this).animate({
-                    top: "0px"
+                    top: "40px"
                 }, 300);
             });
 
@@ -147,6 +153,22 @@
             <li class="menu-button"><a href="career.html">Career</a></li>
             <li class="menu-button"><a href="login.html">Log-in</a></li>
         </ul>
+        <div class="language">
+            <ul>
+                <li class="english">
+                    <span class="lang-ico deu-ico"></span>
+                    <span>Deutsch</span>
+                </li>
+                <li class="germany">
+                    <span class="lang-ico eng-ico"></span>
+                    <span>English</span>
+                </li>
+                <li class="china">
+                    <span class="lang-ico chn-ico"></span>
+                    <span>简体中文</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="navi">
@@ -188,7 +210,9 @@
         <div class="storion"></div>
     </div>
     <div class="feature feature-1">
-        <div class="feature-title"><span>Multi-function</span></div>
+        <div class="feature-title">
+            <span>Multi-function</span>
+        </div>
         <div class="feature-detail">
             <span class="point"></span>
 
@@ -200,7 +224,7 @@
     </div>
     <div class="feature feature-2">
         <div class="feature-title">
-            <span>Powerful</span>
+            <span>Reliability</span>
         </div>
         <div class="feature-detail">
             <span class="point"></span>
@@ -208,6 +232,30 @@
             <p class="feature-detail-content">
                 Via an integrated control system and adaptive logic, the EMS controls and optimizes
             </p>
+        </div>
+        <div class="feature-detail">
+            <span class="point"></span>
+
+            <p class="feature-detail-content">
+                the flow of energy to realize the maximum PV self-consumption rate.
+            </p>
+        </div>
+    </div>
+    <div class="feature feature-3">
+        <div class="feature-title">
+            <span>Compatibility</span>
+        </div>
+        <div class="feature-detail">
+            <span class="point"></span>
+
+            <p class="feature-detail-content">
+                the flow of energy to realize the maximum PV self-consumption rate.
+            </p>
+        </div>
+    </div>
+    <div class="feature feature-4">
+        <div class="feature-title">
+            <span>Safety</span>
         </div>
         <div class="feature-detail">
             <span class="point"></span>
@@ -295,39 +343,39 @@
     </div>
     <div class="left-mixed">
         <div class="feature mixed-feature">
-            <div class="feature-title"><span>Compatibility</span></div>
+            <!--<div class="feature-title"><span>Compatibility</span></div>-->
             <div class="feature-detail">
                 <span class="point"></span>
 
                 <p class="feature-detail-content">
-                    Alpha EMS Controller is the control core of the energy storage system.
+                    Plug & Play
                 </p>
             </div>
             <div class="feature-detail">
                 <span class="point"></span>
 
                 <p class="feature-detail-content">
-                    It provides smart control, intelligent monitoring and expansibility for future applications.
+                    Modular design
                 </p>
             </div>
             <div class="feature-detail">
                 <span class="point"></span>
 
                 <p class="feature-detail-content">
-                    Alpha Hybrid Inverter is the perfect solution for all feed-in and self-use schemes.
+                    Safety
                 </p>
             </div>
             <div class="feature-detail">
                 <span class="point"></span>
 
                 <p class="feature-detail-content">
-                    Not only does this act as a backup during a grid outage but it also optimizes the self-consumption
-                    rate.
+                    20 years lief time
                 </p>
             </div>
         </div>
+        <div class="accessories"></div>
     </div>
-    <div class="right-mixed"></div>
+
     <a class="learn-more" href="detail-3.html">Learn More</a>
 </div>
 <div class="content content-4">
