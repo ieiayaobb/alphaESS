@@ -40,17 +40,17 @@
 }
 
 .divide{
-    width:50%;
-    height:6px;
+    width:300px;
+    height:2px;
     background-image: url(../img/product/divide.png);
     float:left;
     background-position:center;
+    margin-top:10px;
 }
 
 .feature-title{
     color:#7C7C7C;
-    font-size: 36px;
-    width: inherit;
+    font-size: 24px;
     text-align:center;
     position:relative;
     opacity:0;
@@ -59,7 +59,7 @@
 .feature{
     float:left;
     position:relative;
-    width:40%;
+    width:20%;
 }
 
 .feature-detail{
@@ -69,13 +69,11 @@
 .feature-detail-content{
     float:left;
     font-size: 16px;
-    width:50%;
     margin:20px 0 0 20px;
     line-height: 20px;
 }
 .feature-1{
     top:300px;
-    left:5%;
 }
 
 .point{
@@ -84,11 +82,12 @@
     height: 20px;
     margin-top:20px;
     background-image: url(../img/pointer.png);
+    margin-left:-20px;
 }
 
 .feature-2{
     top:100px;
-    left:30%;
+    left:32%;
 }
 
 .crystal{
@@ -152,15 +151,16 @@
 
 .left-feature{
     position:relative;
-    top:100px;
-    left:20%;
-    margin-left:-180px;
+    top:200px;
+    left:30%;
+    margin-left:-600px;
 }
 
 .right-feature{
     position:relative;
-    top:100px;
-    left:65%;
+    top:200px;
+    left:55%;
+    margin-left:-100px;
 }
 
 .left-feature .image-feature-icon{
@@ -172,13 +172,13 @@
 }
 
 .left-feature .image-feature{
-    margin-top:50px;
+    margin-top:60px;
     float:right;
     width:280px;
 }
 
 .right-feature .image-feature{
-    margin-top:50px;
+    margin-top:60px;
     float:left;
     width:310px;
 }
@@ -245,7 +245,6 @@
 .mixed-feature{
     position:relative;
     top:300px;
-    left:30%;
 }
 
 .content-4{
@@ -398,4 +397,17 @@
     margin-top:20px;
     width:100%;
     height:14px;
+}
+
+.title{
+    left:20%;
+    position:relative;
+    text-align: center;
+    float:left;
+    margin-top:20px;
+    z-index:100;
+}
+
+.title h2{
+    font-size:36px;
 }

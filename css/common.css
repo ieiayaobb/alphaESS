@@ -20,16 +20,16 @@ body{
     font-size:24px;
     font-weight:lighter;
     text-align:center;
-    line-height:80px;
 }
 .head-menu>ul{
     display:inline-block;
     margin:auto;
 }
-.head-menu li{
+.head-menu>ul>li{
     float:left;
     display:inline-block;
     padding:0 15px 0 15px;
+    line-height:80px;
 }
 .head-menu a{
     color:#FFF;
@@ -100,4 +100,36 @@ body{
     height:90px;
     background-image: url(../img/product/cloud-menu.png);
     margin-top:50px;
+}
+
+.language{
+    font-size:14px;
+    float:right;
+    color:#fff;
+    margin-right:50px;
+    margin-top:10px;
+}
+
+.lang-ico{
+    width:20px;
+    height:13px;
+    float:left;
+    margin-right:5px;
+}
+
+.deu-ico{
+    background-image: url(../img/geman.png);
+}
+
+.eng-ico{
+    background-image: url(../img/english.png);
+}
+
+.chn-ico{
+    background-image: url(../img/china.png);
+}
+
+.language li{
+    height:20px;
+    cursor:pointer;
 }
