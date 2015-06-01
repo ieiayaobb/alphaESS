@@ -14,7 +14,9 @@
         var limit = 5;
 
         var _1point = 2.5;
-        var _2point = 5;
+        var _2point = 10;
+
+        var testRanges = $("#alpha")[0]
 
         function playToTargetPoint(point){
 
@@ -22,9 +24,17 @@
 
         $(document).ready(function() {
             $("#alpha").attr("height", $(window).height()).height($(window).height());
-            $("#alpha").bind("timeupdate", function(){
-                if($(this)[0].currentTime >= _1point){
-//                    $(this)[0].pause();
+
+            var currentPoint = _1point;
+            var flag = false;
+
+            var $video = $("#alpha")[0];
+//            video.pause();
+            $video.play()
+
+            $("#alpha").bind("timeupdate", function(e){
+                if($video.currentTime >= currentPoint){
+                    $video.pause();
                 }
             });
 
@@ -33,19 +43,24 @@
                 if(count++ > limit){
                     count = 0;
                     console.log("call")
-                    $("#alpha")[0].play()
+
+                    currentPoint = _2point;
+                    if($video.currentTime < currentPoint) {
+                        $video.play();
+                    }
                 }
 
             });
 
             $(window).bind("resize", function(){
                 $("#alpha").attr("height", $(window).height()).height($(window).height());
-            })
+            });
+
         });
     </script>
 </head>
 <body>
-    <video id="alpha" src="Alphaessdemo.mp4" width="1120" height="840" autoplay="autoplay" preload></video>
+    <video id="alpha" src="Alphaessdemo.mp4" width="1120" height="840" preload></video>
     <div class="left-menu">
         <ul>
             <li>
