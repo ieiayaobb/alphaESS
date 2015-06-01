@@ -20,7 +20,7 @@
 
 .login-form{
     display: block !important;
-    width: 400px;
+    width: 330px;
     padding-top: 10px;
     position: relative;
     margin:0 auto;
@@ -37,8 +37,8 @@
 
 .input{
     background-color:transparent;
-    width: 320px;
-    height: 20px;
+    width: 250px;
+    height: 18px;
     line-height: 20px;
     padding: 12px 10px;
     border: 2px solid rgba(200, 200, 200, 0.2);;
@@ -66,11 +66,11 @@
     cursor: pointer;
     border-radius: 6px;
     display: block;
-    font-size: 22px;
-    height: 49px;
+    font-size: 20px;
+    height: 40px;
     line-height: 44px;
     text-align: center;
-    width: 342px;
+    width: 274px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -116,4 +116,5 @@ body{
     margin-top:10px;
     font-size: 18px;
     color:#fff;
+    cursor:pointer;
 }

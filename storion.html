@@ -9,8 +9,62 @@
     <link rel="stylesheet" type="text/css" href="css/storion.css"/>
 
     <script src="js/html5media.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script>
+        var limit = 5;
+
+        var _1point = 2.5;
+        var _2point = 5;
+
+        function playToTargetPoint(point){
+
+        }
+
+        $(document).ready(function() {
+            $("#alpha").attr("height", $(window).height()).height($(window).height());
+            $("#alpha").bind("timeupdate", function(){
+                if($(this)[0].currentTime >= _1point){
+//                    $(this)[0].pause();
+                }
+            });
+
+            var count = 0;
+            $(window).bind("mousewheel", function (e) {
+                if(count++ > limit){
+                    count = 0;
+                    console.log("call")
+                    $("#alpha")[0].play()
+                }
+
+            });
+
+            $(window).bind("resize", function(){
+                $("#alpha").attr("height", $(window).height()).height($(window).height());
+            })
+        });
+    </script>
 </head>
 <body>
-    <video src="Alphaessdemo.mp4" width="1120" height="840" autoplay="autoplay" preload></video>
+    <video id="alpha" src="Alphaessdemo.mp4" width="1120" height="840" autoplay="autoplay" preload></video>
+    <div class="left-menu">
+        <ul>
+            <li>
+                <span class="menu-normal"></span>
+                <span class="menu-text">EMS</span>
+            </li>
+            <li>
+                <span class="menu-normal"></span>
+                <span class="menu-text">Invertor</span>
+            </li>
+            <li>
+                <span class="menu-normal"></span>
+                <span class="menu-text">CableBox</span>
+            </li>
+            <li>
+                <span class="menu-normal"></span>
+                <span class="menu-text">Battery</span>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
