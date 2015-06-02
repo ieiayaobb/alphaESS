@@ -437,16 +437,15 @@
 }
 
 .period-title{
-  margin:50px 0 0 50px;
   font-size:18px;
-  font-family: Calibri;
+  font-family: "Calibri";
+  float:left;
 }
 
 .period-detail{
   width:300px;
   font-size:14px;
   margin:10px 0 10px 0;
-  background-image: url(../img/index/hill1pxback.png);
   background-repeat: repeat-y;
   background-position: right;
   color:#333;

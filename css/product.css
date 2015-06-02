@@ -19,6 +19,7 @@
     width:1000px;
     height:600px;
     margin:0 auto;
+    position:relative;
 }
 
 .storion{
@@ -72,9 +73,8 @@
 }
 
 .feature{
-    float:left;
     position:absolute;
-    width:180px;
+    width:400px;
 }
 
 .feature-detail{
@@ -89,8 +89,8 @@
     line-height: 20px;
 }
 .feature-1{
-    left:15%;
-    top:200px;
+    left:300px;
+    top:100px;
 }
 
 .point{
@@ -102,18 +102,18 @@
 }
 
 .feature-2{
-    top:100px;
-    left:70%;
+    left:400px;
+    top:200px;
 }
 
 .feature-3{
-    top:400px;
-    left:70%;
+    left:500px;
+    top:300px;
 }
 
 .feature-4{
-    top:600px;
-    left:70%;
+    left:600px;
+    top:400px;
 }
 .crystal{
     width:374px;
@@ -425,7 +425,7 @@
 
 .title{
     left:20%;
-    position:relative;
+    position:absolute;
     text-align: center;
     float:left;
     margin-top:20px;
