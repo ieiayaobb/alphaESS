@@ -15,20 +15,20 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            $(".menu-button").hover(function(){
+            $(".menu-button").hover(function () {
                 $(this).animate({
-                    top : 0
-                },200);
+                    top: 0
+                }, 200);
                 $(this).children("a").animate({
-                    top : 30
-                },200);
-            },function(){
+                    top: 30
+                }, 200);
+            }, function () {
                 $(this).animate({
-                    top : -50
-                },200);
+                    top: -50
+                }, 200);
                 $(this).children("a").animate({
-                    top : 50
-                },200);
+                    top: 50
+                }, 200);
             })
 
 
@@ -45,11 +45,11 @@
                 }
             });
 
-            var houseArr = ["morning-house","afternoon-house","evening-house","ups-house"];
-            var timeArr = ["yellowsun","redsun","moon","moon"];
+            var houseArr = ["morning-house", "afternoon-house", "evening-house", "ups-house"];
+            var timeArr = ["yellowsun", "redsun", "moon", "moon"];
             var houseIndex = 1;
 
-            function featureFunction(){
+            function featureFunction() {
                 console.log("running 2")
                 var $next = $(".current-period").removeClass("current-period").next(".period-introduction")
                 if ($next.length == 0) {
@@ -58,9 +58,9 @@
                 $next.addClass("current-period");
 
                 var prevIndex;
-                if(houseIndex == 0){
+                if (houseIndex == 0) {
                     prevIndex = 3;
-                }else{
+                } else {
                     prevIndex = houseIndex - 1;
                 }
 
@@ -74,7 +74,7 @@
 
                 $(".house").removeClass(prev).addClass(now);
                 $(".time-ico").removeClass(prevIco).addClass(nowIco);
-                if(houseIndex++ >=3){
+                if (houseIndex++ >= 3) {
                     houseIndex = 0;
                 }
             }
@@ -170,11 +170,11 @@
                 window.location.href = "news2.html";
             });
 
-            $(".clock").mouseenter(function(){
+            $(".clock").mouseenter(function () {
                 $(this).removeClass("running-clock");
                 clearInterval(featureInterval);
             })
-            $(".clock").mouseout(function(){
+            $(".clock").mouseout(function () {
                 $(this).addClass("running-clock");
                 featureInterval = setInterval(featureFunction, 5000);
             })
@@ -206,30 +206,46 @@
         <div class="period-introduction-wrapper">
             <div class="period-introduction morning-introduction current-period">
                 <div class="feature-link"></div>
-                <div class="period-title morning">Morning</div>
-                <div class="period-detail">The energy produced by the PV module is used to optimize self-consumption; the surplus energy will be used to recharge the batteries.
+                <div class="period">
+                    <div class="period-title morning">Morning</div>
+                    <div class="period-detail">The energy produced by the PV module is used to optimize
+                        self-consumption; the surplus energy will be used to recharge the batteries.
+                    </div>
                 </div>
             </div>
             <div class="period-introduction noon-introduction">
                 <div class="feature-link"></div>
-                <div class="period-title afternoon">Afternoon</div>
-                <div class="period-detail">When the batteries are fully charged and Alpha system already meets your self-consumption requirements, the surplus energy will be fed into public grid.</div>
+                <div class="period">
+                    <div class="period-title afternoon">Afternoon</div>
+                    <div class="period-detail">When the batteries are fully charged and Alpha system already meets your
+                        self-consumption requirements, the surplus energy will be fed into public grid.
+                    </div>
+                </div>
             </div>
             <div class="period-introduction evening-introduction">
                 <div class="feature-link"></div>
-                <div class="period-title evening">Evening</div>
-                <div class="period-detail">Once the sun sets, Alpha system will automatically switch to battery-stored energy. If the battery capacity or power is insufficient to meet your consumption requirements, electricity will then be obtained from public grid.</div>
+                <div class="period">
+                    <div class="period-title evening">Evening</div>
+                    <div class="period-detail">Once the sun sets, Alpha system will automatically switch to
+                        battery-stored energy. If the battery capacity or power is insufficient to meet your consumption
+                        requirements, electricity will then be obtained from public grid.
+                    </div>
+                </div>
             </div>
             <div class="period-introduction midnight-introduction">
                 <div class="feature-link"></div>
-                <div class="period-title ups">UPS</div>
-                <div class="period-detail">When the grid fails, Alpha system can switch to off-grid mode automatically and supply the loads.</div>
+                <div class="period">
+                    <div class="period-title ups">UPS</div>
+                    <div class="period-detail">When the grid fails, Alpha system can switch to off-grid mode
+                        automatically and supply the loads.
+                    </div>
+                </div>
             </div>
         </div>
         <div class="hill-introduction">
             <p>The Graphs are showing the electricity produced
                 during the day and used in the home,with the excess
-                electricity  channelled  into  the  battery storage unit
+                electricity channelled into the battery storage unit
                 which is then stored for later use when the sun is not
                 shining
             </p>
@@ -259,7 +275,7 @@
 </div>
 
 <!--<div class="content smile-content clearfix">-->
-    <!--<div class="smile"></div>-->
+<!--<div class="smile"></div>-->
 <!--</div>-->
 
 <div class="content content-3 clearfix">
@@ -298,15 +314,30 @@
                 <span class="country-name">China</span>
 
                 <ul class="country-info">
+                    <li class="country-company-name">Alpha Energy Storage Solution Co., Ltd.</li>
                     <li class="country-company-fax">Fax. 0086-(0)512-68280679</li>
                     <li class="country-company-tel">Tel. 0086-(0)512-68287609</li>
                     <li class="country-company-email">E-mail. info@alpha-ess.com</li>
                     <li class="country-company-web">www.alpha-ess.com</li>
-                    <li class="country-company-add">NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou, 215123</li>
+                    <li class="country-company-add">NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou,
+                        215123
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+<div class="public">
+    <div class="public-container">
+        <div class="pub-ico f-ico"></div>
+        <div class="pub-ico in-ico"></div>
+        <div class="pub-ico t-ico"></div>
+        <div class="pub-ico g-ico"></div>
+    </div>
+    <div class="copyright">
+        All rights Reserved
+    </div>
+</div>
+
 </body>
 </html>

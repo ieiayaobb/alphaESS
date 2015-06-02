@@ -30,7 +30,7 @@ body{
 
 .content-wrap .left{
     width: 250px;
-    margin-right:10px;
+    margin: 0 50px 0 30px;
     float:left;
     position:relative;
 }
@@ -74,13 +74,13 @@ body{
 .content-wrap .right{
     float: right;
     position:relative;
-    width:728px;
+    width:990px;
     background-color:#fff;
     border: 1px solid #e6e6e6;
 }
 
 .content-wrap .right .main{
-    width: 655px;
+    width: 800px;
     margin: 20px auto 0;
     position: relative;
 }
@@ -139,7 +139,7 @@ body{
 }
 
 .more{
-    width:248px;
+    width:240px;
     border:1px solid #e6e6e6;
     background-color:#fff;
     height:30px;
@@ -150,18 +150,17 @@ body{
     width:200px;
     border:1px solid #e6e6e6;
     background-color:#fff;
-    height:200px;
-    padding: 0 19px 25px 29px;
+    height:340px;
+    padding: 0 20px 25px 20px;
     margin-bottom: 15px;
 }
 
 .news-list h3{
     border-bottom: 1px solid #e6e6e6;
-    margin-bottom: 20px;
     font-size: 14px;
     line-height: 26px;
     padding-bottom: 4px;
-    margin: 16px 0 0 0;
+    margin: 16px 0 20px 0;
 }
 
 .info-head{
@@ -178,4 +177,36 @@ body{
     padding:20px;
     border-bottom: 1px solid #979797;
     margin-bottom:30px;
+}
+
+.pic{
+    float:left;
+    width:200px;
+    height:180px;
+}
+.news1{
+    background-image: url(../img/news/news1.png);
+}
+
+.news2{
+    background-image: url(../img/news/news2.png);
+}
+
+.overview{
+    margin-top:20px;
+    float:left;
+    height:100px;
+    line-height:16px;
+}
+
+.part{
+    float:left;
+    width:380px;
+    padding:10px;
+    line-height: 18px;
+}
+
+.part p{
+    text-indent: 20px;
+    line-height: 20px;
 }

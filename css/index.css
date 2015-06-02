@@ -125,11 +125,11 @@
 
 .hill{
   background-image: url(../img/index/hill.png);
-  width:500px;
-  height:230px;
+  width:400px;
+  height:184px;
   position:absolute;
-  left:200px;
-  top:370px;
+  left:320px;
+  top:416px;
 }
 
 .hill-introduction{
@@ -233,7 +233,7 @@
 .country{
   float:left;
   position:absolute;
-  top:140px;
+  top:180px;
   left:0px;
   width:280px;
 }
@@ -259,7 +259,7 @@
 .info-country{
   float:left;
   width:352px;
-  margin-top:50px;
+  margin-top:10px;
 }
 
 .country-info{
@@ -435,26 +435,32 @@
 
 .period-introduction{
   float:left;
+  width:500px;
+  margin-top:20px;
+  padding:10px;
 }
 
 .period-title{
   font-size:18px;
   font-family: "Calibri";
   float:left;
+  width:100%;
 }
 
 .period-detail{
   width:300px;
   font-size:14px;
-  margin:10px 0 10px 0;
   background-repeat: repeat-y;
   background-position: right;
   color:#333;
-  padding:10px;
+  float:left;
 }
 
 .current-period{
   display:block;
+  background-image: url(../img/index/hill1pxback.png);
+  background-repeat: repeat-y;
+  background-position: left;
 }
 
 .time{
@@ -554,4 +560,9 @@
   width:43px;
   height:51px;
   background-image: url(../img/index/feature-link.png);
+}
+
+.period{
+  float:left;
+  margin-left:10px;
 }

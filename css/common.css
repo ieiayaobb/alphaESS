@@ -176,7 +176,43 @@ body{
     font-size:14px;
 }
 
+.public{
+    width:100%;
+    height:100px;
+    float:left;
+}
+
 .copyright{
-    margin:20px 0 50px 0 ;
-    float:right;
+    margin: 20px auto 0 auto;
+    width:120px;
+}
+
+.pub-ico{
+    width:50px;
+    height:50px;
+    float:left;
+    margin:10px;
+}
+
+.public-container{
+    margin: 20px auto 0 auto;
+    height:70px;
+    width: 280px;
+    cursor: pointer;
+}
+
+.f-ico{
+    background-image: url(../img/public/f.png);
+}
+
+.in-ico{
+    background-image: url(../img/public/in.png);
+}
+
+.t-ico{
+    background-image: url(../img/public/t.png);
+}
+
+.g-ico{
+    background-image: url(../img/public/g.png);
 }
