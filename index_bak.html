@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AlphaESS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen and (min-width: 1400px)">
+    <link rel="stylesheet" type="text/css" href="css/index-small.css" media="screen and (max-width: 1400px)">
+    <style>
+
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            var current = judge(0);
+            var photoSwitchInterval;
+            var featureInterval;
+            var contactInterval;
+            handleAnimation(current)
+            $(window).scroll(function (e) {
+                if (judge(current) != undefined) {
+                    current = judge(current);
+                    handleAnimation(current)
+
+                }
+            });
+
+            var houseArr = ["morning-house","afternoon-house","evening-house","ups-house"];
+            var houseIndex = 1;
+
+            function featureFunction(){
+                console.log("running 2")
+                var $next = $(".current-period").removeClass("current-period").next(".period-introduction")
+                if ($next.length == 0) {
+                    $next = $(".period-introduction").eq(0);
+                }
+                $next.addClass("current-period");
+
+                var prevIndex;
+                if(houseIndex == 0){
+                    prevIndex = 3;
+                }else{
+                    prevIndex = houseIndex - 1;
+                }
+
+                var prev = houseArr[prevIndex];
+                var now = houseArr[houseIndex];
+                $(".house").removeClass(prev).addClass(now);
+                if(houseIndex++ >=3){
+                    houseIndex = 0;
+                }
+            }
+
+            function handleAnimation(current) {
+                clearOtherInterval(current);
+                switch (current) {
+                    case 1 :
+                        console.log("call 1")
+                        photoSwitchInterval = setInterval(function () {
+                            console.log("running 1")
+                            for (var i = 1; i <= 4; i++) {
+                                if (Math.random() > 0.5) {
+                                    $(".photo1_" + i).animate({
+                                        opacity: 1 - $(".photo1_" + i).css("opacity")
+                                    }, 1000);
+                                    $(".photo2_" + i).animate({
+                                        opacity: 1 - $(".photo2_" + i).css("opacity")
+                                    }, 1000);
+                                }
+                            }
+                        }, 3000);
+                        break;
+                    case 2:
+                        console.log("call 2")
+                        featureInterval = setInterval(featureFunction, 5000);
+                        $(".clock").addClass("running-clock");
+                        break;
+                    case 3:
+                        console.log("call 3")
+                        break;
+                    case 4:
+                        console.log("call 4");
+                        var i = 0;
+                        contactInterval = setInterval(function () {
+                            $(".time" + ++i).animate({
+                                opacity: 1
+                            }, 500);
+                            console.log("running 4")
+                        }, 1000);
+                        break;
+                    default :
+
+                }
+            }
+
+            var content_1 = 500;
+            var content_2 = 600;
+            var content_3 = 150;
+            var content_4 = 700;
+
+            function judge(current) {
+                if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= content_1) {
+                    if (current != 1) {
+                        return 1;
+                    }
+                } else if ($(window).scrollTop() > content_1 && $(window).scrollTop() <= content_1 + content_2 + content_3) {
+                    if (current != 2) {
+                        return 2;
+                    }
+                } else if ($(window).scrollTop() > content_1 + content_2 + content_3 && $(window).scrollTop() <= content_1 + content_2 + content_3 + content_4) {
+                    if (current != 3) {
+                        return 3;
+                    }
+                } else if ($(window).scrollTop() > content_1 + content_2 + content_3 + content_4) {
+                    if (current != 4) {
+                        return 4;
+                    }
+                }
+            }
+
+
+            function clearOtherInterval(now) {
+                if (now != 1) {
+                    clearInterval(photoSwitchInterval);
+                }
+                if (now != 2) {
+                    clearInterval(featureInterval);
+                    $(".clock").removeClass("running-clock");
+                }
+                if (now != 3) {
+                }
+                if (now != 4) {
+                    clearInterval(contactInterval);
+                    $(".time").css("opacity", 0);
+                }
+            }
+
+            $(".new").eq(0).click(function () {
+                window.location.href = "news1.html";
+            });
+            $(".new").eq(1).click(function () {
+                window.location.href = "news2.html";
+            });
+
+            $(".clock").mouseenter(function(){
+                $(this).removeClass("running-clock");
+                clearInterval(featureInterval);
+            })
+            $(".clock").mouseout(function(){
+                $(this).addClass("running-clock");
+                featureInterval = setInterval(featureFunction, 5000);
+            })
+        });
+    </script>
+</head>
+<body>
+<div class="head">
+    <div class="head-menu">
+        <ul>
+            <li><span class="logo"></span></li>
+            <li class="menu-button"><a href="index.html">Home</a></li>
+            <li class="menu-button"><a href="company.html">About Us</a></li>
+            <li class="menu-button"><a href="product.html">Products</a></li>
+            <li class="menu-button"><a href="news1.html">News</a></li>
+            <li class="menu-button"><a href="career.html">Career</a></li>
+            <li class="menu-button"><a href="login.html">Log-in</a></li>
+        </ul>
+        <div class="language">
+            <ul>
+                <li class="english">
+                    <span class="lang-ico deu-ico"></span>
+                    <span>Deutsch</span>
+                </li>
+                <li class="germany">
+                    <span class="lang-ico eng-ico"></span>
+                    <span>English</span>
+                </li>
+                <li class="china">
+                    <span class="lang-ico chn-ico"></span>
+                    <span>简体中文</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content content-1 clearfix">
+    <div class="slogan">
+        <div>SMARTEN</div>
+        <div>YOUR</div>
+        <div>ENERGY</div>
+    </div>
+    <div class="photo-list photo-list-1">
+        <span class="photo-up photo1 photo1_1"></span>
+        <span class="photo-up photo2 photo1_2"></span>
+        <span class="photo-down photo3 photo1_3"></span>
+        <span class="photo-down photo4 photo1_4"></span>
+    </div>
+    <div class="photo-list photo-list-2">
+        <span class="photo-up photo1 photo2_1"></span>
+        <span class="photo-up photo2 photo2_2"></span>
+        <span class="photo-down photo3 photo2_3"></span>
+        <span class="photo-down photo4 photo2_4"></span>
+    </div>
+</div>
+<div class="content content-2 clearfix">
+    <div class="clock">
+    </div>
+    <div class="house morning-house">
+
+    </div>
+    <div class="period-introduction-wrapper">
+        <div class="period-introduction morning-introduction current-period">
+            <div class="yellowsun"></div>
+            <div class="period-title morning">Morning</div>
+            <div class="period-detail">The energy produced by the PV module is used to optimize self-consumption; the surplus energy will be used to recharge the batteries.
+            </div>
+        </div>
+        <div class="period-introduction noon-introduction">
+            <div class="redsun"></div>
+            <div class="period-title afternoon">Afternoon</div>
+            <div class="period-detail">When the batteries are fully charged and Alpha system already meets your self-consumption requirements, the surplus energy will be fed into public grid.</div>
+        </div>
+        <div class="period-introduction evening-introduction">
+            <div class="moon"></div>
+            <div class="period-title evening">Evening</div>
+            <div class="period-detail">Once the sun sets, Alpha system will automatically switch to battery-stored energy. If the battery capacity or power is insufficient to meet your consumption requirements, electricity will then be obtained from public grid.</div>
+        </div>
+        <div class="period-introduction midnight-introduction">
+            <div class="moon"></div>
+            <div class="period-title ups">UPS</div>
+            <div class="period-detail">When the grid fails, Alpha system can switch to off-grid mode automatically and supply the loads.</div>
+        </div>
+    </div>
+    <div class="hill-introduction">
+        <p>The Graphs are showing the electricity produced
+            during the day and used in the home,with the excess
+            electricity  channelled  into  the  battery storage unit
+            which is then stored for later use when the sun is not
+            shining
+        </p>
+    </div>
+    <div class="hill">
+
+    </div>
+</div>
+
+<!--<div class="content smile-content clearfix">-->
+    <!--<div class="smile"></div>-->
+<!--</div>-->
+
+<div class="content content-3 clearfix">
+    <div class="news">
+        <div class="new">
+            <div class="new-pic new-pic-1"></div>
+            <span class="new-title">The Intersolar Europe takes place annually at Munich in Germany and is the world’s leading exhibition for the solar industry and its partners.</span>
+
+            <p class="new-content">In 2014, 1,082 international exhibitors and 42,380 trade visitors attended the
+                Intersolar Europe. The exhibition focuses on the areas of photovoltaics, PV production technologies,
+                energy storage systems and renewable heating. Since its founding, it has become the most important
+                industry platform for the solar industry. In 2014, more than 1,100 attendees and ...</p>
+        </div>
+        <div class="new">
+            <div class="new-pic new-pic-2"></div>
+            <span class="new-title">Alpha ESS Welcomes TESLA to the industry</span>
+
+            <p class="new-content">Thanks to Tesla’s unveiling of the Tesla PowerWall this week the spotlight has been
+                firmly place onto the domestic energy storage industry. Back from exhibiting our own Energy Storage
+                Systems at [insert exhibition name] it is refreshing to see that AlphaESS’s vision for the future of
+                domestic power is mimicked in a wider audience.</p>
+        </div>
+    </div>
+</div>
+
+<div class="content contact clearfix">
+    <div class="timeline">
+        <div class="time time4">
+
+            <div class="product-list">
+                <div class="product-icon storion-icon"></div>
+                <div class="product-icon battery-icon"></div>
+                <div class="product-icon battery-box-icon"></div>
+                <div class="product-icon invertor-icon"></div>
+            </div>
+            <!--<div class="time-introduction"><span>EMS</span></div>-->
+        </div>
+        <div class="time time3">
+
+            <div class="product-list">
+                <div class="product-icon storion-icon"></div>
+                <div class="product-icon battery-icon"></div>
+            </div>
+            <!--<div class="time-introduction"><span>Integrated Solution</span></div>-->
+        </div>
+        <div class="time time2">
+
+            <div class="product-list">
+                <div class="product-icon battery-box-icon"></div>
+            </div>
+            <!--<div class="time-introduction"><span>Single Product</span></div>-->
+        </div>
+        <div class="time time1">
+
+            <div class="product-list">
+                <div class="product-icon invertor-icon"></div>
+            </div>
+            <!--<div class="time-introduction"><span>Experimental Product</span></div>-->
+        </div>
+    </div>
+    <div class="country">
+        <div class="info-country info-german">
+            <span class="country-icon country-germany"></span>
+            <span class="country-name">Germany</span>
+
+            <ul class="country-info">
+                <li class="country-company-name">Alpha ESS Europe GmbH</li>
+                <li class="country-company-tel">Tel. +49 176 -999 2 88 66</li>
+                <li class="country-company-email">E-mail.europe@alpha-ess.com</li>
+                <li class="country-company-web">www.alpha-ess.de</li>
+                <li class="country-company-add">Add. Paul-Ehrlich-Straße 1 bis 1c, 63225 Langen</li>
+            </ul>
+        </div>
+        <div class="info-country info-australia">
+            <span class="country-icon country-australia"></span>
+            <span class="country-name">Australia</span>
+
+            <ul class="country-info">
+                <li class="country-company-name">ALPHA ESS AUSTRALIA PTY. LTD.</li>
+                <li class="country-company-tel">Tel. +61-(0)412 953 647</li>
+                <li class="country-company-web">www.alpha-ess.com.au</li>
+                <li class="country-company-add">Add.UNIT M601 68 MCEVOY ST, ALEXANDRIA NSW 2015</li>
+            </ul>
+
+        </div>
+        <div class="info-country info-china">
+            <span class="country-icon country-china"></span>
+            <span class="country-name">China</span>
+
+            <ul class="country-info">
+                <li class="country-company-fax">Fax. 0086-(0)512-68280679</li>
+                <li class="country-company-tel">Tel. 0086-(0)512-68287609</li>
+                <li class="country-company-email">E-mail. info@alpha-ess.com</li>
+                <li class="country-company-web">www.alpha-ess.com</li>
+                <li class="country-company-add">NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou, 215123</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content contact-map">
+    <div class="map clearfix">
+        <div class="map-link clearfix">
+            <div class="map-detail">
+                <div class="map-title">Home</div>
+                <div class="b2code"></div>
+            </div>
+            <div class="map-detail">
+                <div class="map-title">About Us</div>
+                <ul>
+                    <li>Company Introduction</li>
+                    <li>Cooperation Partners</li>
+                </ul>
+            </div>
+            <div class="map-detail">
+                <div class="map-title">Products</div>
+            </div>
+            <div class="map-detail">
+                <div class="map-title">News</div>
+            </div>
+            <div class="map-detail">
+                <div class="map-title">Career</div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <span class="copyright-info"> ©2014-2017 Alpha Energy Storage Solution</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
