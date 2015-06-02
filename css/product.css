@@ -64,33 +64,30 @@
 .feature-title{
     color:#7C7C7C;
     font-size: 24px;
-    text-align:center;
     position:relative;
+    float:left;
+    width:120px;
 }
 
-.content-1 .feature-title{
-    opacity:0;
+.feature-title-content{
+    float:left;
+    width:200px;
 }
 
 .feature{
     position:absolute;
-    width:400px;
+    width:420px;
 }
 
 .feature-detail{
     float:left;
-    margin-top:20px;
 }
 
 .feature-detail-content{
     float:left;
     font-size: 16px;
-    margin:0 0 0 20px;
     line-height: 20px;
-}
-.feature-1{
-    left:300px;
-    top:100px;
+    width:300px;
 }
 
 .point{
@@ -101,42 +98,65 @@
     margin-left:-20px;
 }
 
+.feature-1{
+    left:320px;
+    top:80px;
+}
+
 .feature-2{
-    left:400px;
+    left:440px;
     top:200px;
 }
 
 .feature-3{
-    left:500px;
-    top:300px;
+    left:560px;
+    top:320px;
 }
 
 .feature-4{
-    left:600px;
-    top:400px;
+    left:680px;
+    top:440px;
 }
+
 .crystal{
     width:374px;
     height:640px;
     background-image: url(../img/product/crystal.png);
     float:left;
-    margin: auto;
     position:absolute;
-    left:50%;
-    margin-left:-187px;
-    margin-top:50px;
+    left:300px;
 }
 
 .image-feature{
     float:left;
     position:relative;
-    opacity:0;
+    /*opacity:0;*/
 }
 
 .image-feature-icon{
     width:102px;
     height:102px;
+    background-position: center;
+    background-repeat: no-repeat;
+    float:left;
 }
+
+.multifunction-ico{
+    background-image: url(../img/product/multi_color.png);
+}
+
+.reliability-ico{
+    background-image: url(../img/product/reliability_color.png);
+}
+
+.comparatility-ico{
+    background-image: url(../img/product/comparatility.png);
+}
+
+.safety-ico{
+    background-image: url(../img/product/safety_color.png);
+}
+
 .multifunction{
     background-image: url(../img/product/multi.png);
 }
@@ -175,17 +195,15 @@
 }
 
 .left-feature{
-    position:relative;
+    position:absolute;
     top:200px;
-    left:30%;
-    margin-left:-600px;
+    left:0px;
 }
 
 .right-feature{
-    position:relative;
+    position:absolute;
     top:200px;
-    left:55%;
-    margin-left:-100px;
+    left:700px
 }
 
 .left-feature .image-feature-icon{
@@ -424,7 +442,7 @@
 }
 
 .title{
-    left:20%;
+    left:700px;
     position:absolute;
     text-align: center;
     float:left;
@@ -452,4 +470,11 @@
     height:600px;
     background-image: url("../img/product/family.png");
     float:left;
+}
+
+.centauri-storion{
+    width:1000px;
+    height:600px;
+    margin:0 auto;
+    position:relative;
 }

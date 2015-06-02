@@ -10,13 +10,13 @@
     <script>
         $(document).ready(function () {
             var current = judge(0);
-            handleAnimation(current);
+//            handleAnimation(current);
             setSideMenu(current);
             var cloudInterval;
             $(window).scroll(function (e) {
                 if (judge(current) != undefined) {
                     current = judge(current);
-                    handleAnimation(current)
+//                    handleAnimation(current)
                     setSideMenu(current);
                 }
             });
@@ -97,11 +97,11 @@
             function clearOtherInterval(now) {
                 if (now != 1) {
 //						clearInterval(photoSwitchInterval);
-                    $(".content-1 .feature-title").css("top", 40).css("opacity", 0);
+//                    $(".content-1 .feature-title").css("top", 40).css("opacity", 0);
                 }
                 if (now != 2) {
 //						clearInterval(featureInterval);
-                    $(".image-feature").css("left", 0).css("opacity", 0);
+//                    $(".image-feature").css("left", 0).css("opacity", 0);
                 }
                 if (now != 3) {
                     $(".accessories").css("top", 300).css("opacity", 0);
@@ -135,7 +135,6 @@
             });
 
             $(".storion").click(function(){
-                console.log(1)
                 window.location.href = "storion.html";
             })
         });
@@ -172,11 +171,10 @@
         <div class="family"></div>
         <div class="feature feature-1">
             <div class="feature-title">
-                <span>Multi-function</span>
+                <span class="image-feature-icon multifunction-ico"></span>
+                <span class="feature-title-content">Multi-function</span>
             </div>
             <div class="feature-detail">
-                <span class="point"></span>
-
                 <p class="feature-detail-content">
                     The electricity provided by the PV system can power loads directly, while charging
                     the battery. The surplus solar energy can be fed into the grid.
@@ -185,30 +183,21 @@
         </div>
         <div class="feature feature-2">
             <div class="feature-title">
-                <span>Reliability</span>
+                <span class="image-feature-icon reliability-ico"></span>
+                <span class="feature-title-content">Reliability</span>
             </div>
             <div class="feature-detail">
-                <span class="point"></span>
-
                 <p class="feature-detail-content">
                     Via an integrated control system and adaptive logic, the EMS controls and optimizes
-                </p>
-            </div>
-            <div class="feature-detail">
-                <span class="point"></span>
-
-                <p class="feature-detail-content">
-                    the flow of energy to realize the maximum PV self-consumption rate.
                 </p>
             </div>
         </div>
         <div class="feature feature-3">
             <div class="feature-title">
-                <span>Compatibility</span>
+                <span class="image-feature-icon comparatility-ico"></span>
+                <span class="feature-title-content">Compatibility</span>
             </div>
             <div class="feature-detail">
-                <span class="point"></span>
-
                 <p class="feature-detail-content">
                     the flow of energy to realize the maximum PV self-consumption rate.
                 </p>
@@ -216,11 +205,10 @@
         </div>
         <div class="feature feature-4">
             <div class="feature-title">
-                <span>Safety</span>
+                <span class="image-feature-icon safety-ico"></span>
+                <span class="feature-title-content">Safety</span>
             </div>
             <div class="feature-detail">
-                <span class="point"></span>
-
                 <p class="feature-detail-content">
                     the flow of energy to realize the maximum PV self-consumption rate.
                 </p>
@@ -230,73 +218,75 @@
     </div>
 </div>
 <div class="content content-2">
-    <div class="title">
-        <h2>Alpha-Centauri</h2>
-        <span class="divide"></span>
-    </div>
-    <div class="crystal"></div>
-    <ul class="left-feature">
-        <li>
-            <div class="image-feature">
-                <span class="image-feature-icon multifunction"></span>
-                <span class="image-feature-title">Multi-function</span>
-                <span class="image-feature-sub-title">Variety Of Functions</span>
-            </div>
-        </li>
-        <!--<li>-->
-        <!--<div class="image-feature">-->
-        <!--<span class="image-feature-icon comparatility"></span>-->
-        <!--<span class="image-feature-title">Compatibility</span>-->
-        <!--<span class="image-feature-sub-title">Support AC & DC</span>-->
-        <!--</div>-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--<div class="image-feature">-->
-        <!--<span class="image-feature-icon safety"></span>-->
-        <!--<span class="image-feature-title">Safety</span>-->
-        <!--<span class="image-feature-sub-title">Best Quality</span>-->
-        <!--</div>-->
-        <!--</li>-->
-        <li>
-            <div class="image-feature">
-                <span class="image-feature-icon reliability"></span>
-                <span class="image-feature-title">Reliability</span>
-                <span class="image-feature-sub-title">Design In German</span>
-            </div>
-        </li>
-    </ul>
+    <div class="centauri-storion">
+        <div class="title">
+            <h2>Alpha-Centauri</h2>
+            <span class="divide"></span>
+        </div>
+        <div class="crystal"></div>
+        <ul class="left-feature">
+            <li>
+                <div class="image-feature">
+                    <span class="image-feature-icon multifunction"></span>
+                    <span class="image-feature-title">Multi-function</span>
+                    <span class="image-feature-sub-title">Variety Of Functions</span>
+                </div>
+            </li>
+            <!--<li>-->
+            <!--<div class="image-feature">-->
+            <!--<span class="image-feature-icon comparatility"></span>-->
+            <!--<span class="image-feature-title">Compatibility</span>-->
+            <!--<span class="image-feature-sub-title">Support AC & DC</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<div class="image-feature">-->
+            <!--<span class="image-feature-icon safety"></span>-->
+            <!--<span class="image-feature-title">Safety</span>-->
+            <!--<span class="image-feature-sub-title">Best Quality</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <li>
+                <div class="image-feature">
+                    <span class="image-feature-icon reliability"></span>
+                    <span class="image-feature-title">Reliability</span>
+                    <span class="image-feature-sub-title">Design In German</span>
+                </div>
+            </li>
+        </ul>
 
-    <ul class="right-feature">
-        <!--<li>-->
-        <!--<div class="image-feature">-->
-        <!--<span class="image-feature-icon powerful"></span>-->
-        <!--<span class="image-feature-title">Powerful</span>-->
-        <!--<span class="image-feature-sub-title">Both On Hardware & Software</span>-->
-        <!--</div>-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--<div class="image-feature">-->
-        <!--<span class="image-feature-icon advanced"></span>-->
-        <!--<span class="image-feature-title">Advanced</span>-->
-        <!--<span class="image-feature-sub-title">The Latest Version</span>-->
-        <!--</div>-->
-        <!--</li>-->
-        <li>
-            <div class="image-feature">
-                <span class="image-feature-icon extendability"></span>
-                <span class="image-feature-title">Extendability</span>
-                <span class="image-feature-sub-title">Easy To Extend</span>
-            </div>
-        </li>
-        <li>
-            <div class="image-feature">
-                <span class="image-feature-icon economical"></span>
-                <span class="image-feature-title">Economy</span>
-                <span class="image-feature-sub-title">Bring Benefits</span>
-            </div>
-        </li>
-    </ul>
-    <a class="learn-more" href="detail-2.html">Learn More</a>
+        <ul class="right-feature">
+            <!--<li>-->
+            <!--<div class="image-feature">-->
+            <!--<span class="image-feature-icon powerful"></span>-->
+            <!--<span class="image-feature-title">Powerful</span>-->
+            <!--<span class="image-feature-sub-title">Both On Hardware & Software</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<div class="image-feature">-->
+            <!--<span class="image-feature-icon advanced"></span>-->
+            <!--<span class="image-feature-title">Advanced</span>-->
+            <!--<span class="image-feature-sub-title">The Latest Version</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <li>
+                <div class="image-feature">
+                    <span class="image-feature-icon extendability"></span>
+                    <span class="image-feature-title">Extendability</span>
+                    <span class="image-feature-sub-title">Easy To Extend</span>
+                </div>
+            </li>
+            <li>
+                <div class="image-feature">
+                    <span class="image-feature-icon economical"></span>
+                    <span class="image-feature-title">Economy</span>
+                    <span class="image-feature-sub-title">Bring Benefits</span>
+                </div>
+            </li>
+        </ul>
+        <a class="learn-more" href="detail-2.html">Learn More</a>
+    </div>
 </div>
 <div class="content content-3">
     <div class="title">
