@@ -11,7 +11,29 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
+            $(".menu-button").hover(function () {
+                $(this).animate({
+                    top: 0
+                }, 200);
+                $(this).children("a").animate({
+                    top: 30
+                }, 200);
+            }, function () {
+                $(this).animate({
+                    top: -50
+                }, 200);
+                $(this).children("a").animate({
+                    top: 50
+                }, 200);
+            });
 
+            $(document).click(function(e){
+                if($(e.target).hasClass("bread-2")){
+                    $(".about-list").css("visibility","visible").css("top", 30).css("left", 80);
+                }else{
+                    $(".about-list").css("visibility","hidden").css("top", -9999).css("left", -9999);
+                }
+            })
         });
     </script>
 </head>
@@ -19,52 +41,38 @@
 <div class="head">
     <div class="head-menu">
         <ul>
-            <li><span class="logo"></span></li>
             <li class="menu-button"><a href="index.html">Home</a></li>
             <li class="menu-button"><a href="company.html">About Us</a></li>
             <li class="menu-button"><a href="product.html">Products</a></li>
             <li class="menu-button"><a href="news1.html">News</a></li>
-            <li class="menu-button"><a href="career.html">Career</a></li>
+            <li class="menu-button"><a href="career.html">Contacts</a></li>
             <li class="menu-button"><a href="login.html">Log-in</a></li>
         </ul>
-        <div class="language">
-            <ul>
-                <li class="english">
-                    <span class="lang-ico deu-ico"></span>
-                    <span>Deutsch</span>
-                </li>
-                <li class="germany">
-                    <span class="lang-ico eng-ico"></span>
-                    <span>English</span>
-                </li>
-                <li class="china">
-                    <span class="lang-ico chn-ico"></span>
-                    <span>简体中文</span>
-                </li>
-            </ul>
-        </div>
     </div>
 </div>
 <div class="content-wrap clearfix">
-    <div class="left">
-        <div class="company-info">
+    <div class="banner">
 
-        </div>
-        <div class="news-list">
-            <div class="inner-news-list">
-                <h3>Contact us</h3>
-                <ul class="clearfix">
-                    <li>
-                        <a href="company.html">Company Introduction</a>
-                    </li>
-                    <li>
-                        <a href="partner.html">Cooperation Partners</a>
-                    </li>
+    </div>
+    <div class="bread-wrapper">
+        <div class="bread">
+            <a class="bread-node bread-1">Home</a>
+            <span class="arrow"> > </span>
+            <a class="bread-node bread-2">About Us</a>
+            <span class="arrow"> > </span>
+            <a class="bread-node bread-3">Cooperation Partner</a>
+
+            <div class="about-list">
+                <ul>
+                    <li><a href="company.html">Company Introduction</a> </li>
+                    <li><a href="partner.html">Cooperation Partner</a> </li>
                 </ul>
             </div>
         </div>
 
+
     </div>
+
     <div class="right clearfix">
         <div class="main">
             <h1 class="title">

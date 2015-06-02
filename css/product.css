@@ -406,7 +406,7 @@
     position:fixed;
     z-index:9999;
     left:90%;
-    top:40%
+    top:30%
 }
 
 .menu-normal{
@@ -487,10 +487,12 @@
 }
 
 .cloud_all{
-    width:770px;
-    height:600px;
+    width:478px;
+    height:374px;
     background-image: url(../img/product/cloud_all.png);
     position:absolute;
+    top:100px;
+    left:100px;
 }
 
 .content-3{

@@ -5,6 +5,12 @@ body{
     color:#333;
     overflow:hidden;
 }
+.head{
+    background-repeat:repeat-x;
+    background-size: 100%;
+    height:80px;
+    background-color: #525252;
+}
 
 .head-menu>ul{
     display:inline-block;
@@ -24,7 +30,7 @@ body{
 
 .content-wrap .left{
     width: 250px;
-    margin-right:10px;
+    margin: 0 50px 0 30px;
     float:left;
     position:relative;
 }
@@ -66,15 +72,15 @@ body{
     margin: 1px 0 1px 54px;
 }
 .content-wrap .right{
-    float: left;
+    float: right;
     position:relative;
-    width:1000px;
+    width:990px;
     background-color:#fff;
     border: 1px solid #e6e6e6;
 }
 
 .content-wrap .right .main{
-    width: 655px;
+    width: 800px;
     margin: 20px auto 0;
     position: relative;
 }
@@ -105,9 +111,7 @@ body{
     float: left;
     font-size: 14px;
     color: #333;
-    margin-bottom: 30px;
-    line-height: 20px;
-    text-indent: 30px;
+    line-height: 120%;
 }
 .content-wrap .right .main .downloadlist-background{
     float: left;
@@ -135,7 +139,7 @@ body{
 }
 
 .more{
-    width:248px;
+    width:240px;
     border:1px solid #e6e6e6;
     background-color:#fff;
     height:30px;
@@ -146,8 +150,8 @@ body{
     width:200px;
     border:1px solid #e6e6e6;
     background-color:#fff;
-    height:200px;
-    padding: 0 19px 25px 29px;
+    height:340px;
+    padding: 0 20px 25px 20px;
     margin-bottom: 15px;
 }
 
@@ -159,53 +163,50 @@ body{
     margin: 16px 0 20px 0;
 }
 
-.bread-wrapper{
-    background-color: #fff;
-    border: 1px solid #e6e6e6;
-    width:1000px;
+.info-head{
     float:left;
-    margin-bottom:20px;
-    height:40px;
-    position:relative;
-    z-index: 100;
+    width:100%;
 }
 
-.bread-node{
+.info-head>h1{
+    font-size:36px;
+    padding:20px;
+}
+
+.info-head>h2{
+    padding:20px;
+    border-bottom: 1px solid #979797;
+    margin-bottom:30px;
+}
+
+.pic{
     float:left;
-    margin: 12px 10px 0 20px;
-    cursor: pointer;
+    width:200px;
+    height:180px;
+}
+.news1{
+    background-image: url(../img/news/news1.png);
 }
 
-.arrow{
+.news2{
+    background-image: url(../img/news/news2.png);
+}
+
+.overview{
+    margin-top:20px;
     float:left;
-    margin: 12px 10px 0 20px;
+    height:100px;
+    line-height:16px;
 }
 
-.about-list{
-    background-color: #fff;
-    border: 1px solid #e6e6e6;
-    width:160px;
-    height:80px;
-    visibility: hidden;
-    position: absolute;
-    top:-9999px;
-    left:-9999px;
-}
-
-.about-list a{
+.part{
     float:left;
-    margin:10px;
-    color:#333;
+    width:380px;
+    padding:10px;
+    line-height: 18px;
 }
 
-.banner{
-    width:1000px;
-    height: 300px;
-    background-image: url(../img/banner/medal.png);
-    position:relative;
-    z-index: 100;
-}
-
-.bread{
-    position:relative;
+.part p{
+    text-indent: 20px;
+    line-height: 20px;
 }

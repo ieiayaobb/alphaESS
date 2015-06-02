@@ -9,6 +9,27 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
+            $(".menu-button").hover(function () {
+                $(this).animate({
+                    top: 0
+                }, 200);
+                $(this).children("a").animate({
+                    top: 30
+                }, 200);
+            }, function () {
+                $(this).animate({
+                    top: -50
+                }, 200);
+                $(this).children("a").animate({
+                    top: 50
+                }, 200);
+            });
+
+            var content_1 = 0;
+            var content_2 = 600;
+            var content_3 = 600;
+            var content_4 = 600;
+
             var current = judge(0);
 //            handleAnimation(current);
             setSideMenu(current);
@@ -69,25 +90,20 @@
                 }
             }
 
-            var content_1 = 197;
-            var content_2 = 800;
-            var content_3 = 900;
-            var content_4 = 1000;
-
             function judge(current) {
-                if ($(window).scrollTop() >= content_1 && $(window).scrollTop() <= content_1 + content_2) {
+                if ($(window).scrollTop() >= content_1 && $(window).scrollTop() < content_1 + content_2) {
                     if (current != 1) {
                         return 1;
                     }
-                } else if ($(window).scrollTop() > content_1 + content_2 && $(window).scrollTop() <= content_1 + content_2 + content_3) {
+                } else if ($(window).scrollTop() >= content_1 + content_2 && $(window).scrollTop() < content_1 + content_2 + content_3) {
                     if (current != 2) {
                         return 2;
                     }
-                } else if ($(window).scrollTop() > content_1 + content_2 + content_3 && $(window).scrollTop() <= content_1 + content_2 + content_3 + content_4) {
+                } else if ($(window).scrollTop() >= content_1 + content_2 + content_3 && $(window).scrollTop() < content_1 + content_2 + content_3 + content_4) {
                     if (current != 3) {
                         return 3;
                     }
-                } else if ($(window).scrollTop() > content_1 + content_2 + content_3 + content_4) {
+                } else if ($(window).scrollTop() >= content_1 + content_2 + content_3 + content_4) {
                     if (current != 4) {
                         return 4;
                     }
@@ -120,7 +136,7 @@
                 $(".menu-active").removeClass("menu-active");
                 $(this).children(".menu-normal").addClass("menu-active");
                 $("body").animate({
-                    scrollTop: 200 + 1000 * ($(this).index())
+                    scrollTop: 600 * ($(this).index())
                 }, 500)
             });
 
@@ -141,6 +157,18 @@
     </script>
 </head>
 <body>
+<div class="head">
+    <div class="head-menu">
+        <ul>
+            <li class="menu-button"><a href="index.html">Home</a></li>
+            <li class="menu-button"><a href="company.html">About Us</a></li>
+            <li class="menu-button"><a href="product.html">Products</a></li>
+            <li class="menu-button"><a href="newslist.html">News</a></li>
+            <li class="menu-button"><a href="career.html">Contacts</a></li>
+            <li class="menu-button"><a href="login.html">Log-in</a></li>
+        </ul>
+    </div>
+</div>
 <div class="left-menu">
     <ul>
         <li>
