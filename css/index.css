@@ -499,6 +499,14 @@
   margin: 0 auto;
 }
 
+.time-ico{
+  width:74px;
+  height:74px;
+  float:left;
+  position:absolute;
+  left:300px;
+  top:-30px;
+}
 
 .redsun{
   background-image: url(../img/index/redsun.png);

@@ -104,12 +104,12 @@
 }
 
 .feature-2{
-    left:440px;
+    left:460px;
     top:200px;
 }
 
 .feature-3{
-    left:560px;
+    left:580px;
     top:320px;
 }
 
@@ -150,7 +150,7 @@
 }
 
 .comparatility-ico{
-    background-image: url(../img/product/comparatility.png);
+    background-image: url(../img/product/comparatility_color.png);
 }
 
 .safety-ico{
@@ -290,10 +290,10 @@
 }
 
 .content-4{
-    background-image: url(../img/product/cloud-background.png);
-    background-position:center;
+    background-color: #f5f1e3;
+    width:100%;
     position:relative;
-    z-index:10;
+    height:600px;
 }
 
 .cloud{
@@ -485,5 +485,14 @@
 
 .cloud-wrapper{
     width:1000px;
+    height: 600px;
     margin:0 auto;
+}
+
+.cloud_all{
+    width:770px;
+    height:600px;
+    background-image: url(../img/product/cloud_all.png);
+    position:absolute;
+    left:200px;
 }

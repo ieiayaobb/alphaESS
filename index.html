@@ -29,6 +29,7 @@
             });
 
             var houseArr = ["morning-house","afternoon-house","evening-house","ups-house"];
+            var timeArr = ["yellowsun","redsun","moon","moon"];
             var houseIndex = 1;
 
             function featureFunction(){
@@ -48,7 +49,14 @@
 
                 var prev = houseArr[prevIndex];
                 var now = houseArr[houseIndex];
+
+                var prevIco = timeArr[prevIndex];
+                var nowIco = timeArr[houseIndex];
+
+                console.log(prevIco)
+
                 $(".house").removeClass(prev).addClass(now);
+                $(".time-ico").removeClass(prevIco).addClass(nowIco);
                 if(houseIndex++ >=3){
                     houseIndex = 0;
                 }
@@ -75,7 +83,7 @@
                         break;
                     case 2:
                         console.log("call 2")
-//                        featureInterval = setInterval(featureFunction, 5000);
+                        featureInterval = setInterval(featureFunction, 5000);
                         $(".clock").addClass("running-clock");
                         break;
                     case 3:
@@ -176,7 +184,7 @@
         <div class="clock">
         </div>
         <div class="house morning-house">
-
+            <div class="time-ico yellowsun"></div>
         </div>
         <div class="period-introduction-wrapper">
             <div class="period-introduction morning-introduction current-period">
