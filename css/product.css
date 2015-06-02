@@ -496,3 +496,9 @@
     position:absolute;
     left:200px;
 }
+
+.content-accessories{
+    width:1000px;
+    height:600px;
+    margin:0 auto;
+}

@@ -30,7 +30,7 @@ body{
     display:inline-block;
     margin-left:10px;
     position:relative;
-    /*top:-40px;*/
+    top:-50px;
 }
 .head-menu a{
     color:#FFF;
@@ -62,8 +62,9 @@ body{
 
 .menu-button>a{
     margin:0 auto;
-    top:30px;
+    top:50px;
     position:relative;
+    cursor:pointer;
 }
 
 .navi{
