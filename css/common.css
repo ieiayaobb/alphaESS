@@ -11,17 +11,15 @@ body{
 }
 
 .head{
-    height:80px;
-    background-color: rgba(0, 0, 0, 0.68);
     position:fixed;
     width:100%;
     z-index:9999;
     min-width:960px;
 }
 .head-menu{
-    font-size:24px;
+    font-size:14px;
     font-weight:lighter;
-    text-align:center;
+    float:right;
 }
 .head-menu>ul{
     display:inline-block;
@@ -30,8 +28,9 @@ body{
 .head-menu>ul>li{
     float:left;
     display:inline-block;
-    padding:0 15px 0 15px;
-    line-height:80px;
+    margin-left:10px;
+    position:relative;
+    /*top:-40px;*/
 }
 .head-menu a{
     color:#FFF;
@@ -54,9 +53,17 @@ body{
 
 .menu-button{
     cursor:pointer;
+    background-image: url("../img/menu-mask.png");
+    width:70px;
+    height:80px;
+    float:left;
+    text-align: center;
 }
-.menu-button:hover{
-    background-color:#F7B128;
+
+.menu-button>a{
+    margin:0 auto;
+    top:30px;
+    position:relative;
 }
 
 .navi{

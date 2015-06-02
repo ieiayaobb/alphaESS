@@ -75,7 +75,7 @@
                         break;
                     case 2:
                         console.log("call 2")
-                        featureInterval = setInterval(featureFunction, 5000);
+//                        featureInterval = setInterval(featureFunction, 5000);
                         $(".clock").addClass("running-clock");
                         break;
                     case 3:
@@ -157,76 +157,79 @@
     </script>
 </head>
 <body>
-<!--<div class="head">-->
-    <!--<div class="head-menu">-->
-        <!--<ul>-->
-            <!--<li><span class="logo"></span></li>-->
-            <!--<li class="menu-button"><a href="index.html">Home</a></li>-->
-            <!--<li class="menu-button"><a href="company.html">About Us</a></li>-->
-            <!--<li class="menu-button"><a href="product.html">Products</a></li>-->
-            <!--<li class="menu-button"><a href="news1.html">News</a></li>-->
-            <!--<li class="menu-button"><a href="career.html">Career</a></li>-->
-            <!--<li class="menu-button"><a href="login.html">Log-in</a></li>-->
-        <!--</ul>-->
-        <!--<div class="language">-->
-            <!--<ul>-->
-                <!--<li class="english">-->
-                    <!--<span class="lang-ico deu-ico"></span>-->
-                    <!--<span>Deutsch</span>-->
-                <!--</li>-->
-                <!--<li class="germany">-->
-                    <!--<span class="lang-ico eng-ico"></span>-->
-                    <!--<span>English</span>-->
-                <!--</li>-->
-                <!--<li class="china">-->
-                    <!--<span class="lang-ico chn-ico"></span>-->
-                    <!--<span>简体中文</span>-->
-                <!--</li>-->
-            <!--</ul>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+<div class="head">
+    <div class="head-menu">
+        <ul>
+            <li class="menu-button"><a href="index.html">Home</a></li>
+            <li class="menu-button"><a href="company.html">About Us</a></li>
+            <li class="menu-button"><a href="product.html">Products</a></li>
+            <li class="menu-button"><a href="news1.html">News</a></li>
+            <li class="menu-button"><a href="career.html">Contacts</a></li>
+            <li class="menu-button"><a href="login.html">Log-in</a></li>
+        </ul>
+    </div>
+</div>
 <div class="content content-1 clearfix">
 </div>
 <div class="content content-2 clearfix">
-    <div class="clock">
-    </div>
-    <div class="house morning-house">
+    <div class="clock-wrapper">
+        <div class="clock">
+        </div>
+        <div class="house morning-house">
 
-    </div>
-    <div class="period-introduction-wrapper">
-        <div class="period-introduction morning-introduction current-period">
-            <div class="yellowsun"></div>
-            <div class="period-title morning">Morning</div>
-            <div class="period-detail">The energy produced by the PV module is used to optimize self-consumption; the surplus energy will be used to recharge the batteries.
+        </div>
+        <div class="period-introduction-wrapper">
+            <div class="period-introduction morning-introduction current-period">
+                <div class="yellowsun"></div>
+                <div class="period-title morning">Morning</div>
+                <div class="period-detail">The energy produced by the PV module is used to optimize self-consumption; the surplus energy will be used to recharge the batteries.
+                </div>
+            </div>
+            <div class="period-introduction noon-introduction">
+                <div class="redsun"></div>
+                <div class="period-title afternoon">Afternoon</div>
+                <div class="period-detail">When the batteries are fully charged and Alpha system already meets your self-consumption requirements, the surplus energy will be fed into public grid.</div>
+            </div>
+            <div class="period-introduction evening-introduction">
+                <div class="moon"></div>
+                <div class="period-title evening">Evening</div>
+                <div class="period-detail">Once the sun sets, Alpha system will automatically switch to battery-stored energy. If the battery capacity or power is insufficient to meet your consumption requirements, electricity will then be obtained from public grid.</div>
+            </div>
+            <div class="period-introduction midnight-introduction">
+                <div class="moon"></div>
+                <div class="period-title ups">UPS</div>
+                <div class="period-detail">When the grid fails, Alpha system can switch to off-grid mode automatically and supply the loads.</div>
             </div>
         </div>
-        <div class="period-introduction noon-introduction">
-            <div class="redsun"></div>
-            <div class="period-title afternoon">Afternoon</div>
-            <div class="period-detail">When the batteries are fully charged and Alpha system already meets your self-consumption requirements, the surplus energy will be fed into public grid.</div>
+        <div class="hill-introduction">
+            <p>The Graphs are showing the electricity produced
+                during the day and used in the home,with the excess
+                electricity  channelled  into  the  battery storage unit
+                which is then stored for later use when the sun is not
+                shining
+            </p>
         </div>
-        <div class="period-introduction evening-introduction">
-            <div class="moon"></div>
-            <div class="period-title evening">Evening</div>
-            <div class="period-detail">Once the sun sets, Alpha system will automatically switch to battery-stored energy. If the battery capacity or power is insufficient to meet your consumption requirements, electricity will then be obtained from public grid.</div>
+        <div class="hill"></div>
+        <div class="statement">
+            <ul>
+                <li>
+                    <div class="link"></div>
+                    <div class="statement-detail"></div>
+                </li>
+                <li>
+                    <div class="link"></div>
+                    <div class="statement-detail"></div>
+                </li>
+                <li>
+                    <div class="link"></div>
+                    <div class="statement-detail"></div>
+                </li>
+                <li>
+                    <div class="link"></div>
+                    <div class="statement-detail"></div>
+                </li>
+            </ul>
         </div>
-        <div class="period-introduction midnight-introduction">
-            <div class="moon"></div>
-            <div class="period-title ups">UPS</div>
-            <div class="period-detail">When the grid fails, Alpha system can switch to off-grid mode automatically and supply the loads.</div>
-        </div>
-    </div>
-    <div class="hill-introduction">
-        <p>The Graphs are showing the electricity produced
-            during the day and used in the home,with the excess
-            electricity  channelled  into  the  battery storage unit
-            which is then stored for later use when the sun is not
-            shining
-        </p>
-    </div>
-    <div class="hill">
-
     </div>
 </div>
 

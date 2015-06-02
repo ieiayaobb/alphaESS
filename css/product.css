@@ -446,3 +446,10 @@
     top:240px;
     left:-15%;
 }
+
+.family{
+    width:632px;
+    height:600px;
+    background-image: url("../img/product/family.png");
+    float:left;
+}

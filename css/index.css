@@ -1,5 +1,5 @@
 .content{
-  width:1920px;
+  width:100%;
   background-position: center;
   height:600px;
   /*background-size:100;*/
@@ -127,10 +127,9 @@
   background-image: url(../img/index/hill.png);
   width:500px;
   height:230px;
-  position:relative;
-  left:40%;
-  top:55px;
-
+  position:absolute;
+  left:300px;
+  top:350px;
 }
 
 .hill-introduction{
@@ -146,7 +145,6 @@
 .hill-introduction>p{
   text-indent: 20px;
   line-height: 20px;
-
   width:300px;
   font-size:14px;
   margin:10px 0 10px 0;
@@ -161,8 +159,6 @@
   width:401px;
   height:294px;
   position:relative;
-  left:40%;
-  margin-left:-227px;
   background-position:bottom;
 }
 
@@ -186,12 +182,9 @@
 .clock{
   float:left;
   background-image: url(../img/index/clock.png);
-  width:783px;
-  height:783px;
-  margin-left:-391px;
+  width:600px;
+  height:600px;
   position:relative;
-  left:40%;
-  top:-200px;
 }
 
 .clock .morning{
@@ -228,12 +221,15 @@
   background-position: center;
   background-repeat: no-repeat;
   margin:0 auto;
+  width:1000px;
+  position:relative;
 }
 
 .country{
   float:left;
-  position:relative;
-  left:12%;
+  position:absolute;
+  top:140px;
+  left:0px;
   width:280px;
 }
 
@@ -426,17 +422,14 @@
 
 .period-introduction-wrapper{
   float:left;
-  position:relative;
-  left:25%;
-  top:-300px;
+  position:absolute;
   width:350px;
-
+  top:0;
+  left:800px;
 }
 
 .period-introduction{
   float:left;
-  display:none;
-
 }
 
 .period-title{
@@ -530,4 +523,10 @@
 .country-info li{
   line-height: 18px;
   width:300px;
+}
+
+.clock-wrapper{
+  width:1000px;
+  heigth:600px;
+  margin:0 auto;
 }
