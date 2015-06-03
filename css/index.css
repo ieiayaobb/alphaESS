@@ -16,7 +16,6 @@
   position:relative;
   height:600px;
   width:100%;
-  overflow:hidden;
 }
 
 .content-2{
@@ -163,7 +162,7 @@
   position:absolute;
   background-position:bottom;
   left:120px;
-  top:100px;
+  top:140px;
   background-repeat: no-repeat;
 }
 
