@@ -19,8 +19,9 @@ body{
 .left-menu{
     position:fixed;
     z-index:9999;
+    top:40%;
     left:90%;
-    top:40%
+    margin-right:30px;
 }
 
 .left-menu li{
@@ -44,6 +45,13 @@ body{
     font-size: 12px;
     margin:4px 8px 0 0;
     color: #fff;
+}
+
+.menu-active{
+    background-image: url(../img/menu-active.png);
+    width:18px;
+    height:18px;
+    float:right;
 }
 
 .video-wrapper{
