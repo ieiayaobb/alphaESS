@@ -42,8 +42,8 @@
             var returnFlag = false;
 
             var timeUpdateFunc = function(e){
-//                console.log("currentTime : " + video.currentTime)
-//                console.log("targetTime : " + currentPoint)
+                console.log("currentTime : " + video.currentTime)
+                console.log("targetTime : " + currentPoint)
                 if (video.currentTime >= currentPoint && currentPoint != "end") {
                     video.pause();
                     running = false;
