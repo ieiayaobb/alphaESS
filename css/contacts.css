@@ -8,8 +8,6 @@ body{
 .head{
     background-repeat:repeat-x;
     background-size: 100%;
-    height:80px;
-    background-color: #525252;
 }
 
 .head-menu>ul{
@@ -25,7 +23,6 @@ body{
     width:990px;
     position:relative;
     margin:0px auto;
-    margin-top: 100px;
 }
 
 .content-wrap .left{
