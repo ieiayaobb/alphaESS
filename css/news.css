@@ -19,7 +19,6 @@ body{
     width:990px;
     position:relative;
     margin:0px auto;
-    margin-top: 100px;
 }
 
 .content-wrap .left{
@@ -165,6 +164,12 @@ body{
 .info-head>h1{
     font-size:36px;
     padding:20px;
+    color:#333;
+}
+
+.info-head h1 strong{
+    font-size:36px;
+    color:#F7B128
 }
 
 .info-head>h2{

@@ -19,7 +19,6 @@ body{
     width:990px;
     position:relative;
     margin:0px auto;
-    margin-top: 100px;
 }
 
 .content-wrap .left{
@@ -241,4 +240,9 @@ body{
     width:1000px;
     height: 300px;
     background-image: url(../img/banner/boat.png);
+}
+
+.title strong{
+    font-size:36px;
+    color:#F7B128
 }
