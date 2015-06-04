@@ -104,7 +104,7 @@ body{
     float: left;
     font-size: 14px;
     color: #333;
-    line-height: 120%;
+    line-height: 20px;
 }
 .content-wrap .right .main .downloadlist-background{
     float: left;
@@ -151,7 +151,7 @@ body{
 .news-list h3{
     border-bottom: 1px solid #e6e6e6;
     font-size: 14px;
-    line-height: 26px;
+    line-height: 20px;
     padding-bottom: 4px;
     margin: 16px 0 20px 0;
 }
@@ -189,6 +189,14 @@ body{
 
 .news2{
     background-image: url(../img/news/news2.png);
+}
+
+.news4{
+    background-image: url(../img/news/news4.png);
+}
+
+.news5{
+    background-image: url(../img/news/news5.png);
 }
 
 .overview{
