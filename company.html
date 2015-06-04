@@ -25,6 +25,8 @@
                 $(this).children("a").animate({
                     top: 50
                 }, 200);
+            }).click(function(){
+                window.location.href = $(this).children("a").attr("href");
             });
 
             $(document).click(function(e){
