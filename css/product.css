@@ -136,9 +136,9 @@
     /*opacity:0;*/
 }
 
-.image-feature-icon{
-    width:50px;
-    height:50px;
+.image-feature-icon-big{
+    width:103px;
+    height:102px;
     background-position: center;
     background-repeat: no-repeat;
     float:left;
@@ -209,12 +209,12 @@
     left:700px
 }
 
-.left-feature .image-feature-icon{
-    float:right;
-}
-
-.right-feature .image-feature-icon{
+.image-feature-icon{
     float:left;
+    width:50px;
+    height:50px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .left-feature .image-feature{
@@ -460,6 +460,15 @@
     color:#F7B128
 }
 
+.corner{
+    position:absolute;
+    top:0px;
+    left:670px;
+    width:300px;
+    height:478px;
+    background-image: url("../img/product/corner.png");
+}
+
 .accessories{
     width:400px;
     height:298px;
@@ -467,7 +476,7 @@
     float:right;
     position:relative;
     top:200px;
-
+    right:100px;
 }
 
 .family{

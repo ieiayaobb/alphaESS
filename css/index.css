@@ -4,11 +4,15 @@
   height:600px;
   /*background-size:100;*/
   /*height:1000px;*/
-  /*overflow: hidden;*/
+  overflow: hidden;
   position:relative;
+  min-width: 960px;
 }
 
 .content-1{
+  width:100%;
+}
+.first-inner{
   overflow:hidden;
   background-image: url(../img/index/first/first_new.png);
   background-position: center;
@@ -216,7 +220,6 @@
 .content-4{
   background-color: #F6F6F6;
   width:100%;
-  overflow:hidden;
 }
 
 .contact{
@@ -434,7 +437,7 @@
 
 .period-introduction{
   float:left;
-  width:500px;
+  width:330px;
   margin-top:20px;
   padding:10px;
 }
@@ -447,7 +450,7 @@
 }
 
 .period-detail{
-  width:300px;
+  width:200px;
   font-size:14px;
   background-repeat: repeat-y;
   background-position: right;
