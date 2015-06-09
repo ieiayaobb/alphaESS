@@ -161,6 +161,8 @@ body{
 
 .partner-logo{
     float:left;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .logo-lishen{
@@ -191,6 +193,18 @@ body{
     width:254px;
     height:100px;
     background-image: url(../img/partners/solr360.png);
+}
+
+.logo-greenpower{
+    width:186px;
+    height:64px;
+    background-image: url(../img/partners/greenpowerco.png);
+}
+
+.logo-ogps{
+    width:186px;
+    height:64px;
+    background-image: url(../img/partners/ogps.png);
 }
 
 .bread-wrapper{
@@ -245,4 +259,14 @@ body{
 .title strong{
     font-size:36px;
     color:#F7B128
+}
+
+.detail li{
+    padding-bottom:20px;
+    margin-top:20px;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.detail h2{
+    margin:10px 0 10px 0 ;
 }
