@@ -179,7 +179,25 @@
             $(".clock").mouseout(function () {
                 $(this).addClass("running-clock");
                 featureInterval = setInterval(featureFunction, 5000);
-            })
+            });
+
+            var current = 0;
+            setInterval(function(){
+                if(++current < 2){
+                    for(var i = current;i <= 2;i++) {
+                        $(".banner-" + i).animate({
+                            left: (100 * (i - current - 1)) + "%"
+                        },1000);
+                    }
+                }else{
+                    current = 0;
+                    for(var j = 1;j <= 2;j++){
+                        $(".banner-" + j).animate({
+                            left: (100 * (j - 1)) + "%"
+                        },1000);
+                    }
+                }
+            },5000)
         });
     </script>
 </head>
@@ -198,7 +216,8 @@
     </div>
 </div>
 <div class="content content-1 clearfix">
-    <div class="first-inner"></div>
+    <div class="banner banner-1"></div>
+    <div class="banner banner-2"></div>
 </div>
 <div class="content content-2 clearfix">
     <div class="clock-wrapper">
