@@ -70,6 +70,7 @@ body{
     width:1000px;
     background-color:#fff;
     border: 1px solid #e6e6e6;
+    padding-bottom: 30px;
 }
 
 .content-wrap .right .main{
@@ -212,4 +213,17 @@ body{
 
 .bread{
     position:relative;
+}
+
+.pdf-icon{
+    width:20px;
+    height:24px;
+    background-image: url(../img/pdf.png);
+    float:left;
+}
+
+.pdf-content{
+    float:left;
+    cursor: pointer;
+    padding:5px;
 }

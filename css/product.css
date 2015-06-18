@@ -384,25 +384,38 @@
 }
 
 .learn-more{
-    color:#F7B128;
-    font-size:24px;
+    color:#333;
+    font-size:14px;
     text-decoration: underline;
     position:absolute;
+    left : 800px;
+    top : 520px;
+    width : 200px;
 }
 
-.content-1 .learn-more{
-    left:70%;
-    top:800px;
+.learn-more-left{
+    left: 680px;
 }
 
-.content-2 .learn-more{
-    left:50%;
-    top:800px;
+.learn-more-right{
+    left: 850px;
 }
 
-.content-3 .learn-more{
-    left:40%;
-    top:800px;
+.learn-more li{
+    float:left;
+}
+
+.pdf-icon{
+    width:20px;
+    height:24px;
+    background-image: url(../img/pdf.png);
+    float:left;
+}
+
+.pdf-content{
+    float:left;
+    cursor: pointer;
+    padding:5px;
 }
 
 .left-menu{
