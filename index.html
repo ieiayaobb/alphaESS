@@ -15,21 +15,29 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            $(".menu-button").hover(function () {
-                $(this).animate({
-                    top: 0
-                }, 200);
-                $(this).children("a").animate({
-                    top: 30
-                }, 200);
-            }, function () {
-                $(this).animate({
-                    top: -50
-                }, 200);
-                $(this).children("a").animate({
-                    top: 50
-                }, 200);
-            }).click(function(){
+            var boxWidth = $(".head-menu").width();
+            var boxHeight = 80;
+            var winWidth = $(window).width();
+
+            var animation = true;
+
+            console.log("winWidth:" + (winWidth))
+            console.log("winWidth - boxWidth:" + (winWidth - boxWidth))
+            $(".menu-all").mouseenter(function(mee){
+                    $(".menu-button").animate({
+                        top: "0px"
+                    },"normal", function(){
+                        console.log(11)
+                    });
+            }).mouseleave(function(moe){
+                $(".menu-button").animate({
+                    top: "-80px"
+                },"normal", function(){
+                    console.log(11)
+                });
+            })
+
+            $(".menu-button").click(function(){
                 window.location.href = $(this).children("a").attr("href");
             });
 
@@ -86,20 +94,20 @@
                 switch (current) {
                     case 1 :
                         console.log("call 1")
-                        photoSwitchInterval = setInterval(function () {
-                            console.log("running 1")
-                            for (var i = 1; i <= 4; i++) {
-                                if (Math.random() > 0.5) {
-                                    $(".photo1_" + i).animate({
-                                        opacity: 1 - $(".photo1_" + i).css("opacity")
-                                    }, 1000);
-                                    $(".photo2_" + i).animate({
-                                        opacity: 1 - $(".photo2_" + i).css("opacity")
-                                    }, 1000);
-                                }
-                            }
-                        }, 3000);
-                        break;
+//                        photoSwitchInterval = setInterval(function () {
+//                            console.log("running 1")
+//                            for (var i = 1; i <= 4; i++) {
+//                                if (Math.random() > 0.5) {
+//                                    $(".photo1_" + i).animate({
+//                                        opacity: 1 - $(".photo1_" + i).css("opacity")
+//                                    }, 1000);
+//                                    $(".photo2_" + i).animate({
+//                                        opacity: 1 - $(".photo2_" + i).css("opacity")
+//                                    }, 1000);
+//                                }
+//                            }
+//                        }, 3000);
+//                        break;
                     case 2:
                         console.log("call 2")
                         featureInterval = setInterval(featureFunction, 5000);
@@ -165,21 +173,14 @@
                 }
             }
 
-            $(".new").eq(0).click(function () {
-                window.location.href = "news1.html";
-            });
-            $(".new").eq(1).click(function () {
-                window.location.href = "news2.html";
-            });
-
-            $(".clock").mouseenter(function () {
-                $(this).removeClass("running-clock");
-                clearInterval(featureInterval);
-            })
-            $(".clock").mouseout(function () {
-                $(this).addClass("running-clock");
-                featureInterval = setInterval(featureFunction, 5000);
-            });
+//            $(".clock").mouseenter(function () {
+//                $(this).removeClass("running-clock");
+//                clearInterval(featureInterval);
+//            })
+//            $(".clock").mouseout(function () {
+//                $(this).addClass("running-clock");
+//                featureInterval = setInterval(featureFunction, 5000);
+//            });
 
             var current = 0;
             setInterval(function(){
@@ -204,7 +205,7 @@
 <body>
 <div class="head">
     <div class="head-menu">
-        <ul>
+        <ul class="menu-all">
             <li class="menu-button"><a href="index.html">Home</a></li>
             <li class="menu-button"><a href="company.html">About Us</a></li>
             <li class="menu-button"><a href="product.html">Products</a></li>
@@ -310,42 +311,39 @@
         <div class="country">
             <div class="info-country info-german">
                 <!--<span class="country-icon country-germany"></span>-->
-                <span class="country-name">Germany</span>
+                <span class="country-name">GERMANY</span>
 
                 <ul class="country-info">
                     <li class="country-company-name">Alpha ESS Europe GmbH</li>
-                    <li class="country-company-tel">Tel. +49(0)6103 459 160-1</li>
+                    <li class="country-company-tel">Tel. +49 157 770 600 60</li>
                     <li class="country-company-email">E-mail. europe@alpha-ess.de</li>
                     <li class="country-company-web">www.alpha-ess.de</li>
                     <li class="country-company-add">Add. Paul-Ehrlich-Straße 1a, 63225 Langen</li>
                 </ul>
             </div>
-            <div class="info-country info-australia">
-                <!--<span class="country-icon country-australia"></span>-->
-                <span class="country-name">Australia</span>
-
-                <ul class="country-info">
-                    <li class="country-company-name">ALPHA ESS AUSTRALIA PTY. LTD.</li>
-                    <li class="country-company-tel">Tel. +61-(0)412 953 647</li>
-                    <li class="country-company-web">www.alpha-ess.com.au</li>
-                    <li class="country-company-add">Add.UNIT M601 68 MCEVOY ST, ALEXANDRIA NSW 2015</li>
-                </ul>
-
-            </div>
             <div class="info-country info-china">
                 <!--<span class="country-icon country-china"></span>-->
-                <span class="country-name">China</span>
+                <span class="country-name">CHINA</span>
 
                 <ul class="country-info">
                     <li class="country-company-name">Alpha Energy Storage Solution Co., Ltd.</li>
-                    <li class="country-company-fax">Fax. 0086-(0)512-68280679</li>
-                    <li class="country-company-tel">Tel. 0086-(0)512-68287609</li>
+                    <li class="country-company-tel">Tel. +86 512 682 876 09</li>
                     <li class="country-company-email">E-mail. info@alpha-ess.com</li>
                     <li class="country-company-web">www.alpha-ess.com</li>
-                    <li class="country-company-add">NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou,
-                        215123
-                    </li>
+                    <li class="country-company-add">NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou,215123</li>
                 </ul>
+            </div>
+            <div class="info-country info-australia">
+                <!--<span class="country-icon country-australia"></span>-->
+                <span class="country-name">AUSTRALIA</span>
+
+                <ul class="country-info">
+                    <li class="country-company-name">ALPHA ESS AUSTRALIA PTY. LTD.</li>
+                    <li class="country-company-tel">Tel. 1300 968 933(Australia Only)</li>
+                    <li class="country-company-web">www.alpha-ess.com.au</li>
+                    <li class="country-company-add">Add. UNIT M601,68 Mcevoy St, Alexandria Nsw 2015</li>
+                </ul>
+
             </div>
         </div>
     </div>

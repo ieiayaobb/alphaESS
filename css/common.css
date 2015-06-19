@@ -22,13 +22,13 @@ body{
 .head-menu>ul{
     display:inline-block;
     margin:auto;
+    position:relative;
 }
 .head-menu>ul>li{
     float:left;
     display:inline-block;
     margin-left:10px;
     position:relative;
-    top:-50px;
 }
 .head-menu a{
     color:#FFF;
@@ -56,11 +56,12 @@ body{
     height:80px;
     float:left;
     text-align: center;
+    top:-80px;
 }
 
 .menu-button>a{
     margin:0 auto;
-    top:50px;
+    top:30px;
     position:relative;
     cursor:pointer;
 }
