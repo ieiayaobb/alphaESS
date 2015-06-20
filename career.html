@@ -11,21 +11,17 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            $(".menu-button").hover(function () {
-                $(this).animate({
-                    top: 0
-                }, 200);
-                $(this).children("a").animate({
-                    top: 30
-                }, 200);
-            }, function () {
-                $(this).animate({
-                    top: -50
-                }, 200);
-                $(this).children("a").animate({
-                    top: 50
-                }, 200);
-            }).click(function(){
+            $(".menu-all").mouseenter(function(mee){
+                $(".menu-button").animate({
+                    top: "0px"
+                });
+            }).mouseleave(function(moe){
+                $(".menu-button").animate({
+                    top: "-80px"
+                });
+            })
+
+            $(".menu-button").click(function(){
                 window.location.href = $(this).children("a").attr("href");
             });
         });
@@ -34,7 +30,7 @@
 <body>
 <div class="head">
     <div class="head-menu">
-        <ul>
+        <ul class="menu-all">
             <li class="menu-button"><a href="index.html">Home</a></li>
             <li class="menu-button"><a href="company.html">About Us</a></li>
             <li class="menu-button"><a href="product.html">Products</a></li>

@@ -15,25 +15,13 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            var boxWidth = $(".head-menu").width();
-            var boxHeight = 80;
-            var winWidth = $(window).width();
-
-            var animation = true;
-
-            console.log("winWidth:" + (winWidth))
-            console.log("winWidth - boxWidth:" + (winWidth - boxWidth))
             $(".menu-all").mouseenter(function(mee){
                     $(".menu-button").animate({
                         top: "0px"
-                    },"normal", function(){
-                        console.log(11)
                     });
             }).mouseleave(function(moe){
                 $(".menu-button").animate({
                     top: "-80px"
-                },"normal", function(){
-                    console.log(11)
                 });
             })
 
@@ -182,23 +170,23 @@
 //                featureInterval = setInterval(featureFunction, 5000);
 //            });
 
-            var current = 0;
-            setInterval(function(){
-                if(++current < 2){
-                    for(var i = current;i <= 2;i++) {
-                        $(".banner-" + i).animate({
-                            left: (100 * (i - current - 1)) + "%"
-                        },1000);
-                    }
-                }else{
-                    current = 0;
-                    for(var j = 1;j <= 2;j++){
-                        $(".banner-" + j).animate({
-                            left: (100 * (j - 1)) + "%"
-                        },1000);
-                    }
-                }
-            },5000)
+//            var current = 0;
+//            setInterval(function(){
+//                if(++current < 2){
+//                    for(var i = current;i <= 2;i++) {
+//                        $(".banner-" + i).animate({
+//                            left: (100 * (i - current - 1)) + "%"
+//                        },1000);
+//                    }
+//                }else{
+//                    current = 0;
+//                    for(var j = 1;j <= 2;j++){
+//                        $(".banner-" + j).animate({
+//                            left: (100 * (j - 1)) + "%"
+//                        },1000);
+//                    }
+//                }
+//            },5000)
         });
     </script>
 </head>
@@ -218,7 +206,7 @@
 </div>
 <div class="content content-1 clearfix">
     <div class="banner banner-1"></div>
-    <div class="banner banner-2"></div>
+    <!--<div class="banner banner-2"></div>-->
 </div>
 <div class="content content-2 clearfix">
     <div class="clock-wrapper">
@@ -312,13 +300,11 @@
             <div class="info-country info-german">
                 <!--<span class="country-icon country-germany"></span>-->
                 <span class="country-name">GERMANY</span>
-
                 <ul class="country-info">
-                    <li class="country-company-name">Alpha ESS Europe GmbH</li>
-                    <li class="country-company-tel">Tel. +49 157 770 600 60</li>
-                    <li class="country-company-email">E-mail. europe@alpha-ess.de</li>
-                    <li class="country-company-web">www.alpha-ess.de</li>
-                    <li class="country-company-add">Add. Paul-Ehrlich-Straße 1a, 63225 Langen</li>
+                    <li class="country-company-tel"><span class="tel-ico"></span>+49 157 770 600 60</li>
+                    <li class="country-company-email"><span class="mail-ico"></span>europe@alpha-ess.de</li>
+                    <li class="country-company-web"><span class="web-ico"></span>www.alpha-ess.de</li>
+                    <li class="country-company-add"><span class="add-ico"></span>Paul-Ehrlich-Straße 1a, 63225 Langen</li>
                 </ul>
             </div>
             <div class="info-country info-china">
@@ -326,11 +312,10 @@
                 <span class="country-name">CHINA</span>
 
                 <ul class="country-info">
-                    <li class="country-company-name">Alpha Energy Storage Solution Co., Ltd.</li>
-                    <li class="country-company-tel">Tel. +86 512 682 876 09</li>
-                    <li class="country-company-email">E-mail. info@alpha-ess.com</li>
-                    <li class="country-company-web">www.alpha-ess.com</li>
-                    <li class="country-company-add">NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou,215123</li>
+                    <li class="country-company-tel"><span class="tel-ico"></span>+86 512 682 876 09</li>
+                    <li class="country-company-email">i<span class="mail-ico"></span>nfo@alpha-ess.com</li>
+                    <li class="country-company-web"><span class="web-ico"></span>www.alpha-ess.com</li>
+                    <li class="country-company-add"><span class="add-ico"></span>NW2, Nano Polis, No. 99 Jinji Lake Avenue, Industrial Park, Suzhou,215123</li>
                 </ul>
             </div>
             <div class="info-country info-australia">
@@ -338,10 +323,10 @@
                 <span class="country-name">AUSTRALIA</span>
 
                 <ul class="country-info">
-                    <li class="country-company-name">ALPHA ESS AUSTRALIA PTY. LTD.</li>
-                    <li class="country-company-tel">Tel. 1300 968 933(Australia Only)</li>
-                    <li class="country-company-web">www.alpha-ess.com.au</li>
-                    <li class="country-company-add">Add. UNIT M601,68 Mcevoy St, Alexandria Nsw 2015</li>
+                    <li class="country-company-tel"><span class="tel-ico"></span>1300 968 933(Australia Only)</li>
+                    <li class="country-company-tel"><span class="mail-ico"></span>australia@alpha-ess.com</li>
+                    <li class="country-company-web"><span class="web-ico"></span>www.alpha-ess.com.au</li>
+                    <li class="country-company-add"><span class="add-ico"></span>UNIT M601,68 Mcevoy St, Alexandria Nsw 2015</li>
                 </ul>
 
             </div>
