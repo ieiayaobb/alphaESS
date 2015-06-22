@@ -30,6 +30,10 @@
   left:100%;
 }
 
+.second{
+  background-image: url(../img/index/2.png);
+}
+
 
 .content-2{
   z-index:1;

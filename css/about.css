@@ -111,7 +111,7 @@ body{
     font-size: 14px;
     color: #333;
     margin-bottom: 30px;
-    line-height: 20px;
+    line-height: 30px;
     text-indent: 30px;
 }
 .content-wrap .right .main .downloadlist-background{
@@ -206,7 +206,7 @@ body{
 .banner{
     width:1000px;
     height: 300px;
-    background-image: url(../img/banner/medal.png);
+    background-image: url(../img/banner/suzhou.png);
     position:relative;
     z-index: 100;
 }
@@ -226,4 +226,8 @@ body{
     float:left;
     cursor: pointer;
     padding:5px;
+}
+
+.detail{
+    line-height:20px;
 }

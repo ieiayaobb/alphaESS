@@ -23,7 +23,7 @@ body{
 
 .content-wrap .left{
     width: 250px;
-    margin: 0 50px 0 30px;
+    margin-right:10px;
     float:left;
     position:relative;
 }
@@ -70,10 +70,11 @@ body{
     width:1000px;
     background-color:#fff;
     border: 1px solid #e6e6e6;
+    padding-bottom: 30px;
 }
 
 .content-wrap .right .main{
-    width: 800px;
+    width: 655px;
     margin: 20px auto 0;
     position: relative;
 }
@@ -92,6 +93,11 @@ body{
     word-break: normal;
 }
 
+.title strong{
+    font-size:36px;
+    color:#F7B128
+}
+
 .post-info{
     font-size: 12px;
     color: #8c8c8c;
@@ -104,6 +110,7 @@ body{
     float: left;
     font-size: 14px;
     color: #333;
+    margin-bottom: 30px;
     line-height: 20px;
 }
 .content-wrap .right .main .downloadlist-background{
@@ -132,7 +139,7 @@ body{
 }
 
 .more{
-    width:240px;
+    width:248px;
     border:1px solid #e6e6e6;
     background-color:#fff;
     height:30px;
@@ -143,118 +150,163 @@ body{
     width:200px;
     border:1px solid #e6e6e6;
     background-color:#fff;
-    height:340px;
-    padding: 0 20px 25px 20px;
+    height:200px;
+    padding: 0 19px 25px 29px;
     margin-bottom: 15px;
 }
 
 .news-list h3{
     border-bottom: 1px solid #e6e6e6;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 26px;
     padding-bottom: 4px;
     margin: 16px 0 20px 0;
 }
 
-.info-head{
+.bread-wrapper{
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    width:1000px;
     float:left;
-    width:100%;
+    margin-bottom:20px;
+    height:40px;
+    position:relative;
+    z-index: 100;
 }
 
-.info-head>h1{
-    font-size:36px;
-    padding:20px;
+.bread-node{
+    float:left;
+    margin: 12px 10px 0 20px;
+    cursor: pointer;
+}
+
+.arrow{
+    float:left;
+    margin: 12px 10px 0 20px;
+}
+
+.about-list{
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    width:160px;
+    visibility: hidden;
+    position: absolute;
+    top:-9999px;
+    left:-9999px;
+}
+
+.about-list a{
+    float:left;
+    margin:10px;
     color:#333;
-}
-
-.info-head h1 strong{
-    font-size:36px;
-    color:#F7B128
-}
-
-.info-head>h2{
-    padding:20px;
-    border-bottom: 1px solid #979797;
-    margin-bottom:30px;
-}
-
-.pic{
-    float:left;
-    width:200px;
-    height:180px;
-}
-.news1{
-    background-image: url(../img/news/news1.png);
-}
-
-.news2{
-    background-image: url(../img/news/news2.png);
-}
-
-.news4{
-    background-image: url(../img/news/news4.png);
-}
-
-.news5{
-    background-image: url(../img/news/news5.png);
-}
-
-.news6{
-    background-image: url(../img/news/news6.png);
-}
-
-.news7{
-    background-image: url(../img/news/news7.png);
-}
-
-.news8{
-    background-image: url(../img/news/news8.png);
-}
-
-.news9{
-    background-image: url(../img/news/news9.png);
-}
-
-.overview{
-    margin-top:20px;
-    float:left;
-    height:100px;
-    line-height:16px;
-    color:#333;
-}
-
-.part{
-    float:left;
-    width:380px;
-    padding:10px;
-    line-height: 18px;
-}
-
-.part p{
-    text-indent: 20px;
-    line-height: 20px;
+    width:150px;
 }
 
 .banner{
     width:1000px;
     height: 300px;
-    background-image: url(../img/banner/news.png);
+    background-image: url(../img/banner/medal.png);
     position:relative;
     z-index: 100;
+}
+
+.bread{
+    position:relative;
+}
+
+.pdf-icon{
+    width:20px;
+    height:24px;
+    background-image: url(../img/pdf.png);
     float:left;
-    border: 1px solid #e6e6e6;
 }
 
-.news-inner{
-    width:213px;
-    height:160px;
-    background-image: url(../img/banner/news-inner.png);
-    float:right;
-    position:absolute;
-    left:700px;
-    top:-50px;
+.pdf-content{
+    float:left;
+    cursor: pointer;
+    padding:5px;
 }
 
-p{
-    line-height: 30px;
+.tab{
+    width:655px;
+    text-align: center;
+    float:left;
 }
+
+.tab>a{
+    float:left;
+    width:198px;
+    padding:10px;
+    color:#FFF;
+    background-color: #CC6600;
+    cursor: pointer;
+}
+
+.tab>.current{
+    background-color: #FFCC00;
+}
+
+.downloads-title{
+    float:left;
+    padding:20px;
+    width:615px;
+    border-bottom:2px solid #FFCC00;
+    margin-bottom:20px;
+}
+
+.each{
+    width: 655px;
+    margin-bottom:30px;
+    float:left;
+}
+
+.intro{
+    float:left;
+    width:300px;
+}
+
+.desc{
+    float:left;
+    width:335px;
+    margin-left:20px;
+}
+
+.downloads-pic{
+    width:300px;
+    height:225px;
+    float:left;
+    background-image: url(../img/download/invertor.png);
+    background-repeat: no-repeat;
+    padding:10px;
+}
+
+.downloads-invertor-pic{
+    background-image: url(../img/download/invertor.png);
+}
+
+.downloads-battery-pic{
+    background-image: url(../img/download/battery.png);
+}
+
+.downloads-ems-pic{
+    background-image: url(../img/download/ems.png);
+}
+
+.downloads-storion-pic{
+    background-image: url(../img/download/storion.png);
+}
+
+.downloads-centarui-pic{
+    background-image: url(../img/download/centarui.png);
+}
+
+.downloads-pdf{
+    width:455px;
+    float:left;
+}
+
+.description{
+    height:150px;
+    line-height:30px;
+}
+

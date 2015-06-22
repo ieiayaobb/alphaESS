@@ -237,7 +237,6 @@ body{
     background-color: #fff;
     border: 1px solid #e6e6e6;
     width:160px;
-    height:80px;
     visibility: hidden;
     position: absolute;
     top:-9999px;
@@ -248,8 +247,8 @@ body{
     float:left;
     margin:10px;
     color:#333;
+    width:150px;
 }
-
 .banner{
     width:1000px;
     height: 300px;
