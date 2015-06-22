@@ -199,6 +199,22 @@ body{
     background-image: url(../img/news/news5.png);
 }
 
+.news6{
+    background-image: url(../img/news/news6.png);
+}
+
+.news7{
+    background-image: url(../img/news/news7.png);
+}
+
+.news8{
+    background-image: url(../img/news/news8.png);
+}
+
+.news9{
+    background-image: url(../img/news/news9.png);
+}
+
 .overview{
     margin-top:20px;
     float:left;

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>AlphaESS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/news.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu-all").mouseenter(function(mee){
+                $(".menu-button").animate({
+                    top: "0px"
+                });
+            }).mouseleave(function(moe){
+                $(".menu-button").animate({
+                    top: "-80px"
+                });
+            })
+
+            $(".menu-button").click(function(){
+                window.location.href = $(this).children("a").attr("href");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="head">
+    <div class="head-menu">
+        <ul class="menu-all">
+            <li class="menu-button"><a href="index.html">Home</a></li>
+            <li class="menu-button"><a href="company.html">About Us</a></li>
+            <li class="menu-button"><a href="product.html">Products</a></li>
+            <li class="menu-button"><a href="newslist.html">News</a></li>
+            <li class="menu-button"><a href="career.html">Career</a></li>
+            <li class="menu-button"><a href="http://www.alphes.com">Log-in</a></li>
+            <li class="menu-button beta-version"><a href="http://www.alphaess.com">Beta Version Log-in</a></li>
+        </ul>
+    </div>
+</div>
+<div class="content-wrap clearfix">
+    <div class="banner">
+
+    </div>
+    <div class="right clearfix">
+        <div class="main">
+            <!--<img class="news-pic" width="200" height="200" src="img/index/news/news1.png"/>-->
+
+            <h1 class="title">
+                Alpha Signs Insurance Contract with Mannheimer
+            </h1>
+            <p class="post-info">
+                <span>Post At</span>
+                <span> 04-19 03:03:03</span>
+            </p>
+            <div class="detail">
+                <p>
+                <p style="text-indent:28px;line-height:150%">
+                    <span style="font-size:16px;line-height:150%">During its presence in Intersolar Europe 2015 from June 10<sup>th</sup> to 12<sup>th</sup>, Alpha-ESS opened a new territory by making an ambitious as well as innovative decision--- signing an insurance contract with Mannheimer, one of the biggest Insurance company in Germany. As the very first insurance contract in solar energy storage industry, this action will be able to cover all the risks for end users together with Alpha’s warranty terms. </span>
+                </p>
+                <p style="text-indent:28px;line-height:150%">
+                    <span style="font-size:16px;line-height:150%">At the moment Alpha offers 5 years product warranty, 10 years battery warranty and 20 years estimated lifetime, which is equal to the average warranty conditions in energy storage market. By signing this contract, Alpha will free customers from worries to the biggest extent after purchasing Alpha products. Every year Alpha will spend 50 euros for every customer to cover all the insurance. Any product issue happened within 5 years, or any battery issue within 10 years since customer buys the product, Alpha will be responsible to cover the cost. Any other costs happened within10 years, replacement, labor work, transportation, etc, will all be covered by Mannheimer. This means customer does not need to spend any money. This is extremely important especially when customers find themselves worried about the instability of energy storage market at the moment. Even if the company breaks down, they can now reach for insurance company for future costs. </span>
+                </p>
+                <p style="text-indent:28px">
+                    <span style="font-size:16px;font-family:Calibri">Other than this, this action is regarded as the first step for Alpha to move further into financial leasing business, a value chain extension which is already experimented in other regions like the USA. Signing this contract is a perfect example to show Alpha’s insight into the future of energy storage market by standing in customers’ shoes and its decision-making power to lead the industry.</span>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

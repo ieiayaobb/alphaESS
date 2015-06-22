@@ -277,7 +277,7 @@
   width: 250px;
   margin-left:20px;
   margin-top:10px;
-  color:#F7B128;
+  color:#FDD10A;
   float:left;
 }
 
@@ -328,7 +328,7 @@
 
 .country-name{
   font-size:18px;
-  color:#F7B128;
+  color:#FDD10A;
   margin-left:20px;
 }
 
@@ -578,6 +578,31 @@
   margin-left:10px;
 }
 
+.contact-ico{
+  float:left;
+  width:17px;
+  height:17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .tel-ico{
 
+  background-image: url(../img/index/contact/tel.png);
+}
+
+.add-ico{
+  background-image: url(../img/index/contact/add.png);
+}
+
+.mail-ico{
+  background-image: url(../img/index/contact/mail.png);
+}
+
+.web-ico{
+  background-image: url(../img/index/contact/web.png);
+}
+
+.contact-text{
+  margin-left:5px;
 }

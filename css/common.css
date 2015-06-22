@@ -64,6 +64,13 @@ body{
     top:30px;
     position:relative;
     cursor:pointer;
+
+}
+
+.beta-version>a{
+    top:26px;
+    width:71px;
+    float:left;
 }
 
 .navi{
