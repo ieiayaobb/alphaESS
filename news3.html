@@ -11,38 +11,24 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            $(".menu-all").mouseenter(function(mee){
-                $(".menu-button").animate({
-                    top: "0px"
-                });
-            }).mouseleave(function(moe){
-                $(".menu-button").animate({
-                    top: "-80px"
-                });
-            })
-
-            $(".menu-button").click(function(){
-                window.location.href = $(this).children("a").attr("href");
-            });
+            
         });
     </script>
 </head>
 <body>
-<div class="head">
-    <div class="head-menu">
-        <ul class="menu-all">
-            <li class="menu-button"><a href="index.html">Home</a></li>
-            <li class="menu-button"><a href="company.html">About Us</a></li>
-            <li class="menu-button"><a href="product.html">Products</a></li>
-            <li class="menu-button"><a href="newslist.html">News</a></li>
-            <li class="menu-button"><a href="career.html">Career</a></li>
-            <li class="menu-button"><a href="http://www.alphes.com">Log-in</a></li>
-            <li class="menu-button beta-version"><a href="http://www.alphaess.com">Beta Version Log-in</a></li>
-        </ul>
-    </div>
-</div>
+
 <div class="content-wrap clearfix">
     <div class="banner">
+
+    </div>
+    <div class="bread-wrapper">
+        <div class="bread">
+            <a class="bread-node bread-1" href="index.html">Home</a>
+            <span class="arrow"> > </span>
+            <a class="bread-node bread-2" href="newslist.html">News List</a>
+            <span class="arrow"> > </span>
+
+        </div>
 
     </div>
     <div class="right clearfix">

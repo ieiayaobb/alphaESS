@@ -11,19 +11,7 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            $(".menu-all").mouseenter(function(mee){
-                $(".menu-button").animate({
-                    top: "0px"
-                });
-            }).mouseleave(function(moe){
-                $(".menu-button").animate({
-                    top: "-80px"
-                });
-            })
-
-            $(".menu-button").click(function(){
-                window.location.href = $(this).children("a").attr("href");
-            });
+            
         });
     </script>
 </head>
@@ -45,6 +33,17 @@
     <div class="banner">
 
     </div>
+    <div class="bread-wrapper">
+        <div class="bread">
+            <a class="bread-node bread-1" href="index.html">Home</a>
+            <span class="arrow"> > </span>
+            <a class="bread-node bread-2" href="newslist.html">News List</a>
+            <span class="arrow"> > </span>
+
+        </div>
+
+    </div>
+
     <div class="right clearfix">
         <div class="main">
             <!--<img class="news-pic" width="200" height="200" src="img/index/news/news1.png"/>-->

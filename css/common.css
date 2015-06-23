@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family: "Gotham A","Gotham B","M Hei PRC W45","HelveticaNeue-Regular","Helvetica Neue Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font:16px/1.6em Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 .head{
@@ -14,10 +14,19 @@ body{
     width:100%;
     z-index:9999;
 }
+
+.head-background{
+    position:absolute;
+    width:100%;
+    height: 100%;
+    background-color: rgba(32, 32, 32, 1);
+    opacity: 0;
+}
+
 .head-menu{
-    font-size:14px;
+    font-size:16px;
     font-weight:lighter;
-    float:right;
+    float:left;
 }
 .head-menu>ul{
     display:inline-block;
@@ -30,16 +39,77 @@ body{
     margin-left:10px;
     position:relative;
 }
+
+.head-menu>ul>li>a{
+    font-size: 1.1em;
+    letter-spacing: 0.03em;
+    opacity: 0.6;
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .head-menu a{
     color:#FFF;
     text-decoration:none;
 }
 
-.logo{
+.head-menu>ul>.logo{
     width:78px;
     height: 80px;
     background-image: url(../img/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
     float:left;
+    margin:0px 0 0 30px;
+    top:20px;
+}
+
+.global{
+    float:right;
+    
+    position: relative;
+    z-index: 9999;
+    right:150px;
+    top:30px;
+    
+}
+
+.global-ico{
+    background-image: url(../img/index/global.png);
+    width:24px;
+    height: 24px;
+    cursor: pointer;
+    float:left;
+}
+
+.lang{
+    position: relative;
+    background-color: #f2f2f2;
+    left:35px;
+    width:100%;
+    float:left;
+    top: -25px;
+    border-radius: 3px;
+    visibility: hidden;
+}
+
+.lang li{
+    width:100%;
+    color:#36393a;
+}
+
+.lang .first, .lang .last{
+    height:10px;
+}
+
+.lang .lang-li:hover{
+    background-color:#F7B12A;
+}
+
+.lang a{
+    padding: 4px 20px;
+    color: #000;
+    text-decoration: none;
+    display: block;
 }
 
 .content{
@@ -51,20 +121,17 @@ body{
 
 .menu-button{
     cursor:pointer;
-    background-image: url("../img/menu-mask.png");
-    width:70px;
-    height:80px;
+    height:100px;
     float:left;
     text-align: center;
-    top:-80px;
 }
 
 .menu-button>a{
     margin:0 auto;
-    top:30px;
+    top:40px;
     position:relative;
     cursor:pointer;
-
+    margin: 0 10px 0 10px;
 }
 
 .beta-version>a{

@@ -178,6 +178,28 @@ body{
     margin-bottom:30px;
 }
 
+.bread-wrapper{
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    width:1000px;
+    float:left;
+    margin-bottom:20px;
+    height:40px;
+    position:relative;
+    z-index: 100;
+}
+
+.bread-node{
+    float:left;
+    margin: 12px 10px 0 20px;
+    cursor: pointer;
+}
+
+.arrow{
+    float:left;
+    margin: 12px 10px 0 20px;
+}
+
 .pic{
     float:left;
     width:200px;

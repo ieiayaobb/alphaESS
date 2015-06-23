@@ -15,284 +15,110 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            $(".menu-all").mouseenter(function(mee){
-                    $(".menu-button").animate({
-                        top: "0px"
-                    });
-            }).mouseleave(function(moe){
-                $(".menu-button").animate({
-                    top: "-80px"
-                });
+            $(".menu-button>a").hover(function(){
+                $(this).animate({
+                    opacity:1
+                },"fast")
+            },function(){
+                $(this).animate({
+                    opacity:0.6
+                })
+            },"fast");
+
+            $(document).click(function(e){
+                if($(e.target).hasClass("global-ico")){
+                    $(".lang").css("visibility","visible");
+                }else{
+                    $(".lang").css("visibility","hidden");
+                }
             })
 
-            $(".menu-button").click(function(){
-                window.location.href = $(this).children("a").attr("href");
-            });
+            
+            var hideFlag = false;
+            $(window).scroll(function(e){
+                if(!hideFlag){
+                    if($(window).scrollTop() >= 100){
+                        hideFlag = true;
+                        $(".head-background").animate({
+                            "height":80,
+                            "opacity": "1"
+                        },"slow");
 
+                        $(".logo").animate({
+                            "top":0
+                        },"slow");
 
-            var current = judge(0);
-            var photoSwitchInterval;
-            var featureInterval;
-            var contactInterval;
-            handleAnimation(current)
-            $(window).scroll(function (e) {
-                if (judge(current) != undefined) {
-                    current = judge(current);
-                    handleAnimation(current)
-
-                }
-            });
-
-            var houseArr = ["morning-house", "afternoon-house", "evening-house", "ups-house"];
-            var timeArr = ["yellowsun", "redsun", "moon", "moon"];
-            var houseIndex = 1;
-
-            function featureFunction() {
-                console.log("running 2")
-                var $next = $(".current-period").removeClass("current-period").next(".period-introduction")
-                if ($next.length == 0) {
-                    $next = $(".period-introduction").eq(0);
-                }
-                $next.addClass("current-period");
-
-                var prevIndex;
-                if (houseIndex == 0) {
-                    prevIndex = 3;
-                } else {
-                    prevIndex = houseIndex - 1;
-                }
-
-                var prev = houseArr[prevIndex];
-                var now = houseArr[houseIndex];
-
-                var prevIco = timeArr[prevIndex];
-                var nowIco = timeArr[houseIndex];
-
-                console.log(prevIco)
-
-                $(".house").removeClass(prev).addClass(now);
-                $(".time-ico").removeClass(prevIco).addClass(nowIco);
-                if (houseIndex++ >= 3) {
-                    houseIndex = 0;
-                }
-            }
-
-            function handleAnimation(current) {
-                clearOtherInterval(current);
-                switch (current) {
-                    case 1 :
-                        console.log("call 1")
-//                        photoSwitchInterval = setInterval(function () {
-//                            console.log("running 1")
-//                            for (var i = 1; i <= 4; i++) {
-//                                if (Math.random() > 0.5) {
-//                                    $(".photo1_" + i).animate({
-//                                        opacity: 1 - $(".photo1_" + i).css("opacity")
-//                                    }, 1000);
-//                                    $(".photo2_" + i).animate({
-//                                        opacity: 1 - $(".photo2_" + i).css("opacity")
-//                                    }, 1000);
-//                                }
-//                            }
-//                        }, 3000);
-//                        break;
-                    case 2:
-                        console.log("call 2")
-                        featureInterval = setInterval(featureFunction, 5000);
-                        $(".clock").addClass("running-clock");
-                        break;
-                    case 3:
-                        console.log("call 3")
-                        break;
-                    case 4:
-                        console.log("call 4");
-                        var i = 0;
-                        contactInterval = setInterval(function () {
-                            $(".time" + ++i).animate({
-                                opacity: 1
-                            }, 500);
-                            console.log("running 4")
-                        }, 1000);
-                        break;
-                    default :
-
-                }
-            }
-
-            var content_1 = 500;
-            var content_2 = 600;
-            var content_3 = 150;
-            var content_4 = 700;
-
-            function judge(current) {
-                if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= content_1) {
-                    if (current != 1) {
-                        return 1;
+                        $(".menu-button>a").animate({
+                            "top":30
+                        }, "slow")
                     }
-                } else if ($(window).scrollTop() > content_1 && $(window).scrollTop() <= content_1 + content_2 + content_3) {
-                    if (current != 2) {
-                        return 2;
-                    }
-                } else if ($(window).scrollTop() > content_1 + content_2 + content_3 && $(window).scrollTop() <= content_1 + content_2 + content_3 + content_4) {
-                    if (current != 3) {
-                        return 3;
-                    }
-                } else if ($(window).scrollTop() > content_1 + content_2 + content_3 + content_4) {
-                    if (current != 4) {
-                        return 4;
+                }else{
+                    if($(window).scrollTop() < 100){
+                        hideFlag = false;
+                        $(".head-background").animate({
+                            "height":100,
+                            "opacity": "0"
+                        },"slow");
+
+                        $(".logo").animate({
+                            "top":20
+                        },"slow");
+
+                        $(".menu-button>a").animate({
+                            "top":40
+                        }, "slow")
                     }
                 }
-            }
-
-
-            function clearOtherInterval(now) {
-                if (now != 1) {
-                    clearInterval(photoSwitchInterval);
-                }
-                if (now != 2) {
-                    clearInterval(featureInterval);
-                    $(".clock").removeClass("running-clock");
-                }
-                if (now != 3) {
-                }
-                if (now != 4) {
-                    clearInterval(contactInterval);
-                    $(".time").css("opacity", 0);
-                }
-            }
-
-//            $(".clock").mouseenter(function () {
-//                $(this).removeClass("running-clock");
-//                clearInterval(featureInterval);
-//            })
-//            $(".clock").mouseout(function () {
-//                $(this).addClass("running-clock");
-//                featureInterval = setInterval(featureFunction, 5000);
-//            });
-
-//            var current = 0;
-//            setInterval(function(){
-//                if(++current < 2){
-//                    for(var i = current;i <= 2;i++) {
-//                        $(".banner-" + i).animate({
-//                            left: (100 * (i - current - 1)) + "%"
-//                        },1000);
-//                    }
-//                }else{
-//                    current = 0;
-//                    for(var j = 1;j <= 2;j++){
-//                        $(".banner-" + j).animate({
-//                            left: (100 * (j - 1)) + "%"
-//                        },1000);
-//                    }
-//                }
-//            },5000)
+            })
+            
         });
     </script>
 </head>
 <body>
 <div class="head">
+    <div class="head-background"></div>
     <div class="head-menu">
         <ul class="menu-all">
+            <li class="logo"><a href="index.html"></a></li>
             <li class="menu-button"><a href="index.html">Home</a></li>
             <li class="menu-button"><a href="company.html">About Us</a></li>
             <li class="menu-button"><a href="product.html">Products</a></li>
             <li class="menu-button"><a href="newslist.html">News</a></li>
             <li class="menu-button"><a href="career.html">Career</a></li>
-            <li class="menu-button"><a href="http://www.alphes.com">Log-in</a></li>
-            <li class="menu-button beta-version"><a href="http://www.alphaess.com">Beta Version Log-in</a></li>
+            <li class="menu-button"><a href="http://www.alphaess.com">Log-in</a></li>
         </ul>
     </div>
-</div>
-<div class="content content-1 clearfix">
-    <div class="banner banner-1"></div>
-    <!--<div class="banner banner-2"></div>-->
-</div>
-<div class="content content-2 clearfix">
-    <div class="clock-wrapper">
-        <div class="clock">
-        </div>
-        <div class="house morning-house">
-            <div class="time-ico yellowsun"></div>
-        </div>
-        <div class="period-introduction-wrapper">
-            <div class="period-introduction morning-introduction current-period">
-                <div class="feature-link"></div>
-                <div class="period">
-                    <div class="period-title morning">Morning</div>
-                    <div class="period-detail">The energy produced by the PV module is used to optimize
-                        self-consumption; the surplus energy will be used to recharge the batteries.
-                    </div>
-                </div>
-            </div>
-            <div class="period-introduction noon-introduction">
-                <div class="feature-link"></div>
-                <div class="period">
-                    <div class="period-title afternoon">Afternoon</div>
-                    <div class="period-detail">When the batteries are fully charged and Alpha system already meets your
-                        self-consumption requirements, the surplus energy will be fed into public grid.
-                    </div>
-                </div>
-            </div>
-            <div class="period-introduction evening-introduction">
-                <div class="feature-link"></div>
-                <div class="period">
-                    <div class="period-title evening">Evening</div>
-                    <div class="period-detail">Once the sun sets, Alpha system will automatically switch to
-                        battery-stored energy. If the battery capacity or power is insufficient to meet your consumption
-                        requirements, electricity will then be obtained from public grid.
-                    </div>
-                </div>
-            </div>
-            <div class="period-introduction midnight-introduction">
-                <div class="feature-link"></div>
-                <div class="period">
-                    <div class="period-title ups">UPS</div>
-                    <div class="period-detail">When the grid fails, Alpha system can switch to off-grid mode
-                        automatically and supply the loads.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--<div class="hill-introduction">-->
-            <!--<p>The Graphs are showing the electricity produced-->
-                <!--during the day and used in the home,with the excess-->
-                <!--electricity channelled into the battery storage unit-->
-                <!--which is then stored for later use when the sun is not-->
-                <!--shining-->
-            <!--</p>-->
-        <!--</div>-->
-        <!--<div class="hill"></div>-->
-        <div class="statement">
+    <div class="global">
+        <span class="global-ico"></span>
+        <div class="lang">
             <ul>
-                <li>
-                    <div class="link"></div>
-                    <div class="statement-detail"></div>
-                </li>
-                <li>
-                    <div class="link"></div>
-                    <div class="statement-detail"></div>
-                </li>
-                <li>
-                    <div class="link"></div>
-                    <div class="statement-detail"></div>
-                </li>
-                <li>
-                    <div class="link"></div>
-                    <div class="statement-detail"></div>
-                </li>
+                <li class="first"></li>
+                <li class="lang-li"><a href="#">English</a> </li>
+                <li class="lang-li"><a href="#">Deutsch</a> </li>
+                <li class="lang-li"><a href="#">Français</a> </li>
+                <li class="last"></li>
             </ul>
         </div>
     </div>
+</div>
+<div class="content content-1 clearfix">
+    <div class="banner banner-1">
+        <div class="slogan">
+            <span class="slogan-title">Smart Your Energy</span>
+            <span class="slogan-detail">Focus on Energy Storage Solutions (ESS)</span>
+            <span class="slogan-detail">For a future powered by clean and reliable energy. </span>
+            <a class="slogan-more" href="company.html">LEARN MORE ABOUT US</a>
+        </div>
+    </div>
+    <!--<div class="banner banner-2"></div>-->
+</div>
+<div class="content content-2 clearfix">
+    <div class="banner banner-3"></div>
 </div>
 
 <!--<div class="content smile-content clearfix">-->
 <!--<div class="smile"></div>-->
 <!--</div>-->
-
-<div class="content content-3 clearfix">
-    <div class="content-warrent"></div>
-</div>
 
 <div class="content content-4 clearfix">
     <div class="contact">
