@@ -1,0 +1,7 @@
+/* font */
+@font-face {
+    font-family: 'fontImg';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../font-img/font-img.woff');
+}

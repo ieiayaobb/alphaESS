@@ -19,6 +19,7 @@ body{
     width:990px;
     position:relative;
     margin:0px auto;
+    margin-top: 80px;
 }
 
 .content-wrap .left{
@@ -235,7 +236,7 @@ body{
 
 .tab>a{
     float:left;
-    width:198px;
+    width:143px;
     padding:10px;
     color:#FFF;
     background-color: #CC6600;

@@ -385,14 +385,67 @@
 }
 
 .learn-more{
-    color:#F7B128;
-    font-size:18px;
-    text-decoration: underline;
+    font-size:12px;
     position:absolute;
-    left : 800px;
+    left : 750px;
     top : 520px;
-    width : 200px;
+
+    float:left;
+    background-color: #F7B12A;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      -webkit-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+      -moz-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+      box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+      -webkit-transition: border-radius .2s ease-in-out;
+      -moz-transition: border-radius .2s ease-in-out;
+      -o-transition: border-radius .2s ease-in-out;
+      transition: border-radius .2s ease-in-out;
+      padding: 10px 15px;
+      font-weight: 100;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      text-decoration: none!important;
+      border: transparent;
+      cursor: pointer;
+      color:#fff;
 }
+
+.learn-more:hover{
+  background-color: #AD7A17;
+}
+
+.video{
+    font-size:12px;
+    position:absolute;
+    left : 750px;
+    top : 560px;
+
+    float:left;
+    background-color: #F7B12A;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      -webkit-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+      -moz-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+      box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+      -webkit-transition: border-radius .2s ease-in-out;
+      -moz-transition: border-radius .2s ease-in-out;
+      -o-transition: border-radius .2s ease-in-out;
+      transition: border-radius .2s ease-in-out;
+      padding: 10px 15px;
+      font-weight: 100;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      text-decoration: none!important;
+      border: transparent;
+      cursor: pointer;
+      color:#fff;
+}
+
+.video:hover{
+  background-color: #AD7A17;
+}
+
 
 .learn-more-left{
     left: 680px;
@@ -494,9 +547,9 @@
 }
 
 .family{
-    width:632px;
+    width:265px;
     height:600px;
-    background-image: url("../img/product/family.png");
+    background-image: url("../img/product/storion_new.png");
     float:left;
     position:absolute;
     left:0

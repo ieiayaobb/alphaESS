@@ -6,7 +6,8 @@
 }
 
 body{
-    font:16px/1.6em Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif
+    font-family: NeoSans;
+    font-size:16px/1.6em
 }
 
 .head{
@@ -204,7 +205,7 @@ body{
   -moz-transition: border-radius .2s ease-in-out;
   -o-transition: border-radius .2s ease-in-out;
   transition: border-radius .2s ease-in-out;
-  padding: 2px 8px;
+  padding: 5px 8px 2px 8px;
   font-weight: 400;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -295,6 +296,7 @@ body{
     height:50px;
     float:left;
     margin:10px;
+
 }
 
 .public-container{
@@ -305,7 +307,9 @@ body{
 }
 
 .f-ico{
-    background-image: url(../img/public/f.png);
+    font-family: fontImg;
+  content: "\e605";
+    /*background-image: url(../img/public/f.png);*/
 }
 
 .in-ico{
