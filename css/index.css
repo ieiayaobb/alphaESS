@@ -48,7 +48,7 @@
 
 .slogan{
   color:#FFF;
-  width:550px;
+  width:620px;
   position:relative;
   left:200px;
   top: 250px;
@@ -94,6 +94,7 @@
   text-decoration: none!important;
   border: transparent;
   cursor: pointer;
+  color:#fff;
 }
 
 .slogan-more:hover{
@@ -296,7 +297,8 @@
   position:absolute;
   top:180px;
   left:0px;
-  width:280px;
+  width:300px;
+  font-size: 12px;
 }
 
 .country-icon{
@@ -320,14 +322,13 @@
 .info-country{
   float:left;
   width:330px;
-  margin-top:10px;
+  margin-top:20px;
 }
 
 .country-info{
   width: 250px;
   margin-left:20px;
-  margin-top:10px;
-  color:#FDD10A;
+  color:#F7B12A;
   float:left;
 }
 
@@ -377,8 +378,8 @@
 }
 
 .country-name{
-  font-size:18px;
-  color:#FDD10A;
+  font-size:16px;
+  color:#F7B12A;
   margin-left:20px;
 }
 
