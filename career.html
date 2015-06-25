@@ -11,35 +11,65 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            $(".menu-all").mouseenter(function(mee){
-                $(".menu-button").animate({
-                    top: "0px"
-                });
-            }).mouseleave(function(moe){
-                $(".menu-button").animate({
-                    top: "-80px"
-                });
+            $(document).click(function(e){
+                if($(e.target).hasClass("global-ico")){
+                    $(".lang").css("visibility","visible");
+                }else{
+                    $(".lang").css("visibility","hidden");
+                }
             })
+            
+            $(".menu-button>a").hover(function(){
+                $(this).animate({
+                    opacity:1
+                },"fast")
+            },function(){
+                $(this).animate({
+                    opacity:0.6
+                })
+            },"fast");
 
-            $(".menu-button").click(function(){
-                window.location.href = $(this).children("a").attr("href");
-            });
+            $(".head-background").animate({
+                "height":80,
+                "opacity": "1"
+            },"slow");
+
+            $(".logo").animate({
+                "top":0
+            },"slow");
+
+            $(".menu-button>a").animate({
+                "top":30
+            }, "slow")
         });
     </script>
 </head>
 <body>
 <div class="head">
+    <div class="head-background"></div>
     <div class="head-menu">
         <ul class="menu-all">
+            <li class="logo"><a href="index.html"></a></li>
             <li class="menu-button"><a href="index.html">Home</a></li>
             <li class="menu-button"><a href="company.html">About Us</a></li>
             <li class="menu-button"><a href="product.html">Products</a></li>
             <li class="menu-button"><a href="newslist.html">News</a></li>
             <li class="menu-button"><a href="career.html">Career</a></li>
-            <li class="menu-button"><a href="http://www.alphes.com">Log-in</a></li>
-            <li class="menu-button beta-version"><a href="http://www.alphaess.com">Beta Version Log-in</a></li>
         </ul>
     </div>
+    <div class="global">
+        <span class="global-ico"></span>
+        <div class="lang">
+            <ul>
+                <li class="first"></li>
+                <li class="lang-li"><a href="#">English</a> </li>
+                <li class="lang-li"><a href="#">Deutsch</a> </li>
+                <li class="lang-li"><a href="#">Français</a> </li>
+                <li class="last"></li>
+            </ul>
+        </div>
+    </div>
+    <a class="login" href="http://www.alphes.com">Log-in</a>
 </div>
 <div class="content-wrap clearfix">
     <div class="right clearfix">

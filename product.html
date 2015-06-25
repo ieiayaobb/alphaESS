@@ -140,11 +140,68 @@
 
             $(".storion").click(function(){
                 window.location.href = "storion.html";
+            });
+
+            $(document).click(function(e){
+                if($(e.target).hasClass("global-ico")){
+                    $(".lang").css("visibility","visible");
+                }else{
+                    $(".lang").css("visibility","hidden");
+                }
             })
+
+            $(".menu-button>a").hover(function(){
+                $(this).animate({
+                    opacity:1
+                },"fast")
+            },function(){
+                $(this).animate({
+                    opacity:0.6
+                })
+            },"fast");
+
+            $(".head-background").animate({
+                "height":80,
+                "opacity": "1"
+            },"slow");
+
+            $(".logo").animate({
+                "top":0
+            },"slow");
+
+            $(".menu-button>a").animate({
+                "top":30
+            }, "slow")
         });
     </script>
 </head>
 <body>
+<div class="head">
+    <div class="head-background"></div>
+    <div class="head-menu">
+        <ul class="menu-all">
+            <li class="logo"><a href="index.html"></a></li>
+            <li class="menu-button"><a href="index.html">Home</a></li>
+            <li class="menu-button"><a href="company.html">About Us</a></li>
+            <li class="menu-button"><a href="product.html">Products</a></li>
+            <li class="menu-button"><a href="newslist.html">News</a></li>
+            <li class="menu-button"><a href="career.html">Career</a></li>
+        </ul>
+    </div>
+    <div class="global">
+        <span class="global-ico"></span>
+        <div class="lang">
+            <ul>
+                <li class="first"></li>
+                <li class="lang-li"><a href="#">English</a> </li>
+                <li class="lang-li"><a href="#">Deutsch</a> </li>
+                <li class="lang-li"><a href="#">Français</a> </li>
+                <li class="last"></li>
+            </ul>
+        </div>
+    </div>
+    <a class="login" href="http://www.alphes.com">Log-in</a>
+</div>
 <div class="left-menu">
     <ul>
         <li>
@@ -167,7 +224,6 @@
 </div>
 <div class="content content-1">
     <div class="content-storion">
-        <div class="more"></div>
         <div class="title">
             <h2><strong>S</strong>torion <Strong>S</Strong>eries</h2>
             <span class="divide"></span>
@@ -308,7 +364,7 @@
                 <table class="feature-table">
                     <thead>
                         <tr>
-                            <th>&nbsp;</th>
+                            <th>Parameters</th>
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
