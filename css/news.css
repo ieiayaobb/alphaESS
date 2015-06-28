@@ -106,6 +106,7 @@ body{
     font-size: 14px;
     color: #333;
     line-height: 20px;
+    font-family: Calibri;
 }
 .content-wrap .right .main .downloadlist-background{
     float: left;
@@ -147,14 +148,18 @@ body{
     height:340px;
     padding: 0 20px 25px 20px;
     margin-bottom: 15px;
+    border-bottom: 1px solid #e6e6e6;
 }
 
-.news-list h3{
-    border-bottom: 1px solid #e6e6e6;
+.news-list .news-title{
     font-size: 14px;
     line-height: 20px;
     padding-bottom: 4px;
     margin: 16px 0 20px 0;
+    color:#333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e6e6e6;
+    float:left;
 }
 
 .info-head{
@@ -205,6 +210,7 @@ body{
     float:left;
     width:200px;
     height:180px;
+    cursor: pointer;
 }
 .news1{
     background-image: url(../img/news/news1.png);
@@ -244,6 +250,7 @@ body{
     height:100px;
     line-height:16px;
     color:#333;
+    font-weight:300;
 }
 
 .part{

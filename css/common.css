@@ -5,11 +5,6 @@
     clear:both;
 }
 
-body{
-    font-family: NeoSans;
-    font-size:16px/1.6em
-}
-
 .head{
     position:fixed;
     width:100%;
@@ -69,15 +64,15 @@ body{
     float:right;
     position: relative;
     z-index: 3000;
-    right:150px;
-    top:30px;
+    right:110px;
+    top:32px;
     
 }
 
 .global-ico{
-    background-image: url(../img/index/global.png);
-    width:24px;
-    height: 24px;
+    background-image: url(../img/english.png);
+    width:20px;
+    height: 13px;
     cursor: pointer;
     float:left;
 }
@@ -302,7 +297,7 @@ body{
 .public-container{
     margin: 20px auto 0 auto;
     height:70px;
-    width: 620px;
+    width: 320px;
     cursor: pointer;
 }
 

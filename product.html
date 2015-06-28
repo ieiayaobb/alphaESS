@@ -9,23 +9,20 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
-            $(".more").click(function(){
-                window.location.href = "storion.html"
-            })
-
             var content_1 = 0;
             var content_2 = 600;
             var content_3 = 600;
             var content_4 = 600;
+            var content_5 = 600;
 
             var current = judge(0);
-//            handleAnimation(current);
+
             setSideMenu(current);
             var cloudInterval;
             $(window).scroll(function (e) {
                 if (judge(current) != undefined) {
                     current = judge(current);
-//                    handleAnimation(current)
+
                     setSideMenu(current);
                 }
             });
@@ -34,45 +31,45 @@
                 clearOtherInterval(current);
                 switch (current) {
                     case 1 :
-                        console.log("call 1")
-                        $(".content-1 .feature-title").animate({
-                            top: '-30px',
-                            opacity: 1
-                        });
-                        break;
+                    console.log("call 1")
+                    $(".content-1 .feature-title").animate({
+                        top: '-30px',
+                        opacity: 1
+                    });
+                    break;
                     case 2:
-                        console.log("call 2")
-                        var i = 0;
-                        setInterval(function () {
-                            $(".left-feature .image-feature").eq(i).animate({
-                                left: '30px',
-                                opacity: 1
-                            })
-                        }, 200);
-                        setInterval(function () {
-                            $(".right-feature .image-feature").eq(i++).animate({
-                                left: '-30px',
-                                opacity: 1
-                            })
-                        }, 200);
-                        break;
+                    console.log("call 2")
+                    var i = 0;
+                    setInterval(function () {
+                        $(".left-feature .image-feature").eq(i).animate({
+                            left: '30px',
+                            opacity: 1
+                        })
+                    }, 200);
+                    setInterval(function () {
+                        $(".right-feature .image-feature").eq(i++).animate({
+                            left: '-30px',
+                            opacity: 1
+                        })
+                    }, 200);
+                    break;
                     case 3:
-                        console.log("call 3")
-                        $(".accessories").animate({
-                            opacity: 1,
-                            top: '200px'
-                        }, 500);
-                        break;
+                    console.log("call 3")
+                    $(".accessories").animate({
+                        opacity: 1,
+                        top: '200px'
+                    }, 500);
+                    break;
                     case 4:
-                        console.log("call 4");
-                        var i = 0;
-                        cloudInterval = setInterval(function () {
-                            $(".device" + ++i).animate({
-                                opacity: 1
-                            }, 500);
-                            console.log("running 4")
-                        }, 300);
-                        break;
+                    console.log("call 4");
+                    var i = 0;
+                    cloudInterval = setInterval(function () {
+                        $(".device" + ++i).animate({
+                            opacity: 1
+                        }, 500);
+                        console.log("running 4")
+                    }, 300);
+                    break;
                     default :
 
                 }
@@ -91,21 +88,21 @@
                     if (current != 3) {
                         return 3;
                     }
-                } else if ($(window).scrollTop() >= content_1 + content_2 + content_3 + content_4) {
+                } else if ($(window).scrollTop() >= content_1 + content_2 + content_3 + content_4 && $(window).scrollTop() < content_1 + content_2 + content_3 + content_4 + content_5) {
                     if (current != 4) {
                         return 4;
+                    }
+                } else if ($(window).scrollTop() >= content_1 + content_2 + content_3 + content_4 + content_5) {
+                    if (current != 5) {
+                        return 5;
                     }
                 }
             }
 
             function clearOtherInterval(now) {
                 if (now != 1) {
-//						clearInterval(photoSwitchInterval);
-//                    $(".content-1 .feature-title").css("top", 40).css("opacity", 0);
                 }
                 if (now != 2) {
-//						clearInterval(featureInterval);
-//                    $(".image-feature").css("left", 0).css("opacity", 0);
                 }
                 if (now != 3) {
                     $(".accessories").css("top", 300).css("opacity", 0);
@@ -172,298 +169,388 @@
             $(".menu-button>a").animate({
                 "top":30
             }, "slow")
+
+            $(".tab>a").click(function(){
+                $(".current").removeClass("current");
+                $(this).addClass("current");
+                if($(this).hasClass("components-tab")){
+                    $(".components").show();
+                    $(".features").hide()
+                }else if($(this).hasClass("features-tab")){
+                    $(".features").show();
+                    $(".components").hide()
+                }
+            })
         });
-    </script>
+</script>
 </head>
 <body>
-<div class="head">
-    <div class="head-background"></div>
-    <div class="head-menu">
-        <ul class="menu-all">
-            <li class="logo"><a href="index.html"></a></li>
-            <li class="menu-button"><a href="index.html">Home</a></li>
-            <li class="menu-button"><a href="company.html">About Us</a></li>
-            <li class="menu-button"><a href="product.html">Products</a></li>
-            <li class="menu-button"><a href="newslist.html">News</a></li>
-            <li class="menu-button"><a href="career.html">Career</a></li>
-        </ul>
-    </div>
-    <div class="global">
-        <span class="global-ico"></span>
-        <div class="lang">
-            <ul>
-                <li class="first"></li>
-                <li class="lang-li"><a href="#">English</a> </li>
-                <li class="lang-li"><a href="#">Deutsch</a> </li>
-                <li class="lang-li"><a href="#">Français</a> </li>
-                <li class="last"></li>
+    <div class="head">
+        <div class="head-background"></div>
+        <div class="head-menu">
+            <ul class="menu-all">
+                <a class="logo" href="index.html"></a>
+                <li class="menu-button"><a href="index.html">Home</a></li>
+                <li class="menu-button"><a href="about.html">About Us</a></li>
+                <li class="menu-button"><a href="product.html">Products</a></li>
+                <li class="menu-button"><a href="newslist.html">News</a></li>
+                <li class="menu-button"><a href="career.html">Career</a></li>
             </ul>
         </div>
+        <div class="global">
+            <span class="global-ico"></span>
+            <div class="lang">
+                <ul>
+                    <li class="first"></li>
+                    <li class="lang-li"><a href="#">English</a> </li>
+                    <li class="lang-li"><a href="#">Deutsch</a> </li>
+                    <li class="lang-li"><a href="#">Français</a> </li>
+                    <li class="last"></li>
+                </ul>
+            </div>
+        </div>
+        <a class="login" href="http://www.alphes.com">Log-in</a>
     </div>
-    <a class="login" href="http://www.alphes.com">Log-in</a>
-</div>
-<div class="left-menu">
-    <ul>
-        <li>
-            <span class="menu-normal"></span>
-            <span class="menu-ico ico-storion"></span>
-        </li>
-        <li>
-            <span class="menu-normal"></span>
-            <span class="menu-ico ico-centauri"></span>
-        </li>
-        <li>
-            <span class="menu-normal"></span>
-            <span class="menu-ico ico-accessories"></span>
-        </li>
-        <li>
-            <span class="menu-normal"></span>
-            <span class="menu-ico ico-cloud"></span>
-        </li>
-    </ul>
-</div>
-<div class="content content-1">
-    <div class="content-storion">
-        <div class="title">
-            <h2><strong>S</strong>torion <Strong>S</Strong>eries</h2>
-            <span class="divide"></span>
-        </div>
-
-        <div class="family"></div>
-        <div class="feature feature-1">
-            <div class="feature-title">
-                <span class="image-feature-icon multifunction-ico"></span>
-                <span class="feature-title-content">Multi-function</span>
-            </div>
-            <div class="feature-detail">
-                <p class="feature-detail-content">
-                    The electricity provided by the PV system can power loads directly, while charging
-                    the battery. The surplus solar energy can be fed into the grid.
-                </p>
-            </div>
-        </div>
-        <div class="feature feature-2">
-            <div class="feature-title">
-                <span class="image-feature-icon reliability-ico"></span>
-                <span class="feature-title-content">Reliability</span>
-            </div>
-            <div class="feature-detail">
-                <p class="feature-detail-content">
-                    Via an integrated control system and adaptive logic, the EMS controls and optimizes
-                </p>
-            </div>
-        </div>
-        <div class="feature feature-3">
-            <div class="feature-title">
-                <span class="image-feature-icon comparatility-ico"></span>
-                <span class="feature-title-content">Compatibility</span>
-            </div>
-            <div class="feature-detail">
-                <p class="feature-detail-content">
-                    the flow of energy to realize the maximum PV self-consumption rate.
-                </p>
-            </div>
-        </div>
-        <div class="feature feature-4">
-            <div class="feature-title">
-                <span class="image-feature-icon safety-ico"></span>
-                <span class="feature-title-content">Safety</span>
-            </div>
-            <div class="feature-detail">
-                <p class="feature-detail-content">
-                    the flow of energy to realize the maximum PV self-consumption rate.
-                </p>
-            </div>
-        </div>
-        <a class="learn-more" href="download1.html">Click to download datasheets</a>
-        <a class="video" href="storion.html">Click to watch video</a>
-    </div>
-</div>
-<div class="content content-2">
-    <div class="centauri-storion">
-        <div class="title">
-            <h2><strong>A</strong>lpha-<strong>C</strong>entauri</h2>
-            <span class="divide"></span>
-        </div>
-        <div class="crystal"></div>
-        <ul class="left-feature">
+    <div class="left-menu">
+        <ul>
             <li>
-                <div class="image-feature">
-                    <span class="image-feature-icon-big multifunction"></span>
-                    <span class="image-feature-title">Multi-function</span>
-                    <span class="image-feature-sub-title">Variety Of Functions</span>
-                </div>
+                <span class="menu-normal"></span>
+                <span class="menu-ico ico-storion"></span>
             </li>
-            <!--<li>-->
-            <!--<div class="image-feature">-->
-            <!--<span class="image-feature-icon comparatility"></span>-->
-            <!--<span class="image-feature-title">Compatibility</span>-->
-            <!--<span class="image-feature-sub-title">Support AC & DC</span>-->
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="image-feature">-->
-            <!--<span class="image-feature-icon safety"></span>-->
-            <!--<span class="image-feature-title">Safety</span>-->
-            <!--<span class="image-feature-sub-title">Best Quality</span>-->
-            <!--</div>-->
-            <!--</li>-->
             <li>
-                <div class="image-feature">
-                    <span class="image-feature-icon-big reliability"></span>
-                    <span class="image-feature-title">Reliability</span>
-                    <span class="image-feature-sub-title">Design In German</span>
-                </div>
+                <span class="menu-normal"></span>
+                <span class="menu-ico ico-battery"></span>
+            </li>
+            <li>
+                <span class="menu-normal"></span>
+                <span class="menu-ico ico-centauri"></span>
+            </li>
+            
+            <li>
+                <span class="menu-normal"></span>
+                <span class="menu-ico ico-accessories"></span>
+            </li>
+            <li>
+                <span class="menu-normal"></span>
+                <span class="menu-ico ico-cloud"></span>
             </li>
         </ul>
-
-        <ul class="right-feature">
-            <!--<li>-->
-            <!--<div class="image-feature">-->
-            <!--<span class="image-feature-icon powerful"></span>-->
-            <!--<span class="image-feature-title">Powerful</span>-->
-            <!--<span class="image-feature-sub-title">Both On Hardware & Software</span>-->
-            <!--</div>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<div class="image-feature">-->
-            <!--<span class="image-feature-icon advanced"></span>-->
-            <!--<span class="image-feature-title">Advanced</span>-->
-            <!--<span class="image-feature-sub-title">The Latest Version</span>-->
-            <!--</div>-->
-            <!--</li>-->
-            <li>
-                <div class="image-feature">
-                    <span class="image-feature-icon-big extendability"></span>
-                    <span class="image-feature-title">Extendability</span>
-                    <span class="image-feature-sub-title">Easy To Extend</span>
-                </div>
-            </li>
-            <li>
-                <div class="image-feature">
-                    <span class="image-feature-icon-big economical"></span>
-                    <span class="image-feature-title">Economy</span>
-                    <span class="image-feature-sub-title">Bring Benefits</span>
-                </div>
-            </li>
-        </ul>
-        <a class="learn-more" href="download2.html">
-            Click to download datasheets
-        </a>
     </div>
-</div>
-<div class="content content-3">
-    <div class="content-accessories">
-        <div class="title">
-            <h2><strong>A</strong>ccessories</h2>
-            <span class="divide"></span>
-        </div>
-        <div class="left-mixed">
-            <div class="feature mixed-feature">
-                <table class="feature-table">
-                    <thead>
-                        <tr>
-                            <th>Parameters</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="odd">
-                            <td>Model</td>
-                            <td>Backup Box</td>
-                        </tr>
-                        <tr>
-                            <td>Phase</td>
-                            <td>Single Phase/Three Phase</td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Display</td>
-                            <td>LCD</td>
-                        </tr>
-                        <tr>
-                            <td>Communication</td>
-                            <td>RS485</td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Operating Temperature Range</td>
-                            <td>-20°C To 40°C</td>
-                        </tr>
-                        <tr>
-                            <td>Humidity</td>
-                            <td>15% - 85%</td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Protection Level</td>
-                            <td>IP20</td>
-                        </tr>
-                        <tr>
-                            <td>Dimension(W * D * H)</td>
-                            <td>202 * 117 * 76 mm</td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Warranty</td>
-                            <td>5 Years</td>
-                        </tr>
-                        <tr>
-                            <td>Nominal Output Power</td>
-                            <td>20000 W</td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Grid Output Voltage Range(AC)</td>
-                            <td>184 -264.5 Vac</td>
-                        </tr>
-                        <tr>
-                            <td>Grid Frequency</td>
-                            <td>50/60 Hz</td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Nominal Current</td>
-                            <td>30 A * 3</td>
-                        </tr>
-                        <tr>
-                            <td>Grid Regulation</td>
-                            <td>VDE-AR-N 4105, VDE 0126-1-1, AS 4777.2/.3</td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Safety</td>
-                            <td>IEC 62109-1&-2, AS 3100, IED 62040-1</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <div class="content content-1">
+        <div class="content-storion">
+            <div class="title">
+                <h2><strong>S</strong>torion <Strong>S</Strong>eries</h2>
+                <span class="divide"></span>
             </div>
-            <div class="corner"></div>
-            <div class="accessories"></div>
-        </div>
 
-    </div>
-</div>
-<div class="content content-4">
-    <div class="cloud-wrapper">
-        <div class="title">
-            <h2><strong>A</strong>lpha <strong>C</strong>loud</h2>
-            <span class="divide"></span>
+            <div class="family"></div>
+
+            <div class="tab">
+                <a href="#" class="components-tab ">Components</a>
+                <a href="#" class="features-tab current">Features</a>
+            </div>
+
+            <div class="features" >
+                <div class="feature feature-1">
+                    <div class="feature-title">
+                        <span class="image-feature-icon multifunction-ico"></span>
+                        <span class="feature-title-content">Multi-function</span>
+                    </div>
+                    <div class="feature-detail">
+                        <p class="feature-detail-content">
+                            The electricity provided by the PV system can power loads directly, while charging
+                            the battery. The surplus solar energy can be fed into the grid.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature feature-2">
+                    <div class="feature-title">
+                        <span class="image-feature-icon reliability-ico"></span>
+                        <span class="feature-title-content">Reliability</span>
+                    </div>
+                    <div class="feature-detail">
+                        <p class="feature-detail-content">
+                            Via an integrated control system and adaptive logic, the EMS controls and optimizes
+                        </p>
+                    </div>
+                </div>
+                <div class="feature feature-3">
+                    <div class="feature-title">
+                        <span class="image-feature-icon comparatility-ico"></span>
+                        <span class="feature-title-content">Compatibility</span>
+                    </div>
+                    <div class="feature-detail">
+                        <p class="feature-detail-content">
+                            the flow of energy to realize the maximum PV self-consumption rate.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature feature-4">
+                    <div class="feature-title">
+                        <span class="image-feature-icon safety-ico"></span>
+                        <span class="feature-title-content">Safety</span>
+                    </div>
+                    <div class="feature-detail">
+                        <p class="feature-detail-content">
+                            the flow of energy to realize the maximum PV self-consumption rate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="components" style="display:none;">
+                <div class="components-back"></div>
+                <div class="components-part components-inverter">
+                    <div class="components-title">Inverter</div>
+                    <ul class="components-content">
+                        <li>Multiple operations: Grid-tied, Off-grid and Grid-tied with backup</li>
+                        <li>Built-in MPPT solar charger</li>
+                        <li>LCD display</li>
+                    </ul>
+                </div>
+                <div class="components-part components-battery">
+                    <div class="components-title">Battery</div>
+                    <ul class="components-content">
+                        <li>Premium battery cells</li>
+                        <li>Advanced BMS design ensures safety and efficiency</li>
+                        <li>Automatic protection and maintenance</li>
+                        <li>Heavy-duty 20 years estimated lifetime</li>
+                        <li>Compatible Communication: interface supports both RS485/CAN</li>
+                        <li>Flexible design: Max. 6 modules in parallel to provide max. 15KWh energy capacity</li>
+                        <li>19-inch compatible telecom cabinet and “plug-and-play” installation</li>
+                    </ul>
+                </div>
+                <div class="components-part components-ems">
+                    <div class="components-title">EMS Controller</div>
+                    <ul class="components-content">
+                        <li>Ethernet interface uploads the operation data to easily monitor energy consumption</li>
+                        <li>7-inch LCD touch screen shows real-time status of each component</li>
+                        <li>USB Host interface updates the system firmware directly with USB flash disk</li>
+                        <li>Increased compatibility to support various kinds of inverters and batteries</li>
+                    </ul>
+                </div>
+
+            </div>
+            <a class="learn-more" href="download1.html">Click to download datasheets</a>
+            <a class="video" href="storion.html">Click to watch video</a>
         </div>
-        <div class="cloud_all"></div>
-        <!--<div class="link"></div>-->
-        <!--<div class="device device1 imac"></div>-->
-        <!--<div class="device device2 laptop"></div>-->
-        <!--<div class="device device3 phone"></div>-->
-        <!--<div class="storion-flat"></div>-->
-        <!--<div class="device device4 pad"></div>-->
-        <div class="introduction">
-            <ul class="introduction-detail">
-                <li>Free online visualization through friendly user interface</li>
-                <li>Easy updating by using standard USB flash or online update</li>
-                <li>Professional technical support from AlphaESS</li>
-                <li>Future access to Energy Internet available</li>
+    </div>
+    <div class="content content-2">
+        <div class="content-storion">
+            <div class="title">
+            <h2><strong>P</strong>ower <strong>P</strong>ack</h2>
+                <span class="divide"></span>
+            </div>
+            <div class="powerplug"></div>
+
+            <div class="powerplug-description">
+                <div class="powerplug-desc-content">Premium battery cells LiFePO4</div>
+                <div class="powerplug-desc-content">Two optional models: M4850 (50Ah) and M4860 (60Ah)</div>
+                <div class="powerplug-desc-content">Advanced BMS design to ensure safety and efficiency</div>
+                <div class="powerplug-desc-content">Automatic protection and maintenance</div>
+                <div class="powerplug-desc-content">Compatible Communication: interface supports both RS485/CAN</div>
+            </div>
+
+            <div class="powerplug-features">
+                <div class="feature-all feature-plug">
+                    <span class="feature-ico plug-ico"></span>
+                    <div class="feature-desc plug-desc">Plug & Play Installation</div>
+                </div>
+                <div class="feature-all feature-modular">
+                    <span class="feature-ico modular-ico"></span>
+                    <div class="feature-desc modular-desc">Max. 6 modules to provide max. 15KWh energy capacity</div>
+                </div>
+                <div class="feature-all feature-safety">
+                    <span class="feature-ico safety-new-ico"></span>
+                    <div class="feature-desc safety-desc">Safety insured by battery</div>
+                </div>
+                <div class="feature-all feature-20years">
+                    <span class="feature-ico years-ico"></span>
+                    <div class="feature-desc 20years-desc">Heavy-duty 20 years estimated lifetime</div>
+                </div>
+            </div>
+            <a class="learn-more" href="download3.html">Click to download datasheets</a>
+        </div>
+    </div>
+    <div class="content content-3">
+        <div class="centauri-storion">
+            <div class="title">
+                <h2><strong>A</strong>lpha-<strong>C</strong>entauri</h2>
+                <span class="divide"></span>
+            </div>
+            <div class="crystal"></div>
+            <ul class="left-feature">
+                <li>
+                    <div class="image-feature">
+                        <span class="image-feature-icon-big chemical"></span>
+                        <span class="image-feature-title">Eco-friendly chemistry</span>
+                        <span class="image-feature-sub-title">Less acid. Complies with increasingly strict international standards on protection of the environment.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-feature">
+                        <span class="image-feature-icon-big safety"></span>
+                        <span class="image-feature-title">Safe use</span>
+                        <span class="image-feature-sub-title">No risk of leakage, less harmful chemicals, less fluids because of crystallization.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-feature">
+                        <span class="image-feature-icon-big transportation"></span>
+                        <span class="image-feature-title">Easy Transportation</span>
+                        <span class="image-feature-sub-title">Classified as non-hazardous for transport. The only battery allowed as normal goods by air-freight.</span>
+                    </div>
+                </li>
             </ul>
-        </div>
-    </div>
-    <div class="content-temp-4">
-        <div class="content-temp-4-inner">
 
+            <ul class="right-feature">
+                <li>
+                    <div class="image-feature">
+                        <span class="image-feature-icon-big multifunction"></span>
+                        <span class="image-feature-title">Multi-function</span>
+                        <span class="image-feature-sub-title">Maximize PV self-consumption, UPS function in case of grid outage</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-feature">
+                        <span class="image-feature-icon-big economical"></span>
+                        <span class="image-feature-title">Economy</span>
+                        <span class="image-feature-sub-title">More economic in cost compared with Li-ion series</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="image-feature">
+                        <span class="image-feature-icon-big service"></span>
+                        <span class="image-feature-title">More Service</span>
+                        <span class="image-feature-sub-title">Free online visualization portal with user-friendly website design, easy updating by using standard USB flash</span>
+                    </div>
+                </li>
+            </ul>
+            <a class="learn-more" href="download2.html">
+                Click to download datasheets
+            </a>
         </div>
     </div>
-</div>
+    <div class="content content-4">
+        <div class="content-accessories">
+            <div class="title">
+                <h2><strong>A</strong>ccessories</h2>
+                <span class="divide"></span>
+            </div>
+            <div class="left-mixed">
+                <div class="feature mixed-feature">
+                    <table class="feature-table">
+                        <thead>
+                            <tr>
+                                <th>Parameters</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd">
+                                <td>Model</td>
+                                <td>Backup Box</td>
+                            </tr>
+                            <tr>
+                                <td>Phase</td>
+                                <td>Single Phase/Three Phase</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Display</td>
+                                <td>LCD</td>
+                            </tr>
+                            <tr>
+                                <td>Communication</td>
+                                <td>RS485</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Operating Temperature Range</td>
+                                <td>-20°C To 40°C</td>
+                            </tr>
+                            <tr>
+                                <td>Humidity</td>
+                                <td>15% - 85%</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Protection Level</td>
+                                <td>IP20</td>
+                            </tr>
+                            <tr>
+                                <td>Dimension(W * D * H)</td>
+                                <td>202 * 117 * 76 mm</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Warranty</td>
+                                <td>5 Years</td>
+                            </tr>
+                            <tr>
+                                <td>Nominal Output Power</td>
+                                <td>20000 W</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Grid Output Voltage Range(AC)</td>
+                                <td>184 -264.5 Vac</td>
+                            </tr>
+                            <tr>
+                                <td>Grid Frequency</td>
+                                <td>50/60 Hz</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Nominal Current</td>
+                                <td>30 A * 3</td>
+                            </tr>
+                            <tr>
+                                <td>Grid Regulation</td>
+                                <td>VDE-AR-N 4105, VDE 0126-1-1, AS 4777.2/.3</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Safety</td>
+                                <td>IEC 62109-1&-2, AS 3100, IED 62040-1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="corner"></div>
+                <div class="accessories"></div>
+            </div>
+            <a class="learn-more" href="download4.html" style="z-index:1000">
+                Click to download datasheets
+            </a>
+        </div>
+    </div>
+    <div class="content content-5">
+        <div class="cloud-wrapper">
+            <div class="title">
+                <h2><strong>A</strong>lpha <strong>C</strong>loud</h2>
+                <span class="divide"></span>
+            </div>
+            <div class="cloud_all"></div>
+            <div class="introduction">
+                <ul class="introduction-detail">
+                    <li>
+                        <span class="cloud-title">Maximize your profit!</span>
+                        <div class="cloud-content">24-hour monitoring system through user-friendly interface to reflect real-time profit</div>
+                        <div class="cloud-content">Remote control of system setting according to electricity cost to maximize profit</div>
+                    </li>
+                    <li>
+                        <span class="cloud-title">Free you from any worries!</span>
+                        <div class="cloud-content">Early warnings of possible abnormality happened to system</div>
+                        <div class="cloud-content">Quick response to any problems through remote trouble diagnosis</div>
+                        <div class="cloud-content">Professional technical support from Alpha engineers</div>
+                    </li>
+                    <li>
+                        <span class="cloud-title">Free access to future updates!</span>
+                        <div class="cloud-content">Easy updating by using standard USB flash or online update</div>
+                        <div class="cloud-content">Future access to Energy Internet available</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-temp-4">
+            <div class="content-temp-4-inner">
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

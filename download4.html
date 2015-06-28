@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>AlphaESS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/download.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu-button>a").hover(function(){
+                $(this).animate({
+                    opacity:1
+                },"fast")
+            },function(){
+                $(this).animate({
+                    opacity:0.6
+                })
+            },"fast");
+
+            $(".head-background").animate({
+                "height":80,
+                "opacity": "1"
+            },"slow");
+
+            $(".logo").animate({
+                "top":0
+            },"slow");
+
+            $(".menu-button>a").animate({
+                "top":30
+            }, "slow")
+        });
+    </script>
+</head>
+<body>
+<div class="head">
+    <div class="head-background"></div>
+    <div class="head-menu">
+        <ul class="menu-all">
+            <a class="logo" href="index.html"></a>
+            <li class="menu-button"><a href="index.html">Home</a></li>
+            <li class="menu-button"><a href="about.html">About Us</a></li>
+            <li class="menu-button"><a href="product.html">Products</a></li>
+            <li class="menu-button"><a href="newslist.html">News</a></li>
+            <li class="menu-button"><a href="career.html">Career</a></li>
+        </ul>
+    </div>
+    <div class="global">
+        <span class="global-ico"></span>
+        <div class="lang">
+            <ul>
+                <li class="first"></li>
+                <li class="lang-li"><a href="#">English</a> </li>
+                <li class="lang-li"><a href="#">Deutsch</a> </li>
+                <li class="lang-li"><a href="#">Français</a> </li>
+                <li class="last"></li>
+            </ul>
+        </div>
+    </div>
+    <a class="login" href="http://www.alphes.com">Log-in</a>
+</div>
+<div class="content-wrap clearfix">
+    <div class="banner">
+
+    </div>
+    <div class="bread-wrapper">
+        <div class="bread">
+            <a class="bread-node bread-1" href="index.html">Home</a>
+            <span class="arrow"> > </span>
+            <a class="bread-node bread-2" href="product.html">Products</a>
+            <span class="arrow"> > </span>
+            <a class="bread-node bread-3">Downloads</a>
+
+            <div class="about-list">
+            </div>
+        </div>
+
+    </div>
+    <div class="left">
+        <div class="company-info">
+
+        </div>
+    </div>
+    <div class="right clearfix">
+        <div class="main">
+            <h1 class="title">
+                <strong>D</strong>ownloads
+            </h1>
+
+            <div class="tab">
+                <a href="download1.html" class="storion ">Storion Series</a>
+                <a href="download3.html" class="power-plug">Power-Plug</a>
+                <a href="download2.html" class="alpha-centarui">Alpha-Centarui</a>
+                <a href="download4.html" class="accessories current">Accessories</a>
+            </div>
+
+            <div class="downloads-title">
+                <h1>Backup Box</h1>
+            </div>
+
+            <div class="detail">
+                <ul>
+                    <li class="each">
+                        <div class="intro">
+                            <div class="downloads-pic downloads-backupbox-pic"></div>
+                        </div>
+                        <div class="desc">
+                            <h2 class="">Backup Box</h2>
+                            <div class="downloads-pdf">
+                                <div class="description"></div>
+                                <span class="pdf-icon"></span>
+                                <a href="pdf/Backup Box.pdf" class="pdf-content">Backup Box</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

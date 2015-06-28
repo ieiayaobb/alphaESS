@@ -10,6 +10,17 @@ body{
     background-size: 100%;
 }
 
+.info-head>h1{
+    font-size:36px;
+    color:#333;
+    margin-bottom: 50px;
+}
+
+.info-head h1 strong{
+    font-size:36px;
+    color:#F7B128
+}
+
 .head-menu>ul{
     display:inline-block;
     margin:auto;
@@ -20,7 +31,7 @@ body{
 }
 
 .content-wrap {
-    width:990px;
+    width:1000px;
     position:relative;
     margin:0px auto;
     margin-top: 80px;
@@ -72,7 +83,7 @@ body{
 .content-wrap .right{
     float: right;
     position:relative;
-    width:990px;
+    width:1000px;
     background-color:#fff;
     border: 1px solid #e6e6e6;
 }
@@ -166,11 +177,6 @@ body{
     width:100%;
 }
 
-.info-head>h1{
-    font-size:36px;
-    padding:20px;
-}
-
 .info-head>h2{
     padding:20px;
     border-bottom: 1px solid #979797;
@@ -207,4 +213,28 @@ body{
 .part p{
     text-indent: 20px;
     line-height: 20px;
+}
+
+.career{
+    float:left;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DDD;
+}
+
+.career-record{
+    margin-top:5px;
+
+}
+
+.career-title{
+    padding:10px;
+}
+
+.banner{
+    width:1000px;
+    height: 300px;
+    background-image: url(../img/banner/career.jpg);
+    position:relative;
+    z-index: 100;
 }

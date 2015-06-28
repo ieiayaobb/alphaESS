@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>AlphaESS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/about.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).click(function(e){
+                if($(e.target).hasClass("bread-2")){
+                    $(".about-list").css("visibility","visible").css("top", 30).css("left", 80);
+                }else{
+                    $(".about-list").css("visibility","hidden").css("top", -9999).css("left", -9999);
+                }
+            })
+
+            $(".menu-button>a").hover(function(){
+                $(this).animate({
+                    opacity:1
+                },"fast")
+            },function(){
+                $(this).animate({
+                    opacity:0.6
+                })
+            },"fast");
+
+            $(".head-background").animate({
+                "height":80,
+                "opacity": "1"
+            },"slow");
+
+            $(".logo").animate({
+                "top":0
+            },"slow");
+
+            $(".menu-button>a").animate({
+                "top":30
+            }, "slow")
+        });
+    </script>
+</head>
+<body>
+<div class="head">
+    <div class="head-background"></div>
+    <div class="head-menu">
+        <ul class="menu-all">
+            <a class="logo" href="index.html"></a>
+            <li class="menu-button"><a href="index.html">Home</a></li>
+            <li class="menu-button"><a href="company.html">About Us</a></li>
+            <li class="menu-button"><a href="product.html">Products</a></li>
+            <li class="menu-button"><a href="newslist.html">News</a></li>
+            <li class="menu-button"><a href="career.html">Career</a></li>
+        </ul>
+    </div>
+    <div class="global">
+        <span class="global-ico"></span>
+        <div class="lang">
+            <ul>
+                <li class="first"></li>
+                <li class="lang-li"><a href="#">English</a> </li>
+                <li class="lang-li"><a href="#">Deutsch</a> </li>
+                <li class="lang-li"><a href="#">Français</a> </li>
+                <li class="last"></li>
+            </ul>
+        </div>
+    </div>
+    <a class="login" href="http://www.alphes.com">Log-in</a>
+</div>
+<div class="content-wrap clearfix">
+    <div class="big_earth">
+
+    </div>
+    <a href="company.html" class="panel company-introduction">
+        <div class="about-title">Company Introduction</div>
+        <!-- <div class="about-desc">Know more about our company</div> -->
+    </a>
+    <a href="partner.html" class="panel cooperation">
+        <div class="about-title">Cooperation Partner</div>
+        <!-- <div class="about-desc"></div> -->
+    </a>
+</div>
+</body>
+</html>

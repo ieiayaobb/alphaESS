@@ -206,7 +206,7 @@ body{
 .banner{
     width:1000px;
     height: 300px;
-    background-image: url(../img/banner/medal.png);
+    background-image: url(../img/banner/energy.png);
     position:relative;
     z-index: 100;
 }
@@ -276,7 +276,6 @@ body{
     width:300px;
     height:225px;
     float:left;
-    background-image: url(../img/download/invertor.png);
     background-repeat: no-repeat;
     padding:10px;
 }
@@ -299,6 +298,10 @@ body{
 
 .downloads-centarui-pic{
     background-image: url(../img/download/centarui.png);
+}
+
+.downloads-backupbox-pic{
+    background-image: url(../img/download/backupbox.png);
 }
 
 .downloads-pdf{
