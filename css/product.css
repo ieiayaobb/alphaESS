@@ -209,19 +209,18 @@
 
 .left-feature, .right-feature{
     float:left;
-    width:300px;
 }
 
 .left-feature{
     position:absolute;
     top:100px;
-    left:0px;
+    left:-50px;
 }
 
 .right-feature{
     position:absolute;
     top:100px;
-    left:700px
+    left:650px
 }
 
 .image-feature{
@@ -404,67 +403,42 @@
 }
 
 .learn-more{
-    font-size:12px;
+    font-size:14px;
     position:absolute;
     left : 700px;
-    top : 520px;
-
+    top : 530px;
     float:left;
-    background-color: #F7B12A;
     letter-spacing: 1px;
     text-transform: uppercase;
-    -webkit-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
-    -moz-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
-    box-shadow: 0 0 0 2px rgba(120,120,120,.1);
     -webkit-transition: border-radius .2s ease-in-out;
     -moz-transition: border-radius .2s ease-in-out;
     -o-transition: border-radius .2s ease-in-out;
     transition: border-radius .2s ease-in-out;
     padding: 10px 15px;
-    font-weight: 100;
-    border-radius: 3px;
+    font-weight: 300;
     -webkit-border-radius: 3px;
-    text-decoration: none!important;
-    border: transparent;
     cursor: pointer;
-    color:#fff;
-}
-
-.learn-more:hover{
-  background-color: #AD7A17;
+    color:#F7B12A;
 }
 
 .video{
-    font-size:12px;
+    font-size:14px;
     position:absolute;
-    left : 700px;
-    top : 560px;
-
+    left : 500px;
+    top : 530px;
     float:left;
-    background-color: #F7B12A;
     letter-spacing: 1px;
     text-transform: uppercase;
-    -webkit-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
-    -moz-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
-    box-shadow: 0 0 0 2px rgba(120,120,120,.1);
     -webkit-transition: border-radius .2s ease-in-out;
     -moz-transition: border-radius .2s ease-in-out;
     -o-transition: border-radius .2s ease-in-out;
     transition: border-radius .2s ease-in-out;
     padding: 10px 15px;
-    font-weight: 100;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    text-decoration: none!important;
+    font-weight: 300;
     border: transparent;
     cursor: pointer;
-    color:#fff;
+    color:#F7B12A;
 }
-
-.video:hover{
-  background-color: #AD7A17;
-}
-
 
 .learn-more-left{
     left: 680px;
