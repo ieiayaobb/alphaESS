@@ -190,25 +190,25 @@
 
 .login{
     border: 1px solid rgba(255,255,255,1);
-  float:right;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
-  -moz-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
-  box-shadow: 0 0 0 2px rgba(120,120,120,.1);
-  -webkit-transition: border-radius .2s ease-in-out;
-  -moz-transition: border-radius .2s ease-in-out;
-  -o-transition: border-radius .2s ease-in-out;
-  transition: border-radius .2s ease-in-out;
-  padding: 5px 8px 2px 8px;
-  font-weight: 400;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  text-decoration: none!important;
-  cursor: pointer;
-  top: 27px;
-  position: relative;
-  z-index: 9999;
+    float:right;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+    -moz-box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+    box-shadow: 0 0 0 2px rgba(120,120,120,.1);
+    -webkit-transition: border-radius .2s ease-in-out;
+    -moz-transition: border-radius .2s ease-in-out;
+    -o-transition: border-radius .2s ease-in-out;
+    transition: border-radius .2s ease-in-out;
+    padding: 5px 8px 2px 8px;
+    font-weight: 400;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-decoration: none!important;
+    cursor: pointer;
+    top: 27px;
+    position: relative;
+    z-index: 9999;
     color:#fff;
     font-size: 14px;
 }
@@ -297,13 +297,13 @@
 .public-container{
     margin: 20px auto 0 auto;
     height:70px;
-    width: 320px;
+    width: 340px;
     cursor: pointer;
 }
 
 .f-ico{
     font-family: fontImg;
-  content: "\e605";
+    content: "\e605";
     /*background-image: url(../img/public/f.png);*/
 }
 
