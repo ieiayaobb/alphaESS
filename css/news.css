@@ -160,6 +160,8 @@ body{
     margin-bottom: 15px;
     border-bottom: 1px solid #e6e6e6;
     float:left;
+    height:40px;
+    width:200px;
 }
 
 .info-head{
@@ -220,6 +222,10 @@ body{
     background-image: url(../img/news/news2.png);
 }
 
+.news3{
+    background-image: url(../img/news/news3.png);
+}
+
 .news4{
     background-image: url(../img/news/news4.png);
 }
@@ -242,6 +248,10 @@ body{
 
 .news9{
     background-image: url(../img/news/news9.png);
+}
+
+.news10{
+    background-image: url(../img/news/news10.png);
 }
 
 .overview{
@@ -287,4 +297,20 @@ body{
 
 p{
     line-height: 30px;
+}
+
+.career{
+    float:left;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DDD;
+}
+
+.career-record{
+    margin-top:5px;
+
+}
+
+.career-title{
+    padding:10px;
 }
