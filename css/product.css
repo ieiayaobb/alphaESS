@@ -20,7 +20,7 @@
 .content-1{
     /*background-image: url(../img/product/first_back.png);*/
     width:100%;
-    height:1600px;
+    height:800px;
     background-position: center;
     background-repeat: no-repeat;
     margin-top:80px;
@@ -78,7 +78,7 @@
 
 .feature-title{
     color:#7C7C7C;
-    font-size: 24px;
+    font-size: 18px;
     position:relative;
     float:left;
     width:180px;
@@ -88,19 +88,23 @@
 .feature-title-content{
     float:left;
     width:180px;
+    margin-top: 20px;
 }
 
 .feature-detail{
     float:left;
-    position:relative;
+    position:absolute;
+    top:650px;
+    left:200px;
 }
 
 .feature-detail-content{
     margin-top: 10px;
     float:left;
-    font-size: 12px;
-    line-height: 20px;
-    width:250px;
+    font-size: 14px;
+    line-height: 24px;
+    width:100%;
+    color: #333;
 }
 
 .point{
@@ -216,7 +220,16 @@
     float: left;
     position:absolute;
     top:100px;
+    cursor: pointer;
+}
+
+.feature-glass{
+    float: left;
+    /*position:absolute;*/
+    top:100px;
     left:50px;
+    margin: 30px;
+    cursor: pointer;
 }
 
 .mixed-feature{
@@ -295,7 +308,7 @@
     /*background-color: #f5f1e3;*/
     width:100%;
     position:relative;
-    height:600px;
+    height:500px;
 }
 
 .cloud{
@@ -365,11 +378,9 @@
     opacity : 0;
 }
 
-.introduction{
-    width:300px;
-    height:200px;
+.introduction{   
     position:absolute;
-    left:70%;
+    left:420px;
     top :100px;
 }
 
@@ -389,7 +400,7 @@
     font-size:14px;
     position:absolute;
     left : 700px;
-    top : 530px;
+    top : 750px;
     float:left;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -529,12 +540,12 @@
 
 .family{
     width:265px;
-    height:550px;
+    height:600px;
     background-image: url("../img/product/storion_new.png");
     float:left;
     position:absolute;
     left:320px;
-    top : 100px;
+    top : 160px;
 }
 
 .centauri-storion{
@@ -556,12 +567,11 @@
 }
 
 .cloud_all{
-    width:631px;
-    height:550px;
+    width:400px;
+    height:349px;
     background-image: url(../img/product/cloud_earth.png);
     position:absolute;
-    left:50px;
-    top: 50px;
+    top: 100px;
 }
 
 .powerplug{
@@ -576,7 +586,7 @@
 .powerplug-features{
     position:absolute;
     width: 100%;
-    left: 350px;
+    left: 363px;
     top: 340px;
 }
 
@@ -610,7 +620,7 @@
     /*border-right: 1px solid #F7B128;*/
     float: left;
     /*box-shadow: 2px 0 1px #888888;*/
-    margin-right: 10px;
+    margin-right: 12px;
     /*height: 40px;*/
 }
 
@@ -728,6 +738,7 @@
 .cloud-title{
     font-size:18px;
     margin-top:20px;
+    color:#F7B128;
 }
 
 .cloud-content{
@@ -736,8 +747,8 @@
     background-color: #f7f7f9;
     border: 1px solid #e1e1e8;
     border-radius: 4px;
-    width:280px;
-    height: 30px;
+    width:490px;
+    height: 15px;
 }
 
 .tab{
@@ -825,12 +836,12 @@
 
 .glass{
     width:100%;
-    height: 178px;
+    height: 280px;
     float: left;
     background-image: url(../img/product/glass_bac.png);
     background-repeat: repeat-x;
     position: absolute;
-    top:500px;
+    top:520px;
 }
 
 .table-head{
@@ -853,4 +864,140 @@
 .list-desc{
     float:left;
     padding-top:12px;
+}
+
+.arrow-right-long{
+    position: absolute;
+    float:left;
+    width:204px;
+    height:8px;
+    background-image: url(../img/product/arrow-right-long.png);
+    top:320px;
+    left:160px;
+}
+
+.arrow-left-long{
+    position: absolute;
+    float:left;
+    width:204px;
+    height:8px;
+    background-image: url(../img/product/arrow-left-long.png);
+    top:180px;
+    left:-60px;
+}
+
+.arrow-right-short{
+    position: absolute;
+    float:left;
+    width:82px;
+    height:8px;
+    background-image: url(../img/product/arrow-right-short.png);
+    top:110px;
+    left:240px;
+    
+}
+
+.screen{
+    position: absolute;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.screen strong{
+    color:#F7B12A;
+    font-size: 28px;
+}
+
+.screen-ems{
+    top:100px;
+    left:330px;
+}
+
+.screen-inverter{
+    top:170px;
+    left:-140px;
+}
+
+.screen-battery{
+    top:310px;
+    left:370px;
+}
+
+.feature-detail-content li{
+    border-bottom: 1px solid #F7B12A;
+}
+
+.components{
+    float:left;
+    background-image: url(../img/product/components_bac.png);
+    width:100%;
+    height: 400px;
+    position: absolute;
+    top:100px;
+}
+
+.next-screen{
+    float:left;
+    position:absolute;
+    width:50px;
+    height: 50px;
+    background-image:url(../img/product/next.png);
+    top:160px;
+    left:950px;
+    cursor: pointer;
+}
+
+.prev-screen{
+    float:left;
+    position:absolute;
+    width:50px;
+    height: 50px;
+    background-image:url(../img/product/prev.png);
+    top:160px;
+    left:0px;
+    cursor: pointer;
+}
+
+.ems-screen{
+    display: none;
+}
+
+.ems-screen-bac-1{
+    float: left;
+    width:580px;
+    height: 350px;
+    background-image: url(../img/product/screen-1.png);
+    top:20px;
+    left:80px;
+    position: absolute;
+}
+
+.ems-screen-bac-2{
+    float: left;
+    width:580px;
+    height: 350px;
+    background-image: url(../img/product/screen-2.png);
+    top:20px;
+    left:80px;
+    position: absolute;
+}
+
+.ems-screen-bac-3{
+    float: left;
+    width:580px;
+    height: 350px;
+    background-image: url(../img/product/screen-3.png);
+    top:20px;
+    left:80px;
+    position: absolute;
+}
+
+.ems-screen-bac-4{
+    float: left;
+    width:580px;
+    height: 350px;
+    background-image: url(../img/product/screen-4.png);
+    top:20px;
+    left:80px;
+    position: absolute;
 }

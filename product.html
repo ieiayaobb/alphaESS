@@ -139,11 +139,22 @@
                 window.location.href = "storion.html";
             });
 
+            var currentScreen;
             $(document).click(function(e){
-                if($(e.target).hasClass("global-ico")){
-                    $(".lang").css("visibility","visible");
+                if($(e.target).hasClass("screen") || $(e.target).hasClass("next-screen") || $(e.target).hasClass("prev-screen")){
+                    $(".components").show();
+
+                    currentScreen = 1;
+
+                    if($(e.target).hasClass("screen-ems")){
+                        $(".ems-screen-" + currentScreen).show();
+                    }else if($(e.target).hasClass("screen-inverter")){
+                        $(".inverter-screen-" + currentScreen).show();
+                    }else if($(e.target).hasClass("screen-battery")){
+                        $(".battery-screen-" + currentScreen).show();
+                    }
                 }else{
-                    $(".lang").css("visibility","hidden");
+                    $(".components").hide();
                 }
             })
 
@@ -180,7 +191,31 @@
                     $(".features").show();
                     $(".components").hide()
                 }
-            })
+            });
+
+            $(".feature-glass").mouseenter(function(){
+                var className = $(this).attr("class").split(" ")[2] + "-detail";
+                $("." + className).show();
+
+            }).mouseout(function(){
+                $(".feature-detail").hide()
+            });
+
+            $(".next-screen").click(function(){
+                $(".ems-screen").hide()
+                if(currentScreen < 4){
+                    currentScreen++;
+                }
+                $(".ems-screen-" + currentScreen).show();
+            });
+
+            $(".prev-screen").click(function(){
+                $(".ems-screen").hide()
+                if(currentScreen > 1){
+                    currentScreen--;
+                }
+                $(".ems-screen-" + currentScreen).show();
+            });
         });
 </script>
 </head>
@@ -245,115 +280,122 @@
                 <!-- <span class="divide"></span> -->
             </div>
 
-            <div class="family"></div>
+            <div class="family">
+                <span class="arrow-right-short"></span>
+                <span class="screen screen-ems"><strong>E</strong>MS</span>
+                <span class="arrow-left-long"></span>
+                <span class="screen screen-inverter"><strong>I</strong>nverter</span>
+                <span class="arrow-right-long"></span>
+                <span class="screen screen-battery"><strong>B</strong>attery</span>
+            </div>
 
             <!-- <div class="tab">
                 <a href="#" class="components-tab ">Components</a>
                 <a href="#" class="features-tab current">Features</a>
             </div> -->
 
+            <div class="components" style="display:none;">
+                <span class="prev-screen"></span>
+                <span class="next-screen"></span>
+                <div class="ems-screens">
+                    <div class="ems-screen ems-screen-1">
+                        <div class="ems-screen-bac-1"></div>
+                    </div>
+                    <div class="ems-screen ems-screen-2">
+                        <div class="ems-screen-bac-2"></div>
+                    </div>
+                    <div class="ems-screen ems-screen-3">
+                        <div class="ems-screen-bac-3"></div>
+                    </div>
+                    <div class="ems-screen ems-screen-4">
+                        <div class="ems-screen-bac-4"></div>
+                    </div>
+                </div>
+                <div class="inverter-screen">
+                    <div class="inverter-screen-1"></div>
+                    <div class="inverter-screen-2"></div>
+                </div>
+                <div class="battery-screen">
+                    <div class="battery-screen-1"></div>
+                    <div class="battery-screen-2"></div>
+                </div>
+            </div>
+
             <div class="features glass" >
-                <div class="feature feature-1">
+                <div class="feature-glass feature-1 feature-multifunction">
                     <div class="feature-title">
                         <span class="image-feature-icon multifunction-ico"></span>
                         <span class="feature-title-content">Multi-function</span>
                     </div>
-                    <div class="feature-detail" style="display:none;">
-                        <ul class="feature-detail-content">
-                            <li>Maximize PV self-consumption</li>
-                            <li>UPS function in case of grid outage</li>
-                            <li>Load shifting</li>
-                            <li>Power shaving/Demand charge management</li>
-                            <li>Load management/Demand response</li>
-                        </ul>
-                    </div>
+                    
                 </div>
-                <div class="feature feature-2">
+                <div class="feature-glass feature-2 feature-reliability">
                     <div class="feature-title">
                         <span class="image-feature-icon reliability-ico"></span>
                         <span class="feature-title-content">Reliability</span>
                     </div>
-                    <div class="feature-detail" style="display:none;">
-                        <ul class="feature-detail-content">
-                            <li>German design</li>
-                            <li>German quality standard</li>
-                            <li>5 years product warranty</li>
-                            <li>10 years battery performance warranty</li>
-                            <li>20 years estimated lifetime</li>
-                        </ul>
-                    </div>
                 </div>
-                <div class="feature feature-3">
+                <div class="feature-glass feature-3 feature-compatibility">
                     <div class="feature-title">
                         <span class="image-feature-icon comparatility-ico"></span>
                         <span class="feature-title-content">Compatibility</span>
                     </div>
-                    <div class="feature-detail" style="display:none;">
-                        <ul class="feature-detail-content">
-                            <li>Compatible for both new installation and retrofit systems (both AC/DC coupling)</li>
-                            <li>Modular battery design for easy extension</li>
-                            <li>Independent BMS in each battery module for flexible operation</li>
-                        </ul>
-                    </div>
                 </div>
-                <div class="feature feature-4">
+                <div class="feature-glass feature-4 feature-safety">
                     <div class="feature-title">
                         <span class="image-feature-icon safety-ico"></span>
                         <span class="feature-title-content">Safety</span>
                     </div>
-                    <div class="feature-detail" style="display:none;">
-                        <ul class="feature-detail-content">
-                            <li>Lithium Iron phosphate, the safest chemistry among all lithium battery types</li>
-                            <li>Premium power battery cells provided by world's top 5 manufacturers</li>
-                            <li>BMS design: 3 levels of software protection + 2 levels of redundant hardware protection</li>
-                            <li>EMS design: Extra protections implemented in the system integration</li>
-                            <li>Online real time monitoring and professional technical support from AlphaESS</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
 
-            <div class="components" style="display:none;">
-                <div class="components-back"></div>
-                <div class="components-part components-inverter">
-                    <div class="components-title">Inverter</div>
-                    <ul class="components-content">
-                        <li>Multiple operations: Grid-tied, Off-grid and Grid-tied with backup</li>
-                        <li>Built-in MPPT solar charger</li>
-                        <li>LCD display</li>
-                    </ul>
-                </div>
-                <div class="components-part components-battery">
-                    <div class="components-title">Battery</div>
-                    <ul class="components-content">
-                        <li>Premium battery cells</li>
-                        <li>Advanced BMS design</li>
-                        <li>Automatic protection and maintenance</li>
-                        <li>Heavy-duty 20 years estimated lifetime</li>
-                        <li>Compatible with both RS485/CAN</li>
-                        <li>Modular design: Max. 6 modules ( max. 15KWh)</li>
-                        <li>Plug-and-play installation</li>
-                    </ul>
-                </div>
-                <div class="components-part components-ems">
-                    <div class="components-title">EMS Controller</div>
-                    <ul class="components-content">
-                        <li>Ethernet interface to monitor energy consumption</li>
-                        <li>7-inch LCD touch screen to show real-time status</li>
-                        <li>USB Host interface to update system with USB disk</li>
-                        <li>Compatible with various inverters and batteries</li>
-                    </ul>
-                </div>
+            <div class="feature-detail feature-safety-detail" style="display:none;">
+                <ul class="feature-detail-content">
+                    <li>Lithium Iron phosphate, the safest chemistry among all lithium battery types</li>
+                    <li>Premium power battery cells provided by world's top 5 manufacturers</li>
+                    <li>BMS design: 3 levels of software protection + 2 levels of redundant hardware protection</li>
+                    <li>EMS design: Extra protections implemented in the system integration</li>
+                    <li>Online real time monitoring and professional technical support from AlphaESS</li>
+                </ul>
             </div>
+
+            <div class="feature-detail feature-compatibility-detail" style="display:none;">
+                <ul class="feature-detail-content">
+                    <li>Compatible for both new installation and retrofit systems (both AC/DC coupling)</li>
+                    <li>Modular battery design for easy extension</li>
+                    <li>Independent BMS in each battery module for flexible operation</li>
+                </ul>
+            </div>
+
+            <div class="feature-detail feature-multifunction-detail" style="display:none;">
+                <ul class="feature-detail-content">
+                    <li>Maximize PV self-consumption</li>
+                    <li>UPS function in case of grid outage</li>
+                    <li>Load shifting</li>
+                    <li>Power shaving/Demand charge management</li>
+                    <li>Load management/Demand response</li>
+                </ul>
+            </div>
+
+            <div class="feature-detail feature-reliability-detail" style="display:none;">
+                <ul class="feature-detail-content">
+                    <li>German design</li>
+                    <li>German quality standard</li>
+                    <li>5 years product warranty</li>
+                    <li>10 years battery performance warranty</li>
+                    <li>20 years estimated lifetime</li>
+                </ul>
+            </div>
+
             <a class="learn-more" href="download1.html">Click to download datasheets</a>
-            <a class="video" href="storion.html"><span class="play"></span>Watch the video</a>
+            <a class="video" target="_blank" href="storion.html"><span class="play"></span>Watch the video</a>
         </div>
     </div>
     <div class="content content-2">
         <div class="content-storion">
             <div class="title">
-            <h2><strong>P</strong>ower <strong>P</strong>lug</h2>
-                <span class="divide"></span>
+                <h2><strong>P</strong>ower <strong>P</strong>lug</h2>
+                <!--<span class="divide"></span>-->
             </div>
             <div class="powerplug"></div>
 
@@ -530,20 +572,20 @@
         <div class="cloud-wrapper">
             <div class="title">
                 <h2><strong>A</strong>lpha <strong>C</strong>loud</h2>
-                <span class="divide"></span>
+                <!--<span class="divide"></span>-->
             </div>
             <div class="cloud_all"></div>
             <div class="introduction">
                 <ul class="introduction-detail">
                     <li>
                         <span class="cloud-title">Maximize your profit!</span>
-                        <div class="cloud-content">24-hour monitoring system through user-friendly interface to reflect real-time profit</div>
-                        <div class="cloud-content">Remote control of system setting according to electricity cost to maximize profit</div>
+                        <div class="cloud-content">24-hour monitoring system via user-friendly interface to show real-time profit</div>
+                        <div class="cloud-content">Remote setting control according to electricity cost to maximize profit</div>
                     </li>
                     <li>
                         <span class="cloud-title">Free you from any worries!</span>
-                        <div class="cloud-content">Early warnings of possible abnormality happened to system</div>
                         <div class="cloud-content">Quick response to any problems through remote trouble diagnosis</div>
+                        <div class="cloud-content">Early warnings of possible abnormality happened to system</div>
                         <div class="cloud-content">Professional technical support from Alpha engineers</div>
                     </li>
                     <li>
