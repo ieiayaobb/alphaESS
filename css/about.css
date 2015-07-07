@@ -256,8 +256,9 @@ body{
 }
 
 .panel:hover{
-    background-image: url(../img/about_front.png);
+    /*background-image: url(../img/about_front.png);*/
     text-decoration: none;
+    color:#f7b128;
 }
 
 .about-title{

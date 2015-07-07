@@ -577,24 +577,23 @@
     position:absolute;
     width: 100%;
     left: 350px;
-    top: 80px;
+    top: 340px;
 }
 
 .powerplug-description{
     float:left;
     position: absolute;
     left:400px;
-    top:200px;
+    top:80px;
 }
 
 .powerplug-desc-content{
+    float:left;
     margin-top: 5px;
-    padding: 9px 14px;
     background-color: #f7f7f9;
     border: 1px solid #e1e1e8;
     border-radius: 4px;
-    width: 480px;
-    list-style-type: disc;
+    width: 520px;
 }
 
 .feature-ico{
@@ -607,7 +606,7 @@
 
 .feature-all{
     text-align: center;
-    width:150px;
+    width:140px;
     /*border-right: 1px solid #F7B128;*/
     float: left;
     /*box-shadow: 2px 0 1px #888888;*/
@@ -839,4 +838,19 @@
     width:420px;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.list{
+    padding: 9px 14px;
+    width:20px;
+    height:24px;
+    float: left;
+    background-image: url(../img/product/list.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.list-desc{
+    float:left;
+    padding-top:12px;
 }
