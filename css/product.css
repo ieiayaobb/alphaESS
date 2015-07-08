@@ -225,9 +225,9 @@
 
 .feature-glass{
     float: left;
-    /*position:absolute;*/
-    top:100px;
-    left:50px;
+    /*position:relative;*/
+    /*top:100px;*/
+    /*left:50px;*/
     margin: 30px;
     cursor: pointer;
 }
@@ -924,7 +924,17 @@
 }
 
 .feature-detail-content li{
-    border-bottom: 1px solid #F7B12A;
+    float: left;
+    width:100%;
+}
+
+.feature-detail-content .list{
+    padding:5px;
+}
+
+.feature-detail-content .list-content{
+    float:left;
+    padding-top:5px;
 }
 
 .components{
@@ -1000,4 +1010,13 @@
     top:20px;
     left:80px;
     position: absolute;
+}
+
+.ems-screen-desc{
+    float:left;
+    width:200px;
+    position: absolute;
+    top:20px;
+    left: 700px;
+    color:#333;
 }

@@ -208,6 +208,12 @@ body{
     background-image: url(../img/partners/ogps.png);
 }
 
+.logo-ippon{
+    width:195px;
+    height: 109px;
+    background-image: url(../img/partners/ippon.png)
+}
+
 .bread-wrapper{
     background-color: #fff;
     border: 1px solid #e6e6e6;
