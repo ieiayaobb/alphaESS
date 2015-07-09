@@ -20,7 +20,7 @@
 .content-1{
     /*background-image: url(../img/product/first_back.png);*/
     width:100%;
-    height:800px;
+    height:600px;
     background-position: center;
     background-repeat: no-repeat;
     margin-top:80px;
@@ -94,7 +94,7 @@
 .feature-detail{
     float:left;
     position:absolute;
-    top:650px;
+    top:310px;
     left:200px;
 }
 
@@ -219,7 +219,7 @@
 .feature{
     float: left;
     position:absolute;
-    top:100px;
+    top:80px;
     cursor: pointer;
 }
 
@@ -228,7 +228,7 @@
     /*position:relative;*/
     /*top:100px;*/
     /*left:50px;*/
-    margin: 30px;
+    margin: 180px 30px 30px 30px;
     cursor: pointer;
 }
 
@@ -240,8 +240,8 @@
 }
 
 .image-feature{
-    margin-top:20px;
-    width:420px;
+    margin-top:15px;
+    width:440px;
 }
 
 .image-feature-icon{
@@ -255,7 +255,7 @@
 }
 
 .image-feature-sub-title{
-    width:360px;
+    width:380px;
 }
 
 .image-feature{
@@ -381,7 +381,7 @@
 .introduction{   
     position:absolute;
     left:420px;
-    top :100px;
+    top :20px;
 }
 
 .introduction-name{
@@ -399,7 +399,7 @@
 .learn-more{
     font-size:14px;
     position:absolute;
-    left : 700px;
+    left : 650px;
     top : 560px;
     float:left;
     letter-spacing: 1px;
@@ -419,7 +419,7 @@
     font-size:14px;
     position:absolute;
     left : 350px;
-    top : 60px;
+    top : 70px;
     float:left;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -545,7 +545,7 @@
     float:left;
     position:absolute;
     left:320px;
-    top : 160px;
+    top : 120px;
 }
 
 .centauri-storion{
@@ -604,6 +604,7 @@
     border: 1px solid #e1e1e8;
     border-radius: 4px;
     width: 520px;
+    padding:5px;
 }
 
 .feature-ico{
@@ -655,7 +656,7 @@
     float:left;
     width:420px;
     height:500px;
-    top:0px;
+    top:30px;
     position:relative;
     font-size:12px;
 }
@@ -687,13 +688,13 @@
 
 .screen-table{
     float:left;
-    margin-left: 80px;
+    margin: 80px 0 0 80px;
 }
 
 .screen-table td span{
     float:left;
-    width:270px;
-    height: 20px;
+    width:250px;
+    height: 30px;
     padding:6px 6px 0px 6px;
     border-top: 1px solid #f7b128;
     text-align: center;
@@ -762,8 +763,7 @@
     background-color: #f7f7f9;
     border: 1px solid #e1e1e8;
     border-radius: 4px;
-    width:490px;
-    height: 15px;
+    width:510px;
 }
 
 .tab{
@@ -856,7 +856,7 @@
     background-image: url(../img/product/glass_bac.png);
     background-repeat: repeat-x;
     position: absolute;
-    top:520px;
+    top:320px;
 }
 
 .table-head{
@@ -866,7 +866,27 @@
     margin-bottom: 10px;
 }
 
-.list{
+.ems-screen-desc .list{
+    padding: 9px 14px;
+    width:20px;
+    height:24px;
+    float: left;
+    background-image: url(../img/product/list.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.powerplug-description .list{
+    padding: 9px 14px;
+    width:20px;
+    height:24px;
+    float: left;
+    background-image: url(../img/product/list.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature-detail-content .list{
     padding: 9px 14px;
     width:20px;
     height:24px;
@@ -878,7 +898,6 @@
 
 .list-desc{
     float:left;
-    padding-top:12px;
 }
 
 .arrow-right-long{
@@ -941,15 +960,20 @@
 .feature-detail-content li{
     float: left;
     width:100%;
+    padding: 5px;
 }
 
 .feature-detail-content .list{
-    padding:5px;
+    /*padding-left:5px;*/
 }
 
 .feature-detail-content .list-content{
     float:left;
-    padding-top:5px;
+    padding-left:5px;
+}
+
+.ems-screen-desc .list-content{
+    float:left;
 }
 
 .components{
@@ -967,8 +991,8 @@
     width:50px;
     height: 50px;
     background-image:url(../img/product/next.png);
-    top:160px;
-    left:950px;
+    top:200px;
+    left:850px;
     cursor: pointer;
 }
 
@@ -978,62 +1002,57 @@
     width:50px;
     height: 50px;
     background-image:url(../img/product/prev.png);
-    top:160px;
+    top:200px;
     left:0px;
     cursor: pointer;
 }
 
 .ems-screen, .inverter-screen, .battery-screen{
-    display: none;
+    /*display: none;*/
+    width:900px;
+    height: 500px;
 }
 
 .ems-screen-bac-1{
-    float: left;
     width:580px;
     height: 350px;
     background-image: url(../img/product/screen-1.png);
-    top:20px;
-    left:80px;
-    position: absolute;
+    margin:20px auto;
 }
 
 .ems-screen-bac-2{
-    float: left;
     width:580px;
     height: 350px;
     background-image: url(../img/product/screen-2.png);
-    top:20px;
-    left:80px;
-    position: absolute;
+    margin:20px auto;
 }
 
 .ems-screen-bac-3{
-    float: left;
     width:580px;
     height: 350px;
     background-image: url(../img/product/screen-3.png);
-    top:20px;
-    left:80px;
-    position: absolute;
+    margin:20px auto;
 }
 
 .ems-screen-bac-4{
-    float: left;
     width:580px;
     height: 350px;
     background-image: url(../img/product/screen-4.png);
-    top:20px;
-    left:80px;
-    position: absolute;
+    margin:20px auto;
 }
 
 .ems-screen-desc{
-    float:left;
-    width:200px;
-    position: absolute;
-    top:20px;
-    left: 700px;
     color:#333;
+    width:600px;
+    margin: 0 auto;
+}
+
+.ems-screen-desc li{
+    float:left;
+}
+.ems-screen-desc .list-content{
+    width:570px;
+    float:left;
 }
 
 .screen-product{
@@ -1108,12 +1127,24 @@
 .screen-head{
     color: #F7B128;
     font-size: 24px;
-    margin: 10px;
+    margin: 80px 10px 10px 10px;
     float: left;
 }
 
 .screen-logos{
-    float:left;
+    float:right;
     width:200px;
     margin:20px;
+}
+
+.up{
+    float: left;
+    position: fixed;
+    background-image: url(../img/product/up.png);
+    width: 30px;
+    height: 30px;
+    bottom: 20px;
+    right: 100px;
+    z-index: 9999;
+    cursor: pointer;
 }

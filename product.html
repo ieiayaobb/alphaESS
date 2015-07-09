@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
     <link rel="stylesheet" type="text/css" href="css/product.css"/>
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
             var content_1 = 0;
@@ -183,53 +185,371 @@
             });
 
             var currentScreenIndex = 1;
-            var currentScreen;
-            var limitation;
-            $(document).click(function(e){
-                if($(e.target).hasClass("screen") || $(e.target).hasClass("next-screen") || $(e.target).hasClass("prev-screen")){
-                    $(".components").show();
-
-                    if($(e.target).hasClass("screen-ems")){
-                        $(".ems-screen:first").show();
-                        currentScreen = ".ems-screen";
-                        limitation = 4;
-                    }else if($(e.target).hasClass("screen-inverter")){
-                        $(".inverter-screen:first").show();
-                        currentScreen = ".inverter-screen";
-                        limitation = 2;
-                    }else if($(e.target).hasClass("screen-battery")){
-                        $(".battery-screen:first").show();
-                        currentScreen = ".battery-screen";
-                        limitation = 2;
-                    }
-                }else{
-                    currentScreenIndex = 1;
-                    $(".components").hide();
-                    $(".ems-screen").hide();
-                    $(".inverter-screen").hide();
-                    $(".battery-screen").hide();
+            $(".ems-next").click(function(){
+                $(".ems-screen").hide();
+                if(currentScreenIndex < 4){
+                    currentScreenIndex++;
                 }
-            })
+                $(".ems-screen-" + currentScreenIndex).show();
+            });
 
-$(".next-screen").click(function(){
-    $(currentScreen).hide();
-    if(currentScreenIndex < limitation){
-        currentScreenIndex++;
-    }
-    $(currentScreen + "-" + currentScreenIndex).show();
-});
+            $(".ems-prev").click(function(){
+                $(".ems-screen").hide()
+                if(currentScreenIndex > 1){
+                    currentScreenIndex--;
+                }
+                $(".ems-screen-" + currentScreenIndex).show();
+            });
 
-$(".prev-screen").click(function(){
-    $(currentScreen).hide()
-    if(currentScreenIndex > 1){
-        currentScreenIndex--;
-    }
-    $(currentScreen + "-" + currentScreenIndex).show();
-});
-});
+            $(".inverter-next").click(function(){
+                $(".inverter-screen").hide();
+                if(currentScreenIndex < 2){
+                    currentScreenIndex++;
+                }
+                $(".inverter-screen-" + currentScreenIndex).show();
+            });
+
+            $(".inverter-prev").click(function(){
+                $(".inverter-screen").hide()
+                if(currentScreenIndex > 1){
+                    currentScreenIndex--;
+                }
+                $(".inverter-screen-" + currentScreenIndex).show();
+            });
+
+            $(".battery-next").click(function(){
+                $(".battery-screen").hide();
+                if(currentScreenIndex < 2){
+                    currentScreenIndex++;
+                }
+                $(".battery-screen-" + currentScreenIndex).show();
+            });
+
+            $(".battery-prev").click(function(){
+                $(".battery-screen").hide()
+                if(currentScreenIndex > 1){
+                    currentScreenIndex--;
+                }
+                $(".battery-screen-" + currentScreenIndex).show();
+            });
+
+            $(".up").click(function(){
+                $(window).scrollTop(0)
+            });
+
+        });
 </script>
 </head>
 <body>
+    <div class="modal fade" id="ems" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top:100px;">
+            <div class="modal-content">
+                <span class="prev-screen ems-prev"></span>
+                <span class="next-screen ems-next"></span>
+                <div class="screen-content ems-screen ems-screen-1">
+                    <div class="ems-screen-bac-1"></div>
+                    <div class="ems-screen-desc ems-screen-desc-1">
+                        <ul>
+                            <li><span class="list"></span><span class="list-content">The new icon with a shield represents secured load.</span></li>
+                            <li><span class="list"></span><span class="list-content">The new EMS2.0 has divided the load into 2 groups. One is the load on grid, which will be cut off by grid outage. The other, called secured load,  is connected to Backup port of the system and will be supplied by the inverter if grid outage happens. </span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screen-content ems-screen ems-screen-2" style="display:none">
+                    <div class="ems-screen-bac-2"></div>
+                    <div class="ems-screen-desc ems-screen-desc-2">
+                        <ul>
+                            <li><span class="list"></span><span class="list-content">“History” page displays PV generated power, home load and power fed into grid by selection of hour, day, month or year.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screen-content ems-screen ems-screen-3" style="display:none">
+                    <div class="ems-screen-bac-3"></div>
+                    <div class="ems-screen-desc ems-screen-desc-3">
+                        <ul>
+                            <li><span class="list"></span><span class="list-content">On the right column, firmware version can be checked. When needed, it can be updated by inserting USB stick into the backside of EMS display.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screen-content ems-screen ems-screen-4" style="display:none">
+                    <div class="ems-screen-bac-4"></div>
+                    <div class="ems-screen-desc ems-screen-desc-3">
+                        <ul>
+                            <li><span class="list"></span><span class="list-content">“Setup” page displays: Info, income, system and function. By clicking the above, you can find more detailed info.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="inverter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top:100px;">
+            <div class="modal-content">
+                <span class="prev-screen inverter-prev"></span>
+                <span class="next-screen inverter-next"></span>
+                <div class="screen-content inverter-screen inverter-screen-1">
+                    <table class="screen-table">
+                        <tbody>
+                            <tr class="odd">
+                                <td><span>Maximum PV Input Power</span></td>
+                                <td><span>4500 W</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>No. of MPPTs</span></td>
+                                <td><span>1</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>MPPT Voltage Range</span></td>
+                                <td><span>120 VDC - 450 VDC</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Maximum PV Input Current / Voltage</span></td>
+                                <td><span>1 x 18 A / 500 VDC</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Battery Nominal Voltage</span></td>
+                                <td><span> 48 V</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Charging Power / Current</span></td>
+                                <td><span> 1250 W / 25 A</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Max. Discharging Power </span></td>
+                                <td><span>3000 W </span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Grid Output Power</span></td>
+                                <td><span> 3000 W</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Max. Grid Output Current </span></td>
+                                <td><span> 13 A</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Grid Output Range </span></td>
+                                <td><span> 184-265 VAC </span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Euro efficiency</span></td>
+                                <td><span>95%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="screen-head">3KW Hybrid inverter</div>
+                    <div class="screen-product screen-pic-inverter-black"></div>
+                    <div class="screen-logos">
+                        <span class="screen-logo screen-ce"></span>
+                        <span class="screen-logo screen-saa"></span>
+                        <span class="screen-logo screen-dve"></span>
+                        <span class="screen-logo screen-rohs"></span>
+                    </div>
+                </div>
+                <div class="screen-content inverter-screen inverter-screen-2" style="display:none">
+                    <table class="screen-table">
+                        <!-- <thead>
+                            <tr>
+                                <th>Parameters</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead> -->
+                        <tbody>
+                            <tr class="odd">
+                                <td><span>Maximum PV Input Power</span></td>
+                                <td><span>5400 W</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>No. of MPPTs</span></td>
+                                <td><span>2</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>MPPT Voltage Range</span></td>
+                                <td><span>125 VDC - 550 VDC</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Maximum PV Input Current / Voltage</span></td>
+                                <td><span>2 x 15 A / 580 VDC</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Battery Nominal Voltage</span></td>
+                                <td><span> 48 V</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Charging Power / Current</span></td>
+                                <td><span> 2300 W / 50 A</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Max. Discharging Power </span></td>
+                                <td><span>4600 W </span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Grid Output Power</span></td>
+                                <td><span> 4600 W</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Max. Grid Output Current </span></td>
+                                <td><span> 20 A</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Grid Output Range </span></td>
+                                <td><span> 180-270 VAC </span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Euro efficiency</span></td>
+                                <td><span>97%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="screen-head">5KW Hybrid inverter</div>
+                    <div class="screen-product screen-pic-inverter-blue"></div>
+                    <div class="screen-logos">
+                        <span class="screen-logo screen-ce"></span>
+                        <span class="screen-logo screen-saa"></span>
+                        <span class="screen-logo screen-dve"></span>
+                        <span class="screen-logo screen-rohs"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="battery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top:100px;">
+            <div class="modal-content">
+                <span class="prev-screen battery-prev"></span>
+                <span class="next-screen battery-next"></span>
+                <div class="screen-content battery-screen battery-screen-1">
+                    <table class="screen-table">
+                        <tbody>
+                            <tr class="odd">
+                                <td><span>Max. Charge Current</span></td>
+                                <td><span>25 A (0.5C)</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Discharge Current</span></td>
+                                <td><span>25 A (0.5C)</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Max. Charge Current (OFF-GRID)</span></td>
+                                <td><span>25 A (0.5C)</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Discharge Current (OFF-GRID)</span></td>
+                                <td><span>50 A (1C)</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Max. Discharge Pulse Current (10S)</span></td>
+                                <td><span>100 A</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Power Consumption</span></td>
+                                <td><span>&#60;2 W (Work) &#60;100 mW (Sleep)</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Energy Capacity</span></td>
+                                <td><span>2.5 kWh</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Usable Capacity</span></td>
+                                <td><span>2.0 kWh</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>DOD</span></td>
+                                <td><span>80%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Nominal Voltage</span></td>
+                                <td><span>51.2</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Operating Temperature Range</span></td>
+                                <td><span>0℃ To 40℃</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Internal Resistance</span></td>
+                                <td><span>≤100 mΩ</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Cycle Life</span></td>
+                                <td><span>≥6000 @80%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="screen-head">48V 60Ah Battery Module</div>
+                    <div class="screen-product screen-pic-battery"></div>
+                    <div class="screen-logos">
+                        <span class="screen-logo screen-ce"></span>
+                        <span class="screen-logo screen-iec"></span>
+                        <span class="screen-logo screen-tu"></span>
+                    </div>
+                </div>
+                <div class="screen-content battery-screen battery-screen-2" style="display:none;">
+                    <table class="screen-table">
+                        <tbody>
+                            <tr class="odd">
+                                <td><span>Max. Charge Current</span></td>
+                                <td><span>30 A (0.5C)</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Discharge Current</span></td>
+                                <td><span>30 A (0.5C)</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Max. Charge Current (OFF-GRID)</span></td>
+                                <td><span>30 A (0.5C)</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Max. Discharge Current (OFF-GRID)</span></td>
+                                <td><span>60 A (1C)</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Max. Discharge Pulse Current (10S)</span></td>
+                                <td><span>100 A</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Power Consumption</span></td>
+                                <td><span>&#60;2 W (Work) &#60;100 mW (Sleep)</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Energy Capacity</span></td>
+                                <td><span>3 kWh</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Usable Capacity</span></td>
+                                <td><span>2.4 kWh</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>DOD</span></td>
+                                <td><span>80%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Nominal Voltage</span></td>
+                                <td><span>51.2</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Operating Temperature Range</span></td>
+                                <td><span>0℃ To 40℃</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Internal Resistance</span></td>
+                                <td><span>≤100 mΩ</span></td>
+                            </tr>
+                            <tr class="odd">
+                                <td><span>Cycle Life</span></td>
+                                <td><span>≥6000 @80%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="screen-head">48V 50Ah Battery Module</div>
+                    <div class="screen-product screen-pic-battery"></div>
+                    <div class="screen-logos">
+                        <span class="screen-logo screen-ce"></span>
+                        <span class="screen-logo screen-iec"></span>
+                        <span class="screen-logo screen-tu"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="up">
     </div>
     <div class="head">
@@ -292,339 +612,20 @@ $(".prev-screen").click(function(){
 
             <div class="family">
                 <span class="arrow-right-short"></span>
-                <span class="screen screen-ems"><strong>E</strong>MS</span>
+                <span type="button" class="screen screen-ems" data-toggle="modal" data-target="#ems">EMS</span>
                 <span class="arrow-left-long"></span>
-                <span class="screen screen-inverter"><strong>I</strong>nverter</span>
+                <span type="button" class="screen screen-inverter" data-toggle="modal" data-target="#inverter">Inverter</span>
                 <span class="arrow-right-long"></span>
-                <span class="screen screen-battery"><strong>B</strong>attery</span>
-            </div>
+                <span type="button" class="screen screen-battery" data-toggle="modal" data-target="#battery">Battery</span>
+              </div>
 
-            <!-- <div class="tab">
-                <a href="#" class="components-tab ">Components</a>
-                <a href="#" class="features-tab current">Features</a>
-            </div> -->
-
-            <div class="components" style="display:none;">
-                <span class="prev-screen"></span>
-                <span class="next-screen"></span>
-                <div class="ems-screens">
-                    <div class="screen-content ems-screen ems-screen-1">
-                        <div class="ems-screen-bac-1"></div>
-                        <div class="ems-screen-desc ems-screen-desc-1">
-                            <ul>
-                                <li>The new icon with a shield represents secured load.</li>
-                                <li>The new EMS2.0 has divided the load into 2 groups. One is the load on grid, which will be cut off by grid outage. The other, called secured load,  is connected to Backup port of the system and will be supplied by the inverter if grid outage happens. </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="screen-content ems-screen ems-screen-2">
-                        <div class="ems-screen-bac-2"></div>
-                        <div class="ems-screen-desc ems-screen-desc-2">
-                            <ul>
-                                <li>“History” page displays PV generated power, home load and power fed into grid by selection of hour, day, month or year.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="screen-content ems-screen ems-screen-3">
-                        <div class="ems-screen-bac-3"></div>
-                        <div class="ems-screen-desc ems-screen-desc-3">
-                            <ul>
-                                <li>On the right column, firmware version can be checked. When needed, it can be updated by inserting USB stick into the backside of EMS display.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="screen-content ems-screen ems-screen-4">
-                        <div class="ems-screen-bac-4"></div>
-                        <div class="ems-screen-desc ems-screen-desc-3">
-                            <ul>
-                                <li>“Setup” page displays: Info, income, system and function. By clicking the above, you can find more detailed info.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="inverter-screens">
-                    <div class="screen-content inverter-screen inverter-screen-1">
-                        <table class="screen-table">
-                            <!-- <thead>
-                                <tr>
-                                    <th>Parameters</th>
-                                    <th>&nbsp;</th>
-                                </tr>
-                            </thead> -->
-                            <tbody>
-                                <tr class="odd">
-                                    <td><span>Maximum PV Input Power</span></td>
-                                    <td><span>4500 W</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>No. of MPPTs</span></td>
-                                    <td><span>1</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>MPPT Voltage Range</span></td>
-                                    <td><span>120 VDC - 450 VDC</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Maximum PV Input Current / Voltage</span></td>
-                                    <td><span>1 x 18 A / 500 VDC</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Battery Nominal Voltage</span></td>
-                                    <td><span> 48 V</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Max. Charging Power / Current</span></td>
-                                    <td><span> 1250 W / 25 A</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Max. Discharging Power </span></td>
-                                    <td><span>3000 W </span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Max. Grid Output Power</span></td>
-                                    <td><span> 3000 W</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Max. Grid Output Current </span></td>
-                                    <td><span> 13 A</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Grid Output Range </span></td>
-                                    <td><span> 184-265 VAC </span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Euro efficiency</span></td>
-                                    <td><span>95%</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="screen-head">3KW Hybrid inverter</div>
-                        <div class="screen-product screen-pic-inverter-black"></div>
-                        <div class="screen-logos">
-                            <span class="screen-logo screen-ce"></span>
-                            <span class="screen-logo screen-saa"></span>
-                            <span class="screen-logo screen-dve"></span>
-                            <span class="screen-logo screen-rohs"></span>
-                        </div>
-                    </div>
-                    <div class="screen-content inverter-screen inverter-screen-2">
-                        <table class="screen-table">
-                            <!-- <thead>
-                                <tr>
-                                    <th>Parameters</th>
-                                    <th>&nbsp;</th>
-                                </tr>
-                            </thead> -->
-                            <tbody>
-                                <tr class="odd">
-                                    <td><span>Maximum PV Input Power</span></td>
-                                    <td><span>5400 W</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>No. of MPPTs</span></td>
-                                    <td><span>2</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>MPPT Voltage Range</span></td>
-                                    <td><span>125 VDC - 550 VDC</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Maximum PV Input Current / Voltage</span></td>
-                                    <td><span>2 x 15 A / 580 VDC</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Battery Nominal Voltage</span></td>
-                                    <td><span> 48 V</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Max. Charging Power / Current</span></td>
-                                    <td><span> 2300 W / 50 A</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Max. Discharging Power </span></td>
-                                    <td><span>4600 W </span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Max. Grid Output Power</span></td>
-                                    <td><span> 4600 W</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Max. Grid Output Current </span></td>
-                                    <td><span> 20 A</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Grid Output Range </span></td>
-                                    <td><span> 180-270 VAC </span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Euro efficiency</span></td>
-                                    <td><span>97%</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="screen-head">5KW Hybrid inverter</div>
-                        <div class="screen-product screen-pic-inverter-blue"></div>
-                        <div class="screen-logos">
-                            <span class="screen-logo screen-ce"></span>
-                            <span class="screen-logo screen-saa"></span>
-                            <span class="screen-logo screen-dve"></span>
-                            <span class="screen-logo screen-rohs"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="battery-screens">
-                    <div class="screen-content battery-screen battery-screen-1">
-                        <table class="screen-table">
-                            <!-- <thead>
-                                <tr>
-                                    <th>Parameters</th>
-                                    <th>&nbsp;</th>
-                                </tr>
-                            </thead> -->
-                            <tbody>
-                                <tr class="odd">
-                                    <td><span>Max. Charge Current</span></td>
-                                    <td><span>25 A (0.5C)</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Max. Discharge Current</span></td>
-                                    <td><span>25 A (0.5C)</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Max. Charge Current (OFF-GRID)</span></td>
-                                    <td><span>25 A (0.5C)</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Max. Discharge Current (OFF-GRID)</span></td>
-                                    <td><span>50 A (1C)</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Max. Discharge Pulse Current (10S)</span></td>
-                                    <td><span>100 A</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Power Consumption</span></td>
-                                    <td><span>&#60;2 W (Work) &#60;100 mW (Sleep)</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Energy Capacity</span></td>
-                                    <td><span>2.5 kWh</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Usable Capacity</span></td>
-                                    <td><span>2.0 kWh</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>DOD</span></td>
-                                    <td><span>80%</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Nominal Voltage</span></td>
-                                    <td><span>51.2</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Operating Temperature Range</span></td>
-                                    <td><span>0℃ To 40℃</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Internal Resistance</span></td>
-                                    <td><span>≤100 mΩ</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Cycle Life</span></td>
-                                    <td><span>≥6000 @80%</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="screen-head">48V 60Ah Battery Module</div>
-                        <div class="screen-product screen-pic-battery"></div>
-                        <div class="screen-logos">
-                            <span class="screen-logo screen-ce"></span>
-                            <span class="screen-logo screen-iec"></span>
-                            <span class="screen-logo screen-tu"></span>
-                        </div>
-                    </div>
-                    <div class="screen-content battery-screen battery-screen-2">
-                        <table class="screen-table">
-                            <!-- <thead>
-                                <tr>
-                                    <th>Parameters</th>
-                                    <th>&nbsp;</th>
-                                </tr>
-                            </thead> -->
-                            <tbody>
-                                <tr class="odd">
-                                    <td><span>Max. Charge Current</span></td>
-                                    <td><span>30 A (0.5C)</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Max. Discharge Current</span></td>
-                                    <td><span>30 A (0.5C)</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Max. Charge Current (OFF-GRID)</span></td>
-                                    <td><span>30 A (0.5C)</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Max. Discharge Current (OFF-GRID)</span></td>
-                                    <td><span>60 A (1C)</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Max. Discharge Pulse Current (10S)</span></td>
-                                    <td><span>100 A</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Power Consumption</span></td>
-                                    <td><span>&#60;2 W (Work) &#60;100 mW (Sleep)</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Energy Capacity</span></td>
-                                    <td><span>3 kWh</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Usable Capacity</span></td>
-                                    <td><span>2.4 kWh</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>DOD</span></td>
-                                    <td><span>80%</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Nominal Voltage</span></td>
-                                    <td><span>51.2</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Operating Temperature Range</span></td>
-                                    <td><span>0℃ To 40℃</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Internal Resistance</span></td>
-                                    <td><span>≤100 mΩ</span></td>
-                                </tr>
-                                <tr class="odd">
-                                    <td><span>Cycle Life</span></td>
-                                    <td><span>≥6000 @80%</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="screen-head">48V 50Ah Battery Module</div>
-                        <div class="screen-product screen-pic-battery"></div>
-                        <div class="screen-logos">
-                            <span class="screen-logo screen-ce"></span>
-                            <span class="screen-logo screen-iec"></span>
-                            <span class="screen-logo screen-tu"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="features glass" >
+              <div class="features glass" >
                 <div class="feature-glass feature-1 feature-multifunction">
                     <div class="feature-title">
                         <span class="image-feature-icon multifunction-ico"></span>
                         <span class="feature-title-content">Multi-function</span>
                     </div>
-                    
+
                 </div>
                 <div class="feature-glass feature-2 feature-reliability">
                     <div class="feature-title">
@@ -794,7 +795,7 @@ $(".prev-screen").click(function(){
                             <div class="left-mixed">
                                 <div class="mixed-feature">
                                     <table class="feature-table">
-                                        <div class="table-head">Parameters</div>
+                                        <!-- <div class="table-head">Parameters</div> -->
                         <!-- <thead>
                             <tr>
                                 <th>Parameters</th>
