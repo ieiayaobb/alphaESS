@@ -400,7 +400,7 @@
     font-size:14px;
     position:absolute;
     left : 700px;
-    top : 750px;
+    top : 560px;
     float:left;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -680,6 +680,21 @@
     width:180px;
     height: 20px;
     padding:10px 6px 0px 6px;
+    border-top: 1px solid #f7b128;
+    text-align: center;
+    line-height: 18px;
+}
+
+.screen-table{
+    float:left;
+    margin-left: 80px;
+}
+
+.screen-table td span{
+    float:left;
+    width:270px;
+    height: 20px;
+    padding:6px 6px 0px 6px;
     border-top: 1px solid #f7b128;
     text-align: center;
     line-height: 18px;
@@ -1019,4 +1034,86 @@
     top:20px;
     left: 700px;
     color:#333;
+}
+
+.screen-product{
+    float:left;
+    margin:20px;
+}
+
+.screen-pic-inverter-black{
+    width:147px;
+    height: 195px;
+    background-image: url(../img/screen/screen-black-inverter.png)
+}
+
+.screen-pic-inverter-blue{
+    width:143px;
+    height: 146px;
+    background-image: url(../img/screen/screen-blue-inverter.png)
+}
+
+.screen-pic-battery{
+    width:250px;
+    height: 83px;
+    background-image: url(../img/screen/screen-battery.png)
+}
+
+.screen-logo{
+    float:left;
+}
+
+.screen-ce{
+    width:39px;
+    height: 28px;
+    background-image: url(../img/screen/screen-ce.png);
+}
+
+.screen-saa{
+    width:37px;
+    height: 28px;
+    background-image: url(../img/screen/screen-saa.png);
+}
+
+.screen-dve{
+    width:33px;
+    height: 28px;
+    background-image: url(../img/screen/screen-dve.png);
+}
+
+.screen-rohs{
+    width:55px;
+    height: 36px;
+    background-image: url(../img/screen/screen-rohs.png);
+}
+
+.screen-ce{
+    width:39px;
+    height: 28px;
+    background-image: url(../img/screen/screen-ce.png);
+}
+
+.screen-iec{
+    widows: 37px;
+    height: 37px;
+    background-image: url(../img/screen/screen-iec.png);
+}
+
+.screen-tu{
+    width: 37px;
+    height:37px;
+    background-image: url(../img/screen/screen-tu.png);
+}
+
+.screen-head{
+    color: #F7B128;
+    font-size: 24px;
+    margin: 10px;
+    float: left;
+}
+
+.screen-logos{
+    float:left;
+    width:200px;
+    margin:20px;
 }

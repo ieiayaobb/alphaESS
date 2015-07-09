@@ -184,6 +184,7 @@
 
             var currentScreenIndex = 1;
             var currentScreen;
+            var limitation;
             $(document).click(function(e){
                 if($(e.target).hasClass("screen") || $(e.target).hasClass("next-screen") || $(e.target).hasClass("prev-screen")){
                     $(".components").show();
@@ -191,12 +192,15 @@
                     if($(e.target).hasClass("screen-ems")){
                         $(".ems-screen:first").show();
                         currentScreen = ".ems-screen";
+                        limitation = 4;
                     }else if($(e.target).hasClass("screen-inverter")){
                         $(".inverter-screen:first").show();
                         currentScreen = ".inverter-screen";
+                        limitation = 2;
                     }else if($(e.target).hasClass("screen-battery")){
                         $(".battery-screen:first").show();
                         currentScreen = ".battery-screen";
+                        limitation = 2;
                     }
                 }else{
                     currentScreenIndex = 1;
@@ -207,22 +211,22 @@
                 }
             })
 
-            $(".next-screen").click(function(){
-                $(currentScreen).hide()
-                if(currentScreenIndex < 4){
-                    currentScreenIndex++;
-                }
-                $(currentScreen + "-" + currentScreenIndex).show();
-            });
+$(".next-screen").click(function(){
+    $(currentScreen).hide();
+    if(currentScreenIndex < limitation){
+        currentScreenIndex++;
+    }
+    $(currentScreen + "-" + currentScreenIndex).show();
+});
 
-            $(".prev-screen").click(function(){
-                $(currentScreen).hide()
-                if(currentScreenIndex > 1){
-                    currentScreenIndex--;
-                }
-                $(currentScreen + "-" + currentScreenIndex).show();
-            });
-        });
+$(".prev-screen").click(function(){
+    $(currentScreen).hide()
+    if(currentScreenIndex > 1){
+        currentScreenIndex--;
+    }
+    $(currentScreen + "-" + currentScreenIndex).show();
+});
+});
 </script>
 </head>
 <body>
@@ -340,8 +344,7 @@
                 </div>
                 <div class="inverter-screens">
                     <div class="screen-content inverter-screen inverter-screen-1">
-                        <table class="feature-table">
-                            <div class="table-head">3KW Hybrid inverter</div>
+                        <table class="screen-table">
                             <!-- <thead>
                                 <tr>
                                     <th>Parameters</th>
@@ -395,10 +398,17 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="screen-head">3KW Hybrid inverter</div>
+                        <div class="screen-product screen-pic-inverter-black"></div>
+                        <div class="screen-logos">
+                            <span class="screen-logo screen-ce"></span>
+                            <span class="screen-logo screen-saa"></span>
+                            <span class="screen-logo screen-dve"></span>
+                            <span class="screen-logo screen-rohs"></span>
+                        </div>
                     </div>
                     <div class="screen-content inverter-screen inverter-screen-2">
-                        <table class="feature-table">
-                            <div class="table-head">M4850</div>
+                        <table class="screen-table">
                             <!-- <thead>
                                 <tr>
                                     <th>Parameters</th>
@@ -452,12 +462,19 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="screen-head">5KW Hybrid inverter</div>
+                        <div class="screen-product screen-pic-inverter-blue"></div>
+                        <div class="screen-logos">
+                            <span class="screen-logo screen-ce"></span>
+                            <span class="screen-logo screen-saa"></span>
+                            <span class="screen-logo screen-dve"></span>
+                            <span class="screen-logo screen-rohs"></span>
+                        </div>
                     </div>
                 </div>
                 <div class="battery-screens">
                     <div class="screen-content battery-screen battery-screen-1">
-                        <table class="feature-table">
-                            <div class="table-head">M4850</div>
+                        <table class="screen-table">
                             <!-- <thead>
                                 <tr>
                                     <th>Parameters</th>
@@ -519,10 +536,16 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="screen-head">48V 60Ah Battery Module</div>
+                        <div class="screen-product screen-pic-battery"></div>
+                        <div class="screen-logos">
+                            <span class="screen-logo screen-ce"></span>
+                            <span class="screen-logo screen-iec"></span>
+                            <span class="screen-logo screen-tu"></span>
+                        </div>
                     </div>
                     <div class="screen-content battery-screen battery-screen-2">
-                        <table class="feature-table">
-                            <div class="table-head">M4850</div>
+                        <table class="screen-table">
                             <!-- <thead>
                                 <tr>
                                     <th>Parameters</th>
@@ -584,6 +607,13 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="screen-head">48V 50Ah Battery Module</div>
+                        <div class="screen-product screen-pic-battery"></div>
+                        <div class="screen-logos">
+                            <span class="screen-logo screen-ce"></span>
+                            <span class="screen-logo screen-iec"></span>
+                            <span class="screen-logo screen-tu"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -616,7 +646,7 @@
                 </div>
             </div>
 
-            <div class="feature-detail feature-safety-detail" >
+            <div class="feature-detail feature-safety-detail" style="display:none;">
                 <ul class="feature-detail-content">
                     <li><span class="list"></span><span class="list-content">Lithium Iron phosphate, the safest chemistry among all lithium battery types</span></li>
                     <li><span class="list"></span><span class="list-content">Premium power battery cells provided by world's top 5 manufacturers</span></li>
@@ -654,7 +684,7 @@
                 </ul>
             </div>
 
-            <a class="learn-more" href="download1.html">Click to download datasheets</a>
+            <a class="learn-more" href="download1.html" style="top:750px;">Click to download datasheets</a>
             <a class="video" target="_blank" href="storion.html"><span class="play"></span>Watch the video</a>
         </div>
     </div>
@@ -722,49 +752,49 @@
                         <span class="image-feature-icon-big multifunction"></span>
                         <span class="image-feature-title">Multi-function</span>
                         <span class="image-feature-sub-title">Maximize PV self-consumption, UPS function </br>
-                        in case of grid outage</span>
+                            in case of grid outage</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image-feature">
+                            <span class="image-feature-icon-big economical"></span>
+                            <span class="image-feature-title">Economy</span>
+                            <span class="image-feature-sub-title">More economic in cost compared with </br>
+                                Li-ion series</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-feature">
+                                <span class="image-feature-icon-big safety"></span>
+                                <span class="image-feature-title">Safe use</span>
+                                <span class="image-feature-sub-title">No risk of leakage, less harmful chemicals, </br>
+                                    less fluids because of crystallization.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="image-feature">
+                                    <span class="image-feature-icon-big service"></span>
+                                    <span class="image-feature-title">More Service</span>
+                                    <span class="image-feature-sub-title">Free online visualization portal with user-friendly </br>
+                                        website design, easy updating by using standard USB flash</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a class="learn-more" href="download2.html">
+                                Click to download datasheets
+                            </a>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <div class="image-feature">
-                        <span class="image-feature-icon-big economical"></span>
-                        <span class="image-feature-title">Economy</span>
-                        <span class="image-feature-sub-title">More economic in cost compared with </br>
-                        Li-ion series</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="image-feature">
-                        <span class="image-feature-icon-big safety"></span>
-                        <span class="image-feature-title">Safe use</span>
-                        <span class="image-feature-sub-title">No risk of leakage, less harmful chemicals, </br>
-                        less fluids because of crystallization.</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="image-feature">
-                        <span class="image-feature-icon-big service"></span>
-                        <span class="image-feature-title">More Service</span>
-                        <span class="image-feature-sub-title">Free online visualization portal with user-friendly </br>
-                        website design, easy updating by using standard USB flash</span>
-                    </div>
-                </li>
-            </ul>
-            <a class="learn-more" href="download2.html">
-                Click to download datasheets
-            </a>
-        </div>
-    </div>
-    <div class="content content-4">
-        <div class="content-accessories">
-            <div class="title">
-                <h2><strong>A</strong>ccessories</h2>
-                <!-- <span class="divide"></span> -->
-            </div>
-            <div class="left-mixed">
-                <div class="mixed-feature">
-                    <table class="feature-table">
-                        <div class="table-head">Parameters</div>
+                    <div class="content content-4">
+                        <div class="content-accessories">
+                            <div class="title">
+                                <h2><strong>A</strong>ccessories</h2>
+                                <!-- <span class="divide"></span> -->
+                            </div>
+                            <div class="left-mixed">
+                                <div class="mixed-feature">
+                                    <table class="feature-table">
+                                        <div class="table-head">Parameters</div>
                         <!-- <thead>
                             <tr>
                                 <th>Parameters</th>
