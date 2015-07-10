@@ -43,6 +43,11 @@
     font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.head-menu>ul>li>a:hover, .head-menu>ul>li>a:focus{
+    color:#FFF;
+    text-decoration: none;
+}
+
 .head-menu a{
     color:#FFF;
     text-decoration:none;

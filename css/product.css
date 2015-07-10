@@ -31,7 +31,7 @@
 }
 
 .content-storion{
-    width:1000px;
+    width:1200px;
     height:600px;
     margin:0 auto;
     position:relative;
@@ -94,8 +94,8 @@
 .feature-detail{
     float:left;
     position:absolute;
-    top:310px;
-    left:200px;
+    /*top:310px;*/
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .feature-detail-content{
@@ -136,12 +136,12 @@
 }
 
 .crystal{
-    width:327px;
+    width:244px;
     height:560px;
     background-image: url(../img/product/crystal.png);
     float:left;
     position:absolute;
-    left:500px;
+    left:650px;
 }
 
 .image-feature{
@@ -221,6 +221,7 @@
     position:absolute;
     top:80px;
     cursor: pointer;
+    left: 100px;
 }
 
 .feature-glass{
@@ -228,7 +229,7 @@
     /*position:relative;*/
     /*top:100px;*/
     /*left:50px;*/
-    margin: 180px 30px 30px 30px;
+    margin: 20px 50px 0px 50px;
     cursor: pointer;
 }
 
@@ -380,7 +381,7 @@
 
 .introduction{   
     position:absolute;
-    left:420px;
+    left:540px;
     top :20px;
 }
 
@@ -399,7 +400,7 @@
 .learn-more{
     font-size:14px;
     position:absolute;
-    left : 650px;
+    left : 880px;
     top : 560px;
     float:left;
     letter-spacing: 1px;
@@ -418,7 +419,7 @@
 .video{
     font-size:14px;
     position:absolute;
-    left : 350px;
+    left : 450px;
     top : 70px;
     float:left;
     letter-spacing: 1px;
@@ -504,7 +505,7 @@
 
 .content-1 .title{
     top:0px;
-    left:320px;
+    left:420px;
 }
 
 .title h2{
@@ -544,12 +545,12 @@
     background-image: url("../img/product/storion_new.png");
     float:left;
     position:absolute;
-    left:320px;
+    left:420px;
     top : 120px;
 }
 
 .centauri-storion{
-    width:1000px;
+    width:1200px;
     height:600px;
     margin:0 auto;
     position:relative;
@@ -586,15 +587,15 @@
 .powerplug-features{
     position:absolute;
     width: 100%;
-    left: 363px;
-    top: 340px;
+    left: 580px;
+    top: 450px;
 }
 
 .powerplug-description{
     float:left;
     position: absolute;
-    left:400px;
-    top:80px;
+    left:620px;
+    top:120px;
 }
 
 .powerplug-desc-content{
@@ -646,7 +647,7 @@
 }
 
 .content-accessories{
-    width:1000px;
+    width:1200px;
     height:600px;
     margin:0 auto;
     position:relative;
@@ -659,6 +660,7 @@
     top:30px;
     position:relative;
     font-size:12px;
+    left:50px;
 }
 
 .feature-table thead{
@@ -678,7 +680,7 @@
 
 .feature-table td span{
     float:left;
-    width:180px;
+    width:200px;
     height: 20px;
     padding:10px 6px 0px 6px;
     border-top: 1px solid #f7b128;
@@ -851,12 +853,13 @@
 
 .glass{
     width:100%;
-    height: 280px;
+    height: 120px;
     float: left;
     background-image: url(../img/product/glass_bac.png);
     background-repeat: repeat-x;
     position: absolute;
-    top:320px;
+    top:480px;
+    background-position: bottom;
 }
 
 .table-head{
@@ -937,6 +940,10 @@
     cursor: pointer;
 }
 
+.screen:hover{
+    text-decoration: underline;
+}
+
 .screen strong{
     color:#F7B12A;
     font-size: 28px;
@@ -992,7 +999,7 @@
     height: 50px;
     background-image:url(../img/product/next.png);
     top:200px;
-    left:850px;
+    left:848px;
     cursor: pointer;
 }
 
@@ -1003,7 +1010,7 @@
     height: 50px;
     background-image:url(../img/product/prev.png);
     top:200px;
-    left:0px;
+    left:-25px;
     cursor: pointer;
 }
 
@@ -1141,10 +1148,30 @@
     float: left;
     position: fixed;
     background-image: url(../img/product/up.png);
-    width: 30px;
-    height: 30px;
+    width: 39px;
+    height: 24px;
     bottom: 20px;
-    right: 100px;
+    right: 60px;
     z-index: 9999;
     cursor: pointer;
+}
+
+.feature-safety-detail{
+    top:290px;
+    left:600px;
+}
+
+.feature-reliability-detail{
+    top:290px;
+    left:200px;
+}
+
+.feature-compatibility-detail{
+    top:358px;
+    left:400px;
+}
+
+.feature-multifunction-detail{
+    top:290px;
+    left:100px;
 }
