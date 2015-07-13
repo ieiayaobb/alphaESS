@@ -13,7 +13,7 @@ body{
 .info-head>h1{
     font-size:36px;
     color:#333;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .info-head h1 strong{
@@ -240,4 +240,8 @@ body{
     background-image: url(../img/banner/career.jpg);
     position:relative;
     z-index: 100;
+}
+
+.email{
+    margin-bottom: 30px;
 }

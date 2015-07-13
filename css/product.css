@@ -381,8 +381,8 @@
 
 .introduction{   
     position:absolute;
-    left:580px;
-    top :20px;
+    left:550px;
+    top :100px;
 }
 
 .introduction-name{
@@ -419,7 +419,7 @@
 .video{
     font-size:14px;
     position:absolute;
-    left : 450px;
+    left : 350px;
     top : 70px;
     float:left;
     letter-spacing: 1px;
@@ -590,7 +590,7 @@
 .powerplug-features{
     position:absolute;
     width: 100%;
-    left: 580px;
+    left: 545px;
     top: 450px;
 }
 
@@ -621,7 +621,7 @@
 
 .feature-all{
     text-align: center;
-    width:130px;
+    width:138px;
     /*border-right: 1px solid #F7B128;*/
     float: left;
     /*box-shadow: 2px 0 1px #888888;*/
@@ -693,12 +693,22 @@
 
 .screen-table{
     float:left;
-    margin: 80px 0 0 80px;
+    margin: 50px 0 0 50px;
 }
 
-.screen-table td span{
+.screen-table .key span{
     float:left;
-    width:250px;
+    width:285px;
+    height: 30px;
+    padding:6px 6px 0px 6px;
+    border-top: 1px solid #f7b128;
+    text-align: center;
+    line-height: 18px;
+}
+
+.screen-table .value span{
+    float:left;
+    width:265px;
     height: 30px;
     padding:6px 6px 0px 6px;
     border-top: 1px solid #f7b128;
@@ -768,7 +778,7 @@
     /*background-color: #f7f7f9;*/
     /*border: 1px solid #e1e1e8;*/
     /*border-radius: 4px;*/
-    width:550px;
+    width:570px;
 }
 
 .tab{
@@ -851,7 +861,7 @@
     width:13px;
     height:13px;
     background-image: url(../img/product/play.png);
-    margin-right:5px;
+    margin:3px 5px 0 0;
 }
 
 .glass{
@@ -916,7 +926,7 @@
     float:left;
 }
 
-.arrow-right-long{
+.family .arrow-right-long{
     position: absolute;
     float:left;
     width:204px;
@@ -926,7 +936,7 @@
     left:160px;
 }
 
-.arrow-left-long{
+.family .arrow-left-long{
     position: absolute;
     float:left;
     width:204px;
@@ -936,7 +946,7 @@
     left:-60px;
 }
 
-.arrow-right-short{
+.family .arrow-right-short{
     position: absolute;
     float:left;
     width:82px;
@@ -944,7 +954,29 @@
     background-image: url(../img/product/arrow-right-short.png);
     top:110px;
     left:240px;
-    
+}
+
+.crystal .arrow-right-short{
+    position: absolute;
+    float:left;
+    width:82px;
+    height:8px;
+    background-image: url(../img/product/arrow-right-short.png);
+}
+
+.crystal .arrow-ems{
+    top:60px;
+    left:240px;
+}
+
+.crystal .arrow-inverter{
+    top:260px;
+    left:240px;
+}
+
+.crystal .arrow-battery{
+    top:410px;
+    left:240px;
 }
 
 .screen{
@@ -959,19 +991,34 @@
     font-size: 28px;
 }
 
-.screen-ems{
+.family .screen-ems{
     top:100px;
     left:330px;
 }
 
-.screen-inverter{
+.crystal .screen-ems{
+    top:50px;
+    left:330px;
+}
+
+.family .screen-inverter{
     top:170px;
     left:-140px;
 }
 
-.screen-battery{
+.crystal .screen-inverter{
+    top:250px;
+    left:330px;
+}
+
+.family .screen-battery{
     top:310px;
     left:370px;
+}
+
+.crystal .screen-battery{
+    top:400px;
+    left:330px;
 }
 
 .feature-detail-content li{
@@ -1020,7 +1067,6 @@
     height: 50px;
     background-image:url(../img/product/prev.png);
     top:200px;
-    left:-25px;
     cursor: pointer;
 }
 
@@ -1093,6 +1139,12 @@
     width:250px;
     height: 83px;
     background-image: url(../img/screen/screen-battery.png)
+}
+
+.screen-pic-centuri-battery{
+    width:200px;
+    height: 111px;
+    background-image: url(../img/screen/screen-centuri-battery.png)
 }
 
 .screen-logo{
@@ -1184,4 +1236,8 @@
 .feature-multifunction-detail{
     top:290px;
     left:100px;
+}
+
+.video-text{
+    float:left;
 }
