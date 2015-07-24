@@ -242,7 +242,7 @@
 
 .image-feature{
     margin-top:15px;
-    width:440px;
+    width:450px;
 }
 
 .image-feature-icon{
@@ -400,7 +400,7 @@
 .learn-more{
     font-size:14px;
     position:absolute;
-    left : 880px;
+    left : 800px;
     top : 560px;
     float:left;
     letter-spacing: 1px;
@@ -1003,7 +1003,7 @@
 
 .family .screen-inverter{
     top:170px;
-    left:-140px;
+    left:-265px;
 }
 
 .crystal .screen-inverter{
