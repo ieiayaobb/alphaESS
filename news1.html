@@ -11,6 +11,14 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script>
         $(document).ready(function () {
+            $(document).click(function(e){
+                if($(e.target).hasClass("global-ico")){
+                    $(".lang").css("visibility","visible");
+                }else{
+                    $(".lang").css("visibility","hidden");
+                }
+            })
+            
             $(".menu-button>a").hover(function(){
                 $(this).animate({
                     opacity:1
@@ -54,14 +62,14 @@
         <div class="lang">
             <ul>
                 <li class="first"></li>
-                <li class="lang-li"><a href="#">English</a> </li>
-                <li class="lang-li"><a href="#">Deutsch</a> </li>
+                <li class="lang-li"><a href="www.alpha-ess.com">English</a> </li>
+                <li class="lang-li"><a href="www.alpha-ess.de">Deutsch</a> </li>
                 <li class="lang-li"><a href="#">Français</a> </li>
                 <li class="last"></li>
             </ul>
         </div>
     </div>
-    <a class="login" href="http://www.alphes.com">Log-in</a>
+    <a class="login" href="http://www.alphes.com">Login</a>
 </div>
 <div class="content-wrap clearfix">
     <div class="bread-wrapper">

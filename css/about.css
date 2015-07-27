@@ -190,7 +190,7 @@ body{
 .about-list{
     background-color: #fff;
     border: 1px solid #e6e6e6;
-    width:160px;
+    width:200px;
     visibility: hidden;
     position: absolute;
     top:-9999px;
@@ -201,7 +201,7 @@ body{
     float:left;
     margin:10px;
     color:#333;
-    width:150px;
+    width:180px;
 }
 
 .banner{
@@ -263,9 +263,9 @@ body{
 
 .about-title{
     font-size:22px;
-    width:100px;
+    width:150px;
     line-height: 30px;
-    margin: 30px 0 0 15px;
+    margin: 50px 0 0 15px;
 }
 
 .about-desc{

@@ -11,135 +11,13 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            var content_1 = 0;
-            var content_2 = 600;
-            var content_3 = 600;
-            var content_4 = 600;
-            var content_5 = 600;
-
-            var current = judge(0);
-
-            setSideMenu(current);
-            var cloudInterval;
-            $(window).scroll(function (e) {
-                if (judge(current) != undefined) {
-                    current = judge(current);
-
-                    setSideMenu(current);
+            $(document).click(function(e){
+                if($(e.target).hasClass("global-ico")){
+                    $(".lang").css("visibility","visible");
+                }else{
+                    $(".lang").css("visibility","hidden");
                 }
-            });
-
-            function handleAnimation(current) {
-                clearOtherInterval(current);
-                switch (current) {
-                    case 1 :
-                    console.log("call 1")
-                    $(".content-1 .feature-title").animate({
-                        top: '-30px',
-                        opacity: 1
-                    });
-                    break;
-                    case 2:
-                    console.log("call 2")
-                    var i = 0;
-                    setInterval(function () {
-                        $(".left-feature .image-feature").eq(i).animate({
-                            left: '30px',
-                            opacity: 1
-                        })
-                    }, 200);
-                    setInterval(function () {
-                        $(".right-feature .image-feature").eq(i++).animate({
-                            left: '-30px',
-                            opacity: 1
-                        })
-                    }, 200);
-                    break;
-                    case 3:
-                    console.log("call 3")
-                    $(".accessories").animate({
-                        opacity: 1,
-                        top: '200px'
-                    }, 500);
-                    break;
-                    case 4:
-                    console.log("call 4");
-                    var i = 0;
-                    cloudInterval = setInterval(function () {
-                        $(".device" + ++i).animate({
-                            opacity: 1
-                        }, 500);
-                        console.log("running 4")
-                    }, 300);
-                    break;
-                    default :
-
-                }
-            }
-
-            function judge(current) {
-                if ($(window).scrollTop() >= content_1 && $(window).scrollTop() < content_1 + content_2) {
-                    if (current != 1) {
-                        return 1;
-                    }
-                } else if ($(window).scrollTop() >= content_1 + content_2 && $(window).scrollTop() < content_1 + content_2 + content_3) {
-                    if (current != 2) {
-                        return 2;
-                    }
-                } else if ($(window).scrollTop() >= content_1 + content_2 + content_3 && $(window).scrollTop() < content_1 + content_2 + content_3 + content_4) {
-                    if (current != 3) {
-                        return 3;
-                    }
-                } else if ($(window).scrollTop() >= content_1 + content_2 + content_3 + content_4 && $(window).scrollTop() < content_1 + content_2 + content_3 + content_4 + content_5) {
-                    if (current != 4) {
-                        return 4;
-                    }
-                } else if ($(window).scrollTop() >= content_1 + content_2 + content_3 + content_4 + content_5) {
-                    if (current != 5) {
-                        return 5;
-                    }
-                }
-            }
-
-            function clearOtherInterval(now) {
-                if (now != 1) {
-                }
-                if (now != 2) {
-                }
-                if (now != 3) {
-                    $(".accessories").css("top", 300).css("opacity", 0);
-                }
-                if (now != 4) {
-                    clearInterval(cloudInterval);
-                }
-            }
-
-            function setSideMenu(current) {
-                $(".menu-active").removeClass("menu-active");
-                $(".menu-normal").eq(current - 1).addClass("menu-active");
-            }
-
-            $(".left-menu li").click(function () {
-                $(".menu-active").removeClass("menu-active");
-                $(this).children(".menu-normal").addClass("menu-active");
-                $("body").animate({
-                    scrollTop: 600 * ($(this).index())
-                }, 500)
-            });
-
-            $(".storion").mouseenter(function () {
-                $(this).animate({
-                    top: "20px"
-                }, 300);
-            }).mouseout(function () {
-                $(this).animate({
-                    top: "40px"
-                }, 300);
-            });
-
-            $(".storion").click(function(){
-                window.location.href = "storion.html";
-            });
+            })
 
             $(".menu-button>a").hover(function(){
                 $(this).animate({
@@ -259,8 +137,7 @@
                     <div class="ems-screen-bac-2"></div>
                     <div class="ems-screen-desc ems-screen-desc-2">
                         <ul>
-                            <li><span class="list"></span><span class="list-content">This page shows the PV generated power, house-load power and power which has been fed in the public grid on hourly, daily and monthly basis.</span></li>
-                            <li><span class="list"></span><span class="list-content">Diese Seite zeigt den PV erzeugten Strom, die Eigenbedarfsleistung und die ins Netz eingespeiste Energie an. Diese Informationen sind in der Anzeige als stündlich, täglich und monatlich dargestellt.</span></li>
+                            <li><span class="list"></span><span class="list-content">Die Seite “History” zeigt die PV-Erzeugung, die Last aller Verbraucher und den eingespeisten Strom in der Auswahl Stunde, Tag, Monat und Jahr an.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -268,8 +145,7 @@
                     <div class="ems-screen-bac-3"></div>
                     <div class="ems-screen-desc ems-screen-desc-3">
                         <ul>
-                            <li><span class="list"></span><span class="list-content">On the right column, firmware version can be checked. When needed, software can be easily updated by inserting an USB stick into the backside of the EMS display.</span></li>
-                            <li><span class="list"></span><span class="list-content">In der rechten Spalte kann die Software-Version überprüft werden. Bei Bedarf kann diese problemlos aktualisiert werden: Auf der Rückseite der EMS-Anzeige befindet sich die Möglichkeit durch die Verwendung eines USB-Sticks eine aktuelle Version der Software auf das Gerät sehr einfach zu übertragen.</span></li>
+                            <li><span class="list"></span><span class="list-content">Die rechte Spalte zeigt die aktuelle Firmware-Version an. Diese kann bei Bedarf über ein USB-Speichergerät auf der Rückseite des EMS Displays aktualisiert werden.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -277,8 +153,7 @@
                     <div class="ems-screen-bac-4"></div>
                     <div class="ems-screen-desc ems-screen-desc-3">
                         <ul>
-                            <li><span class="list"></span><span class="list-content" style="line-height:1.4;">This page displays the configuration data of general information, income (settings of electricity price and feed-in tariff), system and functions. Detailed information can be found by clicking on the sections: Info, Income, System, Function.</span></li>
-                            <li><span class="list"></span><span class="list-content" style="line-height:1.4;">Diese Seite zeigt die Konfigurationsdaten der allgemeinen Informationen , des Einkommens (Einstellungen des Strompreises und des Einspeisetarifs), des Systems und der Funktionen. Detaillierte Informationen kann man unter den jeweiligen Abschnitten Infos, Einkommen, System, Funktion finden.</span></li>
+                            <li><span class="list"></span><span class="list-content" style="line-height:1.4;">Die Seite “Setup” zeigt folgende Auswahl an: Info, Income, System und Funktion. Für weitere Informationen wählen Sie bitte das entsprechende Symbol.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -649,14 +524,14 @@
             <div class="lang">
                 <ul>
                     <li class="first"></li>
-                    <li class="lang-li"><a href="#">English</a> </li>
-                    <li class="lang-li"><a href="#">Deutsch</a> </li>
+                    <li class="lang-li"><a href="www.alpha-ess.com">English</a> </li>
+                    <li class="lang-li"><a href="www.alpha-ess.de">Deutsch</a> </li>
                     <li class="lang-li"><a href="#">Français</a> </li>
                     <li class="last"></li>
                 </ul>
             </div>
         </div>
-        <a class="login" href="http://www.alphes.com">Log-in</a>
+        <a class="login" href="http://www.alphes.com">Login</a>
     </div>
     <!-- <div class="left-menu">
         <ul>

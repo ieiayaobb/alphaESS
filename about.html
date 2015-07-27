@@ -19,6 +19,14 @@
                 }
             })
 
+            $(document).click(function(e){
+                if($(e.target).hasClass("global-ico")){
+                    $(".lang").css("visibility","visible");
+                }else{
+                    $(".lang").css("visibility","hidden");
+                }
+            })
+
             $(".menu-button>a").hover(function(){
                 $(this).animate({
                     opacity:1
@@ -62,25 +70,25 @@
         <div class="lang">
             <ul>
                 <li class="first"></li>
-                <li class="lang-li"><a href="#">English</a> </li>
-                <li class="lang-li"><a href="#">Deutsch</a> </li>
+                <li class="lang-li"><a href="www.alpha-ess.com">English</a> </li>
+                <li class="lang-li"><a href="www.alpha-ess.de">Deutsch</a> </li>
                 <li class="lang-li"><a href="#">Français</a> </li>
                 <li class="last"></li>
             </ul>
         </div>
     </div>
-    <a class="login" href="http://www.alphes.com">Log-in</a>
+    <a class="login" href="http://www.alphes.com">Login</a>
 </div>
 <div class="content-wrap clearfix">
     <div class="big_earth">
 
     </div>
     <a href="company.html" class="panel company-introduction">
-        <div class="about-title">Company Introduction Unternehmens-Einführung</div>
+        <div class="about-title">Das Unternehmen – Einleitung</div>
         <!-- <div class="about-desc">Know more about our company</div> -->
     </a>
     <a href="partner.html" class="panel cooperation">
-        <div class="about-title">Cooperation Partners Kooperations-partner</div>
+    <div class="about-title">Kooperations</br>partner</div>
         <!-- <div class="about-desc"></div> -->
     </a>
 </div>

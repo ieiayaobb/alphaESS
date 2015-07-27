@@ -19,6 +19,14 @@
                 }
             })
 
+            $(document).click(function(e){
+                if($(e.target).hasClass("global-ico")){
+                    $(".lang").css("visibility","visible");
+                }else{
+                    $(".lang").css("visibility","hidden");
+                }
+            })
+
             $(".menu-button>a").hover(function(){
                 $(this).animate({
                     opacity:1
@@ -62,14 +70,14 @@
         <div class="lang">
             <ul>
                 <li class="first"></li>
-                <li class="lang-li"><a href="#">English</a> </li>
-                <li class="lang-li"><a href="#">Deutsch</a> </li>
+                <li class="lang-li"><a href="www.alpha-ess.com">English</a> </li>
+                <li class="lang-li"><a href="www.alpha-ess.de">Deutsch</a> </li>
                 <li class="lang-li"><a href="#">Français</a> </li>
                 <li class="last"></li>
             </ul>
         </div>
     </div>
-    <a class="login" href="http://www.alphes.com">Log-in</a>
+    <a class="login" href="http://www.alphes.com">Login</a>
 </div>
 <div class="content-wrap clearfix">
     <div class="banner">
@@ -81,11 +89,11 @@
             <span class="arrow"> > </span>
             <a class="bread-node bread-2">Unternehmen</a>
             <span class="arrow"> > </span>
-            <a class="bread-node bread-3">Das Unternehmen Einleitung</a>
+            <a class="bread-node bread-3">Das Unternehmen-Einleitung</a>
 
             <div class="about-list">
                 <ul>
-                    <li><a href="company.html">Das Unternehmen Einleitung</a> </li>
+                    <li><a href="company.html">Das Unternehmen-Einleitung</a> </li>
                     <li><a href="partner.html">Kooperationspartner</a> </li>
                 </ul>
             </div>
@@ -114,7 +122,7 @@
             </div>
             <div class="pdf">
                 <span class="pdf-icon"></span>
-                <a target="_blank" href="pdf/Company Presentation.pdf" class="pdf-content">Click to download company presentation</a>
+                <a target="_blank" href="pdf/Company Presentation.pdf" class="pdf-content">Hier Unternehmens-Einleitung herunterladen</a>
             </div>
         </div>
     </div>
