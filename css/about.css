@@ -16,7 +16,7 @@ body{
 }
 
 .content-wrap {
-    width:990px;
+    width:100%;
     position:relative;
     margin:0px auto;
     margin-top: 80px;
@@ -213,9 +213,10 @@ body{
 }
 
 .big_earth{
-    width:1000px;
+    width:100%;
     height: 600px;
     background-image: url(../img/big_earth.jpg);
+    background-position: center;
     position: relative;
 }
 
@@ -274,11 +275,15 @@ body{
 }
 
 .company-introduction{
-    top:220px;
-    left:500px;
+    left:0px;
 }
 
 .cooperation{
-    top:220px;
-    left:700px;
+    left:220px;
+}
+
+.company-detail{
+    position:absolute;
+    top:200px;
+    left:50%;
 }
