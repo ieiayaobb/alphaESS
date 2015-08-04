@@ -15,8 +15,15 @@ body{
     text-decoration:none;
 }
 
-.content-wrap {
+.content-wrap-all {
     width:100%;
+    position:relative;
+    margin:0px auto;
+    margin-top: 80px;
+}
+
+.content-wrap {
+    width:1000px;
     position:relative;
     margin:0px auto;
     margin-top: 80px;
