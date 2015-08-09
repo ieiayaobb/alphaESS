@@ -310,7 +310,11 @@ body{
 }
 
 .description{
-    height:150px;
+    height:120px;
     line-height:30px;
+}
+
+.pdf{
+    float:left;
 }
 
